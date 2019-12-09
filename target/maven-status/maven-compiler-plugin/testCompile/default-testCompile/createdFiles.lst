@@ -1,0 +1,5 @@
+GenericTest\LoginSales.class
+GenericTest\LoginAdmin.class
+GenericTest\LoginDispatcher.class
+GenericTest\LoginCustomer.class
+GenericTest\LoginIRT.class

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8fc5ed9e-67ae-46fb-a91e-ff1c40627db3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TESavDykitb7uMoxnYQsAglq4q" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="deletionFromPopupRequiresConfirmation" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2026287" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Functions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/xampp/htdocs/Phoenix-Drogon-Maven/testng.xml">
+    <configuration name="C:/xampp/htdocs/Phoenix-Drogon-Maven/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Phoenix-Drogon-Maven" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginAdmin.Login" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Phoenix-Drogon-Maven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GenericTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="LoginTestCases" />
+      <option name="MAIN_CLASS_NAME" value="GenericTest.LoginAdmin" />
+      <option name="METHOD_NAME" value="Login" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/xampp/htdocs/Phoenix-Drogon-Maven/testng.xml" />
+        <item itemvalue="TestNG.LoginAdmin.Login" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8fc5ed9e-67ae-46fb-a91e-ff1c40627db3" name="Default Changelist" comment="" />
+      <created>1573023829187</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573023829187</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="44" key="#Project_Structure" timestamp="1574997711755">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="44" key="#Project_Structure/0.0.1366.768@0.0.1366.768" timestamp="1574997711755" />
+    <state width="281" height="638" key="GridCell.Tab.0.bottom" timestamp="1575002594250">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="281" height="638" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.-306.1920.1080@0.0.1366.768" timestamp="1575002594250" />
+    <state width="281" height="638" key="GridCell.Tab.0.center" timestamp="1575002594250">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="281" height="638" key="GridCell.Tab.0.center/0.0.1366.768/1366.-306.1920.1080@0.0.1366.768" timestamp="1575002594250" />
+    <state width="281" height="638" key="GridCell.Tab.0.left" timestamp="1575002594249">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="281" height="638" key="GridCell.Tab.0.left/0.0.1366.768/1366.-306.1920.1080@0.0.1366.768" timestamp="1575002594249" />
+    <state width="281" height="638" key="GridCell.Tab.0.right" timestamp="1575002594250">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="281" height="638" key="GridCell.Tab.0.right/0.0.1366.768/1366.-306.1920.1080@0.0.1366.768" timestamp="1575002594250" />
+    <state x="363" y="210" key="com.intellij.ide.util.TipDialog" timestamp="1574997368688">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="363" y="210" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1574997368688" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Configuration/SetUp.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
