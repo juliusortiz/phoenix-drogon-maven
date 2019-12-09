@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fc5ed9e-67ae-46fb-a91e-ff1c40627db3" name="Default Changelist" comment="" />
+    <list default="true" id="8fc5ed9e-67ae-46fb-a91e-ff1c40627db3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +17,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,6 +28,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1TESavDykitb7uMoxnYQsAglq4q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -101,10 +109,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="44" key="#Project_Structure" timestamp="1574997711755">
+    <state x="275" y="44" key="#Project_Structure" timestamp="1575870162402">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="44" key="#Project_Structure/0.0.1366.768@0.0.1366.768" timestamp="1574997711755" />
+    <state x="275" y="44" key="#Project_Structure/0.0.1366.768@0.0.1366.768" timestamp="1575870162402" />
     <state width="281" height="638" key="GridCell.Tab.0.bottom" timestamp="1575002594250">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -121,10 +129,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="281" height="638" key="GridCell.Tab.0.right/0.0.1366.768/1366.-306.1920.1080@0.0.1366.768" timestamp="1575002594250" />
-    <state x="363" y="210" key="com.intellij.ide.util.TipDialog" timestamp="1574997368688">
+    <state x="363" y="210" key="com.intellij.ide.util.TipDialog" timestamp="1575870153488">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="363" y="210" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1574997368688" />
+    <state x="363" y="210" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1575870153488" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
