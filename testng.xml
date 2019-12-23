@@ -11,9 +11,9 @@
         <classes>
             <class name="GenericTest.LoginAdmin" />
          <!--   <class name="GenericTest.LoginCustomer" />
-            <class name="GenericTest.LoginDispatcher" />
+           &lt;!&ndash; <class name="GenericTest.LoginDispatcher" />
             <class name="GenericTest.LoginIRT" />
-            <class name="GenericTest.LoginSales" />-->
+            <class name="GenericTest.LoginSales" />&ndash;&gt;-->
         </classes>
     </test>
 

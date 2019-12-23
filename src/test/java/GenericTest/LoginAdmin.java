@@ -32,16 +32,22 @@ public class LoginAdmin extends SetUp {
         driver.findElement(By.xpath(String.valueOf(sheet.getRow(7).getCell(0)))).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click();
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[1]/div/div/label")).click();
-        ///html/body/div[2]/aside/div/nav/a[1]/div/div/label
-
         WebElement dashboardchart = driver.findElement(By.cssSelector(String.valueOf(sheet.getRow(1).getCell(5))));
         Assert.assertTrue(dashboardchart.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();
 
-        //driver.quit();
+        //lester
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/section/button[1]/a/div")).click(); //status
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //customer
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[5]/div/div")).click(); //driver
+        System.out.print(CYAN_BOLD_BRIGHT + "STATUS/CUSTOMER/DRIVER = PASSED" + RESET);
+        System.out.println();
+
+        driver.quit();
     }
 }
 
