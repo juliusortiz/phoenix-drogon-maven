@@ -53,17 +53,90 @@ public class LoginAdmin extends SetUp {
     @Test(priority = 2)
     public void NavigateToManageStatuses() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[3]/div[1]/div[1]")).click(); //status
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        Thread.sleep(4000);
         WebElement ManageStatusHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(ManageStatusHeader.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Status page = PASSED" + RESET);
         System.out.println();
     }
-}
+
+    @Test(priority = 3)
+    public void NavigateToManageCustomer() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[4]/div[1]")).click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        WebElement ManageCustomerHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
+        Assert.assertTrue(ManageCustomerHeader.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Customer page = PASSED" + RESET);
+        System.out.println();
+    }
+
+    @Test(priority = 4)
+    public void NavigateToManageTruckDrivers() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[5]/div[1]")).click();
+        Thread.sleep(5000);
+        WebElement ManageTruckDriverHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
+        Assert.assertTrue(ManageTruckDriverHeader.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Truck Drivers page = PASSED" + RESET);
+        System.out.println();
+    }
+
+    @Test(priority = 5)
+    public void NavigateToDeliveryReceipts() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[6]/div[1]")).click();
+        Thread.sleep(5000);
+        WebElement DeliveryReceipts = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
+        Assert.assertTrue(DeliveryReceipts.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Truck Drivers page = PASSED" + RESET);
+        System.out.println();
+    }
+
+    @Test(priority = 6)
+    public void NavigateToProblemsReportedandBackloads() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[7]/div[1]")).click();
+        WebElement DeliveryReceipts = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[7]/div[1]"));
+        Assert.assertTrue(DeliveryReceipts.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Problems Reported and Backloads page = PASSED" + RESET);
+        System.out.println();
+    }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /*  //lester
+
+
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //customer
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[5]/div/div")).click(); //driver
+        System.out.print(CYAN_BOLD_BRIGHT + "STATUS/CUSTOMER/DRIVER = PASSED" + RESET);
+        System.out.println();
+
+
+        driver.quit();*/
+    }
 
 
 

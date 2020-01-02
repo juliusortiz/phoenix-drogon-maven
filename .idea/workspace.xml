@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fc5ed9e-67ae-46fb-a91e-ff1c40627db3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GenericTest/LoginDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GenericTest/LoginDispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/html/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/html/overview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/html/suite1_test1_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/html/suite1_test1_results.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/xml/GenericTest.LoginCustomer_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/xml/GenericTest.LoginCustomer_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/xml/GenericTest.LoginDispatcher_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/xml/GenericTest.LoginDispatcher_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/xml/GenericTest.LoginIRT_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/xml/GenericTest.LoginIRT_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GenericTest/LoginAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GenericTest/LoginAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
