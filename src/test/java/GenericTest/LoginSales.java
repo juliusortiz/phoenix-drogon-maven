@@ -36,11 +36,18 @@ public class LoginSales extends SetUp {
 
         //lester
 
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div")).click(); //ser client
+
+        WebElement servingclient = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div")); //ser client
+        Assert.assertTrue(servingclient.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Serving Client = PASSED" + RESET);
+        System.out.println();
         Thread.sleep(1000);
-       /* driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div[2]/div")).click(); //last 6 months
+        WebElement last6months =  driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div[2]/div")).click(); //last 6 months
+        Assert.assertTrue(last6months.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + " = PASSED" + RESET);
+        System.out.println();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div[2]/div")).click(); //last 6 months
+        /* driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div[2]/div")).click(); //last 6 months
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[7]/a")).click(); //view dr
         Thread.sleep(2000);
