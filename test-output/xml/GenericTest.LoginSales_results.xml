@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="33.730">
+           time="31.471">
   <properties />
-            <testcase name="ViewDR" time="13.124" classname="GenericTest.LoginSales">
+            <testcase name="ViewDR" time="12.114" classname="GenericTest.LoginSales">
                 <failure type="org.openqa.selenium.NoSuchElementException"
                   message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[7]/a&quot;}
   (Session info: chrome=79.0.3945.88)
@@ -14,8 +14,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
 System info: host: &apos;LAPTOP-OSLLQ5OA&apos;, ip: &apos;192.168.72.163&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56683}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 036169992f7af72c68f037e7f4cd120a
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:62578}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: de662d20dbc13337573ca9dd31e0bff5
 *** Element info: {Using=xpath, value=/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[7]/a}"
               >
 <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[7]/a"}
@@ -24,8 +24,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'LAPTOP-OSLLQ5OA', ip: '192.168.72.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56683}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 036169992f7af72c68f037e7f4cd120a
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:62578}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: de662d20dbc13337573ca9dd31e0bff5
 *** Element info: {Using=xpath, value=/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[7]/a}
   sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -75,11 +75,11 @@ Session ID: 036169992f7af72c68f037e7f4cd120a
           </testcase>
   
   
-            <testcase name="Login" time="1.513" classname="GenericTest.LoginSales" />
-                <testcase name="ServingClient" time="3.224" classname="GenericTest.LoginSales" />
-                <testcase name="Last6Months" time="3.234" classname="GenericTest.LoginSales" />
-                <testcase name="DeliveryStatus" time="4.206" classname="GenericTest.LoginSales" />
-                <testcase name="History" time="4.201" classname="GenericTest.LoginSales" />
-                <testcase name="OnGoingDeliveries" time="4.228" classname="GenericTest.LoginSales" />
+            <testcase name="OnGoingDeliveries" time="4.288" classname="GenericTest.LoginSales" />
+                <testcase name="ServingClient" time="3.014" classname="GenericTest.LoginSales" />
+                <testcase name="History" time="4.231" classname="GenericTest.LoginSales" />
+                <testcase name="Login" time="0.436" classname="GenericTest.LoginSales" />
+                <testcase name="DeliveryStatus" time="4.247" classname="GenericTest.LoginSales" />
+                <testcase name="Last6Months" time="3.141" classname="GenericTest.LoginSales" />
       
 </testsuite>

@@ -82,18 +82,16 @@ public class LoginIRT extends SetUp {
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/p")).click(); //settings page
         WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/p")); //
         Assert.assertTrue(settingspage.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Image Submitted Page = PASSED" + RESET);
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Settings Page = PASSED" + RESET);
         System.out.println();
         Thread.sleep(2000);
     }
 
     @Test(priority = 5)
     public void NotificationPage() throws InterruptedException, IOException {
-        //driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        //Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")).click(); //notfication page
-        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")); //
-        Assert.assertTrue(settingspage.isDisplayed());
+        WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")); //
+        Assert.assertTrue(notificationpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
         System.out.println();
         Thread.sleep(2000);

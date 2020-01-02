@@ -61,31 +61,9 @@ public class LoginAdmin extends SetUp {
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Status page = PASSED" + RESET);
         System.out.println();
     }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-      /*  //lester
-
-
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //customer
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[5]/div/div")).click(); //driver
-        System.out.print(CYAN_BOLD_BRIGHT + "STATUS/CUSTOMER/DRIVER = PASSED" + RESET);
-        System.out.println();
-
-
-        driver.quit();*/
-    }
 
 
 
