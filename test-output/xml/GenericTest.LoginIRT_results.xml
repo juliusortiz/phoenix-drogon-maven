@@ -4,15 +4,15 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="23.209">
+           time="23.392">
   <properties />
   
   
-            <testcase name="SettingsPage" time="4.290" classname="GenericTest.LoginIRT" />
-                <testcase name="ImageSubmittedPage" time="4.216" classname="GenericTest.LoginIRT" />
-                <testcase name="AcceptedOrdersPage" time="4.250" classname="GenericTest.LoginIRT" />
-                <testcase name="NotificationPage" time="2.899" classname="GenericTest.LoginIRT" />
-                <testcase name="InTransitOrdersPage" time="4.162" classname="GenericTest.LoginIRT" />
-                <testcase name="Login" time="3.392" classname="GenericTest.LoginIRT" />
+            <testcase name="Login" time="3.411" classname="GenericTest.LoginIRT" />
+                <testcase name="NotificationPage" time="2.894" classname="GenericTest.LoginIRT" />
+                <testcase name="AcceptedOrdersPage" time="4.262" classname="GenericTest.LoginIRT" />
+                <testcase name="ImageSubmittedPage" time="4.238" classname="GenericTest.LoginIRT" />
+                <testcase name="SettingsPage" time="4.248" classname="GenericTest.LoginIRT" />
+                <testcase name="InTransitOrdersPage" time="4.339" classname="GenericTest.LoginIRT" />
       
 </testsuite>

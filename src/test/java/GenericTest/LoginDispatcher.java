@@ -32,14 +32,68 @@ public class LoginDispatcher extends SetUp {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println(CYAN_BOLD_BRIGHT + "Login Dispatcher = PASSED" + RESET);
         System.out.println();
-        driver.quit();
+        Thread.sleep(3000);
        /* WebElement Header = driver.findElement(By.xpath(String.valueOf(sheet.getRow(2).getCell(4))));
         Assert.assertTrue(Header.isDisplayed());
         System.out.println("Login Customer = PASSED");
         driver.quit();*/
     }
-}
 
+        @Test(priority = 1)
+        public void DeliveryHistoryPage() throws InterruptedException, IOException {
+            driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+            Thread.sleep(2000);
+            driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click(); //delivery history page
+            WebElement deliveryhistorypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")); //
+            Assert.assertTrue(deliveryhistorypage.isDisplayed());
+            System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Delivery History Page = PASSED" + RESET);
+            System.out.println();
+            Thread.sleep(2000);
+        }
+        @Test(priority = 2)
+        public void ProblemsReportedPage() throws InterruptedException, IOException {
+            driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+            Thread.sleep(2000);
+            driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")).click(); //problems reported page
+            WebElement problemsreportedpage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")); //
+            Assert.assertTrue(problemsreportedpage.isDisplayed());
+            System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Problems Reported Page = PASSED" + RESET);
+            System.out.println();
+            Thread.sleep(2000);
+        }
+        @Test(priority = 3)
+        public void ManageReasonsPage() throws InterruptedException, IOException {
+            driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+            Thread.sleep(2000);
+            driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //manage reasons page
+            WebElement managereasonspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")); //
+            Assert.assertTrue(managereasonspage.isDisplayed());
+            System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Reasons Page = PASSED" + RESET);
+            System.out.println();
+            Thread.sleep(2000);
+        }
+        @Test(priority = 4)
+        public void SettingsPage() throws InterruptedException, IOException {
+            driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+            Thread.sleep(2000);
+            driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")).click(); //settings page
+            WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")); //
+            Assert.assertTrue(settingspage.isDisplayed());
+            System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Settings Page = PASSED" + RESET);
+            System.out.println();
+            Thread.sleep(2000);
+        }
+        @Test(priority = 5)
+        public void NotificationPage() throws InterruptedException, IOException {
+            driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")).click(); //notfication page
+            WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")); //
+            Assert.assertTrue(notificationpage.isDisplayed());
+            System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
+            System.out.println();
+            Thread.sleep(2000);
+            driver.quit();
+        }
+    }
 
 
 
