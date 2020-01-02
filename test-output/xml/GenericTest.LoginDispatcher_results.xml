@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.970">
+           time="1.261">
   <properties />
   
   
-            <testcase name="Login" time="0.970" classname="GenericTest.LoginDispatcher" />
+            <testcase name="Login" time="1.261" classname="GenericTest.LoginDispatcher" />
       
 </testsuite>

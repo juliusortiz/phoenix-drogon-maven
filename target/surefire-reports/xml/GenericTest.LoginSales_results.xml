@@ -3,8 +3,13 @@
            tests="2"
            failures="1"
            errors="0"
+<<<<<<< HEAD:target/surefire-reports/xml/GenericTest.LoginAdmin_results.xml
            skipped="1"
            time="10.602">
+=======
+           skipped="0"
+           time="4.599">
+>>>>>>> origin/alpha:target/surefire-reports/xml/GenericTest.LoginSales_results.xml
   <properties />
             <testcase name="beforeTest" time="10.602" classname="GenericTest.LoginAdmin">
                 <failure type="org.openqa.selenium.NoSuchWindowException"
@@ -78,4 +83,9 @@ Session ID: 83aa903242ba5903960c71d73c147d75
     </testcase>
   
   
+<<<<<<< HEAD:target/surefire-reports/xml/GenericTest.LoginAdmin_results.xml
+=======
+            <testcase name="Login" time="4.599" classname="GenericTest.LoginSales" />
+      
+>>>>>>> origin/alpha:target/surefire-reports/xml/GenericTest.LoginSales_results.xml
 </testsuite>

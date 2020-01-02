@@ -3,8 +3,13 @@
            tests="2"
            failures="1"
            errors="0"
+<<<<<<< HEAD:target/surefire-reports/xml/GenericTest.LoginIRT_results.xml
            skipped="1"
            time="14.979">
+=======
+           skipped="0"
+           time="4.414">
+>>>>>>> origin/alpha:test-output/xml/GenericTest.LoginSales_results.xml
   <properties />
             <testcase name="beforeTest" time="14.979" classname="GenericTest.LoginIRT">
                 <failure type="org.openqa.selenium.SessionNotCreatedException"
@@ -144,4 +149,9 @@ remote stacktrace: Backtrace:
     </testcase>
   
   
+<<<<<<< HEAD:target/surefire-reports/xml/GenericTest.LoginIRT_results.xml
+=======
+            <testcase name="Login" time="4.414" classname="GenericTest.LoginSales" />
+      
+>>>>>>> origin/alpha:test-output/xml/GenericTest.LoginSales_results.xml
 </testsuite>

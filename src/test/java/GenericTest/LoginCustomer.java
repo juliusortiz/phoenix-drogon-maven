@@ -32,6 +32,13 @@ public class LoginCustomer extends SetUp {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println(CYAN_BOLD_BRIGHT + "Login Customer = PASSED" + RESET);
         System.out.println();
+
+        //lester
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div/div/label")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[3]/div/div/label")).click();
+
         driver.quit();
        /* WebElement Header = driver.findElement(By.xpath(String.valueOf(sheet.getRow(2).getCell(4))));
         Assert.assertTrue(Header.isDisplayed());
