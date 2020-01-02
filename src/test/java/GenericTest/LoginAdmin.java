@@ -36,18 +36,46 @@ public class LoginAdmin extends SetUp {
         Assert.assertTrue(dashboardchart.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();
+    }
 
-
-
-
-
-
-
-
-
-        //lester
+    @Test(priority = 1)
+    public void NavigateToManageAdmin() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/section/button[1]/a/div")).click(); //status
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[2]/div[1]")).click();
+        WebElement ManageAdminheader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
+        Assert.assertTrue(ManageAdminheader.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Admins page = PASSED" + RESET);
+        System.out.println();
+    }
+
+
+    @Test(priority = 2)
+    public void NavigateToManageStatuses() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[3]/div[1]/div[1]")).click(); //status
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebElement ManageStatusHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
+        Assert.assertTrue(ManageStatusHeader.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Status page = PASSED" + RESET);
+        System.out.println();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+      /*  //lester
+
+
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //customer
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
@@ -56,9 +84,9 @@ public class LoginAdmin extends SetUp {
         System.out.println();
 
 
-        driver.quit();
+        driver.quit();*/
     }
-}
+
 
 
 
