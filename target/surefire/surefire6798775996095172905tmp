@@ -1,11 +1,11 @@
 #surefire
-#Fri Dec 06 14:46:46 SGT 2019
+#Fri Dec 27 10:25:56 SGT 2019
 testng.configurator=org.apache.maven.surefire.testng.conf.TestNG652Configurator
-testng.test.classpath=C\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\target\\test-classes
+testng.test.classpath=c\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\target\\test-classes
 usedefaultlisteners=false
 listener=org.uncommons.reportng.HTMLReporter,\n                                org.uncommons.reportng.JUnitXMLReporter
-classPathUrl.0=C\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\target\\test-classes
-classPathUrl.1=C\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\target\\classes
+classPathUrl.0=c\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\target\\test-classes
+classPathUrl.1=c\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\target\\classes
 classPathUrl.2=C\:\\Users\\Admin\\.m2\\repository\\org\\seleniumhq\\selenium\\selenium-java\\4.0.0-alpha-3\\selenium-java-4.0.0-alpha-3.jar
 classPathUrl.3=C\:\\Users\\Admin\\.m2\\repository\\org\\seleniumhq\\selenium\\selenium-api\\4.0.0-alpha-3\\selenium-api-4.0.0-alpha-3.jar
 classPathUrl.4=C\:\\Users\\Admin\\.m2\\repository\\org\\seleniumhq\\selenium\\selenium-chrome-driver\\4.0.0-alpha-3\\selenium-chrome-driver-4.0.0-alpha-3.jar
@@ -86,13 +86,13 @@ enableAssertions=true
 childDelegation=false
 testFwJarVersion=7.0.0
 preferTestsFromInStream=false
-testSuiteDefinitionTestSourceDirectory=C\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\src\\test\\java
-testSuiteXmlFiles0=C\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\testng.xml
+testSuiteDefinitionTestSourceDirectory=c\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\src\\test\\java
+testSuiteXmlFiles0=c\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\testng.xml
 rerunFailingTestsCount=0
 runOrder=filesystem
-runStatisticsFile=C\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\.surefire-16493F0CBC31460F2E52D38E90F162A38C5B44B0
+runStatisticsFile=c\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\.surefire-58329F7F5BF59F1ED785DEE33127DFA3452F5BCA
 isTrimStackTrace=true
-reportsDirectory=C\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\target\\surefire-reports
+reportsDirectory=c\:\\xampp\\htdocs\\Phoenix-Drogon-Maven\\target\\surefire-reports
 useSystemClassLoader=true
 useManifestOnlyJar=true
 failIfNoTests=false

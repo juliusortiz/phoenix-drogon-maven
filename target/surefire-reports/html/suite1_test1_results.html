@@ -12,15 +12,273 @@
 <body>
 <h1>Generic test cases</h1>
 <p>
-  Test duration: 125.579s
+  Test duration: 90.260s
 </p>
 
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">GenericTest.LoginAdmin</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  beforeTest
+      </td>
+  <td class="duration">
+    10.602s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"chrome"</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed<br/>
+from unknown error: web view not found<br/>
+&nbsp; (Session info: chrome=79.0.3945.88)<br/>
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;<br/>
+System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.43.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50261}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
+Session ID: 83aa903242ba5903960c71d73c147d75</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:633)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:495)<br />
+              Configuration.SetUp.beforeTest(SetUp.java:42)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)<br />
+              org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)<br />
+              org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)<br />
+              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1257)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:770)<br />
+              org.testng.TestRunner.run(TestRunner.java:591)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:402)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:304)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1102)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1032)<br />
+              org.testng.TestNG.run(TestNG.java:1000)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)<br />
+                </div>
+      </td>
+</tr>
+          <tr class="group">
+        <td colspan="3">GenericTest.LoginDispatcher</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  beforeTest
+      </td>
+  <td class="duration">
+    21.969s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"chrome"</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.WebDriverException: chrome not reachable<br/>
+&nbsp; (Session info: chrome=79.0.3945.88)<br/>
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;<br/>
+System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.43.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50365}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
+Session ID: f3c965887101d37260972f1b58a8a467</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:633)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.getWindowHandle(RemoteWebDriver.java:495)<br />
+              Configuration.SetUp.beforeTest(SetUp.java:42)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)<br />
+              org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)<br />
+              org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)<br />
+              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1257)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:770)<br />
+              org.testng.TestRunner.run(TestRunner.java:591)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:402)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:304)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1102)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1032)<br />
+              org.testng.TestNG.run(TestNG.java:1000)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)<br />
+                </div>
+      </td>
+</tr>
+          <tr class="group">
+        <td colspan="3">GenericTest.LoginIRT</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  beforeTest
+      </td>
+  <td class="duration">
+    14.979s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"chrome"</span><br />
+    
+        
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.SessionNotCreatedException: session not created<br/>
+from chrome not reachable<br/>
+&nbsp; (Session info: chrome=79.0.3945.88)<br/>
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;<br/>
+System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.43.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;<br/>
+Driver info: driver.version: ChromeDriver<br/>
+remote stacktrace: Backtrace:<br/>
+	Ordinal0 [0x002EA113+1548563]<br/>
+	Ordinal0 [0x0026DDA1+1039777]<br/>
+	Ordinal0 [0x001EE32E+516910]<br/>
+	Ordinal0 [0x001E8012+491538]<br/>
+	Ordinal0 [0x001E86EB+493291]<br/>
+	Ordinal0 [0x001E9855+497749]<br/>
+	Ordinal0 [0x001E5885+481413]<br/>
+	Ordinal0 [0x001EF0D0+520400]<br/>
+	Ordinal0 [0x0019C030+180272]<br/>
+	Ordinal0 [0x0019B59D+177565]<br/>
+	Ordinal0 [0x001995FB+169467]<br/>
+	Ordinal0 [0x0018160A+71178]<br/>
+	Ordinal0 [0x00182690+75408]<br/>
+	Ordinal0 [0x00182629+75305]<br/>
+	Ordinal0 [0x002871B7+1143223]<br/>
+	GetHandleVerifier [0x00382B46+507814]<br/>
+	GetHandleVerifier [0x00382864+507076]<br/>
+	GetHandleVerifier [0x00389F47+537511]<br/>
+	GetHandleVerifier [0x00383402+510050]<br/>
+	Ordinal0 [0x0027F29C+1110684]<br/>
+	Ordinal0 [0x0028938B+1151883]<br/>
+	Ordinal0 [0x002894F3+1152243]<br/>
+	Ordinal0 [0x002883F5+1147893]<br/>
+	BaseThreadInitThunk [0x74A16359+25]<br/>
+	RtlGetAppContainerNamedObjectPath [0x77157B74+228]<br/>
+	RtlGetAppContainerNamedObjectPath [0x77157B44+180]<br/>
+</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)<br />
+              org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)<br />
+              org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$1(ProtocolHandshake.java:127)<br />
+              java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)<br />
+              java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)<br />
+              java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)<br />
+              java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)<br />
+              java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)<br />
+              java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)<br />
+              java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)<br />
+              java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)<br />
+              java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)<br />
+              org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:129)<br />
+              org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:210)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)<br />
+              org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:75)<br />
+              org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:163)<br />
+              org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:150)<br />
+              org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:139)<br />
+              Configuration.SetUp.beforeTest(SetUp.java:30)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)<br />
+              org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)<br />
+              org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)<br />
+              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1257)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:770)<br />
+              org.testng.TestRunner.run(TestRunner.java:591)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:402)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:304)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1102)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1032)<br />
+              org.testng.TestNG.run(TestNG.java:1000)<br />
+              org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)<br />
+              org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)<br />
+              org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)<br />
+              org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)<br />
+                </div>
+      </td>
+</tr>
+    
+      </table>
 
 
 
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
           <tr>
         <td colspan="3" class="group">GenericTest.LoginAdmin</td>
       </tr>
@@ -30,28 +288,10 @@
                   Login
       </td>
   <td class="duration">
-    3.847s
+    0.000s
   </td>
   <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">GenericTest.LoginCustomer</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  Login
-      </td>
-  <td class="duration">
-    0.951s
-  </td>
-  <td class="result">
-        
+                               
     
         
 
@@ -66,10 +306,10 @@
                   Login
       </td>
   <td class="duration">
-    0.889s
+    0.000s
   </td>
   <td class="result">
-        
+                               
     
         
 
@@ -84,7 +324,29 @@
                   Login
       </td>
   <td class="duration">
-    0.892s
+    0.000s
+  </td>
+  <td class="result">
+                               
+    
+        
+
+      </td>
+</tr>
+      </table>
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginCustomer</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Login
+      </td>
+  <td class="duration">
+    1.351s
   </td>
   <td class="result">
         
