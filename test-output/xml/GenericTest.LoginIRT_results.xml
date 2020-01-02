@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Generic test cases"
-           tests="1"
+           tests="6"
            failures="0"
            errors="0"
            skipped="0"
-           time="1.441">
+           time="23.767">
   <properties />
   
   
-            <testcase name="Login" time="1.441" classname="GenericTest.LoginIRT" />
+            <testcase name="AcceptedOrdersPage" time="4.224" classname="GenericTest.LoginIRT" />
+                <testcase name="ImageSubmittedPage" time="4.284" classname="GenericTest.LoginIRT" />
+                <testcase name="Login" time="3.924" classname="GenericTest.LoginIRT" />
+                <testcase name="SettingsPage" time="4.206" classname="GenericTest.LoginIRT" />
+                <testcase name="NotificationPage" time="2.895" classname="GenericTest.LoginIRT" />
+                <testcase name="InTransitOrdersPage" time="4.234" classname="GenericTest.LoginIRT" />
       
 </testsuite>
