@@ -36,6 +36,7 @@ public class LoginAdmin extends SetUp {
         Assert.assertTrue(dashboardchart.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();
+        Thread.sleep(2000);
     }
 
     @Test(priority = 1)
@@ -141,8 +142,19 @@ public class LoginAdmin extends SetUp {
         Assert.assertTrue(notificationpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
+    }
+    @Test(priority = 10)
+    public void LogoutPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
+        Thread.sleep(2000);
+        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
+        Assert.assertTrue(logoutpage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Logout Page = PASSED" + RESET);
+        System.out.println();
 
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
+        Thread.sleep(2000);
         driver.quit();
     }
 }
