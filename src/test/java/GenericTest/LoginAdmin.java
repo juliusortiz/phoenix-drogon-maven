@@ -47,6 +47,7 @@ public class LoginAdmin extends SetUp {
         System.out.print(CYAN_BOLD_BRIGHT + "STATUS/CUSTOMER/DRIVER = PASSED" + RESET);
         System.out.println();
 
+
         driver.quit();
     }
 }

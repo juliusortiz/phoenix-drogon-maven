@@ -8,8 +8,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import Configuration.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.thread.IThreadWorkerFactory;
 
 
 public class LoginSales extends SetUp {
@@ -31,11 +33,31 @@ public class LoginSales extends SetUp {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println(CYAN_BOLD_BRIGHT + "Login Sales = PASSED" + RESET);
         System.out.println();
+
+        //lester
+
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div")).click(); //ser client
+        Thread.sleep(1000);
+       /* driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div[2]/div")).click(); //last 6 months
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div[2]/div")).click(); //last 6 months
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[7]/a")).click(); //view dr
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click(); //ongodeliveries
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")).click(); //deliverystatus
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //history
+        Thread.sleep(1000);
+*/
         driver.quit();
-       /* WebElement Header = driver.findElement(By.xpath(String.valueOf(sheet.getRow(2).getCell(4))));
-        Assert.assertTrue(Header.isDisplayed());
-        System.out.println("Login Customer = PASSED");
-        driver.quit();*/
     }
 }
 
