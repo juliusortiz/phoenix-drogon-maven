@@ -4,25 +4,25 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="5.644">
+           time="3.645">
   <properties />
-            <testcase name="Login" time="5.644" classname="GenericTest.LoginAdmin">
+            <testcase name="Login" time="3.645" classname="GenericTest.LoginAdmin">
                 <failure type="org.openqa.selenium.ElementClickInterceptedException"
-                  message="element click intercepted: Element &lt;button class=&quot;navbar__sidebar-toggle&quot;&gt;...&lt;/button&gt; is not clickable at point (304, 42). Other element would receive the click: &lt;div class=&quot;sidebar-content-wrapper&quot;&gt;...&lt;/div&gt;
+                  message="element click intercepted: Element &lt;button class=&quot;navbar__sidebar-toggle&quot;&gt;...&lt;/button&gt; is not clickable at point (121, 42). Other element would receive the click: &lt;div class=&quot;sidebar-content-wrapper&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=79.0.3945.88)
 Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
-System info: host: &apos;LAPTOP-OSLLQ5OA&apos;, ip: &apos;192.168.72.163&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.72.179&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57069}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 3e3cc343c2fe75a6f31ec2d54e3eab62"
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52503}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fd927f47811fb61be02a84abc5bfdc11"
               >
-<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="navbar__sidebar-toggle">...</button> is not clickable at point (304, 42). Other element would receive the click: <div class="sidebar-content-wrapper">...</div>
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="navbar__sidebar-toggle">...</button> is not clickable at point (121, 42). Other element would receive the click: <div class="sidebar-content-wrapper">...</div>
   (Session info: chrome=79.0.3945.88)
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
-System info: host: 'LAPTOP-OSLLQ5OA', ip: '192.168.72.163', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.179', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57069}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 3e3cc343c2fe75a6f31ec2d54e3eab62
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:52503}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: fd927f47811fb61be02a84abc5bfdc11
   sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
   sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -35,7 +35,7 @@ Session ID: 3e3cc343c2fe75a6f31ec2d54e3eab62
   org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
   org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
   org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-  GenericTest.LoginAdmin.Login(LoginAdmin.java:43)
+  GenericTest.LoginAdmin.Login(LoginAdmin.java:51)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

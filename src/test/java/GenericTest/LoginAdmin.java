@@ -37,6 +37,14 @@ public class LoginAdmin extends SetUp {
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();
 
+
+
+
+
+
+
+
+
         //lester
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/section/button[1]/a/div")).click(); //status

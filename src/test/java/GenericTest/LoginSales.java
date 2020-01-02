@@ -37,7 +37,7 @@ public class LoginSales extends SetUp {
         //lester
 
 
-        WebElement servingclient = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div")); //ser client
+ /*       WebElement servingclient = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div")); //ser client
         Assert.assertTrue(servingclient.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Serving Client = PASSED" + RESET);
         System.out.println();
@@ -47,7 +47,7 @@ public class LoginSales extends SetUp {
         System.out.print(CYAN_BOLD_BRIGHT + " = PASSED" + RESET);
         System.out.println();
         Thread.sleep(1000);
-        /* driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div[2]/div")).click(); //last 6 months
+        *//* driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div[2]/div")).click(); //last 6 months
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[7]/a")).click(); //view dr
         Thread.sleep(2000);
@@ -63,8 +63,8 @@ public class LoginSales extends SetUp {
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //history
         Thread.sleep(1000);
-*/
-        driver.quit();
+*//*
+        driver.quit();*/
     }
 }
 
