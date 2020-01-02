@@ -95,7 +95,7 @@ public class LoginSales extends SetUp {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 6)
+    /*@Test(priority = 6)
     public void ViewDR() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[1]/div/div")).click(); //dashboard button
@@ -105,7 +105,30 @@ public class LoginSales extends SetUp {
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to View DR page = PASSED" + RESET);
         System.out.println();
         Thread.sleep(2000);
-       // driver.quit();
+
+        }*/
+    @Test(priority = 6)
+    public void SettingsPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")).click(); //settings page
+        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")); //
+        Assert.assertTrue(settingspage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Settings Page = PASSED" + RESET);
+        System.out.println();
+        Thread.sleep(2000);
+    }
+
+    @Test(priority = 7)
+    public void NotificationPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")).click(); //notfication page
+        WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")); //
+        Assert.assertTrue(notificationpage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
+        System.out.println();
+        Thread.sleep(2000);
+        driver.quit();
+
     }
 }
 
