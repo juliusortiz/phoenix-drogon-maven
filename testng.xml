@@ -9,17 +9,10 @@
     <test name="Generic test cases">
         <parameter name="browser" value="chrome" />
         <classes>
-<<<<<<< HEAD
-           <!--   <class name="GenericTest.LoginAdmin"/>
-              <class name="GenericTest.LoginCustomer"/>
-              <class name="GenericTest.LoginDispatcher"/>
-              <class name="GenericTest.LoginIRT" />-->
-=======
-              <class name="GenericTest.LoginAdmin"/>
+                <class name="GenericTest.LoginAdmin"/>
               <class name="GenericTest.LoginCustomer"/>
               <class name="GenericTest.LoginDispatcher"/>
               <class name="GenericTest.LoginIRT" />
->>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
               <class name="GenericTest.LoginSales"/>
         </classes>
     </test>
