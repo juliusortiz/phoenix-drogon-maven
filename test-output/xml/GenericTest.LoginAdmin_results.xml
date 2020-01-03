@@ -4,38 +4,20 @@
            failures="0"
            errors="0"
            skipped="0"
-<<<<<<< HEAD
-           time="45.885">
+           time="47.971">
   <properties />
   
   
-            <testcase name="SettingsPage" time="4.247" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageTruckDriversPage" time="4.266" classname="GenericTest.LoginAdmin" />
-                <testcase name="LogoutPage" time="4.986" classname="GenericTest.LoginAdmin" />
-                <testcase name="NotificationPage" time="2.156" classname="GenericTest.LoginAdmin" />
-                <testcase name="DeliveryReceiptsPage" time="4.268" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageAdminPage" time="4.230" classname="GenericTest.LoginAdmin" />
-                <testcase name="Login" time="4.533" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageCustomerPage" time="4.252" classname="GenericTest.LoginAdmin" />
-                <testcase name="ProblemsReportedAndBackloadsPage" time="4.439" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageStatusesPage" time="4.247" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageReasonsPage" time="4.261" classname="GenericTest.LoginAdmin" />
-=======
-           time="44.643">
-  <properties />
-  
-  
-            <testcase name="SettingsPage" time="4.113" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageTruckDriversPage" time="4.111" classname="GenericTest.LoginAdmin" />
-                <testcase name="LogoutPage" time="4.708" classname="GenericTest.LoginAdmin" />
-                <testcase name="NotificationPage" time="2.081" classname="GenericTest.LoginAdmin" />
-                <testcase name="DeliveryReceiptsPage" time="4.119" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageAdminPage" time="4.152" classname="GenericTest.LoginAdmin" />
-                <testcase name="Login" time="4.822" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageCustomerPage" time="4.152" classname="GenericTest.LoginAdmin" />
-                <testcase name="ProblemsReportedAndBackloadsPage" time="4.103" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageStatusesPage" time="4.134" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageReasonsPage" time="4.148" classname="GenericTest.LoginAdmin" />
->>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
+            <testcase name="ManageAdminPage" time="4.255" classname="GenericTest.LoginAdmin" />
+                <testcase name="ProblemsReportedAndBackloadsPage" time="4.238" classname="GenericTest.LoginAdmin" />
+                <testcase name="SettingsPage" time="6.470" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageStatusesPage" time="4.262" classname="GenericTest.LoginAdmin" />
+                <testcase name="NotificationPage" time="2.150" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageReasonsPage" time="4.280" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageTruckDriversPage" time="4.259" classname="GenericTest.LoginAdmin" />
+                <testcase name="DeliveryReceiptsPage" time="4.288" classname="GenericTest.LoginAdmin" />
+                <testcase name="LogoutPage" time="5.152" classname="GenericTest.LoginAdmin" />
+                <testcase name="Login" time="4.374" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageCustomerPage" time="4.243" classname="GenericTest.LoginAdmin" />
       
 </testsuite>

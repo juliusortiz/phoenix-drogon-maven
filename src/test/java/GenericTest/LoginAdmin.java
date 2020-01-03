@@ -103,7 +103,7 @@ public class LoginAdmin extends SetUp {
     public void ProblemsReportedAndBackloadsPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[7]/div")).click(); //problems and back reloads
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[7]/div/div/label")).click(); //problems and back reloads
         WebElement ProblemsReportedAndBackloads = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(ProblemsReportedAndBackloads.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Problems Reported And Backloads page = PASSED" + RESET);
@@ -127,8 +127,12 @@ public class LoginAdmin extends SetUp {
     public void SettingsPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a")).click(); //settings page
-        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/a")); //
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a")).click(); //settings page //request box
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")).click(); //about this app
+        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")); //
         Assert.assertTrue(settingspage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Settings Page = PASSED" + RESET);
         System.out.println();

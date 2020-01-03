@@ -88,7 +88,11 @@ public class LoginCustomer extends SetUp {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/footer/div/section[1]/a/span")).click(); //settings page
-        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/footer/div/section[1]/a/span")); //
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")).click(); //about this app
+        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")); //
         Assert.assertTrue(settingspage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Settings Page = PASSED" + RESET);
         System.out.println();
@@ -102,6 +106,19 @@ public class LoginCustomer extends SetUp {
         Assert.assertTrue(notificationpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
         System.out.println();
+        Thread.sleep(2000);
+
+    }
+    @Test(priority = 7)
+    public void LogoutPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
+        Thread.sleep(2000);
+        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")); //
+        Assert.assertTrue(logoutpage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Logout Page = PASSED" + RESET);
+        System.out.println();
+
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/footer/div/section[2]/button/span")).click();
         Thread.sleep(2000);
         driver.quit();
     }

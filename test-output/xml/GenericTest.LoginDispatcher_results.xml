@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Generic test cases"
-           tests="6"
+           tests="7"
            failures="0"
            errors="0"
            skipped="0"
-<<<<<<< HEAD
-           time="23.580">
+           time="30.265">
   <properties />
   
   
-            <testcase name="NotificationPage" time="2.870" classname="GenericTest.LoginDispatcher" />
-                <testcase name="Login" time="3.410" classname="GenericTest.LoginDispatcher" />
-                <testcase name="ManageReasonsPage" time="4.239" classname="GenericTest.LoginDispatcher" />
-                <testcase name="SettingsPage" time="4.254" classname="GenericTest.LoginDispatcher" />
-                <testcase name="ProblemsReportedPage" time="4.194" classname="GenericTest.LoginDispatcher" />
-                <testcase name="DeliveryHistoryPage" time="4.613" classname="GenericTest.LoginDispatcher" />
-=======
-           time="22.505">
-  <properties />
-  
-  
-            <testcase name="ProblemsReportedPage" time="4.125" classname="GenericTest.LoginDispatcher" />
-                <testcase name="NotificationPage" time="2.682" classname="GenericTest.LoginDispatcher" />
-                <testcase name="SettingsPage" time="4.112" classname="GenericTest.LoginDispatcher" />
-                <testcase name="ManageReasonsPage" time="4.138" classname="GenericTest.LoginDispatcher" />
-                <testcase name="Login" time="3.309" classname="GenericTest.LoginDispatcher" />
-                <testcase name="DeliveryHistoryPage" time="4.139" classname="GenericTest.LoginDispatcher" />
->>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
+            <testcase name="ProblemsReportedPage" time="4.250" classname="GenericTest.LoginDispatcher" />
+                <testcase name="ManageReasonsPage" time="4.278" classname="GenericTest.LoginDispatcher" />
+                <testcase name="Login" time="3.841" classname="GenericTest.LoginDispatcher" />
+                <testcase name="SettingsPage" time="6.509" classname="GenericTest.LoginDispatcher" />
+                <testcase name="DeliveryHistoryPage" time="4.233" classname="GenericTest.LoginDispatcher" />
+                <testcase name="NotificationPage" time="2.149" classname="GenericTest.LoginDispatcher" />
+                <testcase name="LogoutPage" time="5.005" classname="GenericTest.LoginDispatcher" />
       
 </testsuite>
