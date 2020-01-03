@@ -10,10 +10,10 @@
         <parameter name="browser" value="chrome" />
         <classes>
               <class name="GenericTest.LoginAdmin"/>
-      <!--        <class name="GenericTest.LoginCustomer"/>
+              <class name="GenericTest.LoginCustomer"/>
               <class name="GenericTest.LoginDispatcher"/>
               <class name="GenericTest.LoginIRT" />
-              <class name="GenericTest.LoginSales"/>-->
+              <class name="GenericTest.LoginSales"/>
         </classes>
     </test>
 

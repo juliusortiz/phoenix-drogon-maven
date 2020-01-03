@@ -4,15 +4,15 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="23.301">
+           time="22.505">
   <properties />
   
   
-            <testcase name="ManageReasonsPage" time="4.303" classname="GenericTest.LoginDispatcher" />
-                <testcase name="NotificationPage" time="2.847" classname="GenericTest.LoginDispatcher" />
-                <testcase name="Login" time="3.425" classname="GenericTest.LoginDispatcher" />
-                <testcase name="SettingsPage" time="4.229" classname="GenericTest.LoginDispatcher" />
-                <testcase name="ProblemsReportedPage" time="4.213" classname="GenericTest.LoginDispatcher" />
-                <testcase name="DeliveryHistoryPage" time="4.284" classname="GenericTest.LoginDispatcher" />
+            <testcase name="ProblemsReportedPage" time="4.125" classname="GenericTest.LoginDispatcher" />
+                <testcase name="NotificationPage" time="2.682" classname="GenericTest.LoginDispatcher" />
+                <testcase name="SettingsPage" time="4.112" classname="GenericTest.LoginDispatcher" />
+                <testcase name="ManageReasonsPage" time="4.138" classname="GenericTest.LoginDispatcher" />
+                <testcase name="Login" time="3.309" classname="GenericTest.LoginDispatcher" />
+                <testcase name="DeliveryHistoryPage" time="4.139" classname="GenericTest.LoginDispatcher" />
       
 </testsuite>
