@@ -12,11 +12,295 @@
 <body>
 <h1>Generic test cases</h1>
 <p>
+<<<<<<< HEAD
   Test duration: 6.872s
+=======
+  Test duration: 315.334s
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
 </p>
 
 
 
+<<<<<<< HEAD
+=======
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginIRT</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  AcceptedOrdersPage
+      </td>
+  <td class="duration">
+    12.122s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[2]/aside/div/nav/a[3]/div/div&quot;}<br/>
+&nbsp; (Session info: chrome=79.0.3945.88)<br/>
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;<br/>
+System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.43.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62582}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
+Session ID: 1c3da9492d8b089dc5d0a9aa5dad3c5c<br/>
+*** Element info: {Using=xpath, value=/html/body/div[2]/aside/div/nav/a[3]/div/div}</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)<br />
+              org.openqa.selenium.By$ByXPath.findElement(By.java:396)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)<br />
+              GenericTest.LoginIRT.AcceptedOrdersPage(LoginIRT.java:59)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br />
+              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)<br />
+              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)<br />
+              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
+              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)<br />
+              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1257)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:770)<br />
+              org.testng.TestRunner.run(TestRunner.java:591)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:402)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:304)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1102)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1032)<br />
+              org.testng.TestNG.run(TestNG.java:1000)<br />
+              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)<br />
+              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  ImageSubmittedPage
+      </td>
+  <td class="duration">
+    10.055s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[2]/main/header/button[1]/span&quot;}<br/>
+&nbsp; (Session info: chrome=79.0.3945.88)<br/>
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;<br/>
+System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.43.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62582}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
+Session ID: 1c3da9492d8b089dc5d0a9aa5dad3c5c<br/>
+*** Element info: {Using=xpath, value=/html/body/div[2]/main/header/button[1]/span}</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)<br />
+              org.openqa.selenium.By$ByXPath.findElement(By.java:396)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)<br />
+              GenericTest.LoginIRT.ImageSubmittedPage(LoginIRT.java:68)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br />
+              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)<br />
+              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)<br />
+              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
+              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)<br />
+              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1257)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:770)<br />
+              org.testng.TestRunner.run(TestRunner.java:591)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:402)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:304)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1102)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1032)<br />
+              org.testng.TestNG.run(TestNG.java:1000)<br />
+              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)<br />
+              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NotificationPage
+      </td>
+  <td class="duration">
+    10.037s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[2]/main/header/a[2]/span&quot;}<br/>
+&nbsp; (Session info: chrome=79.0.3945.88)<br/>
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;<br/>
+System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.43.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62582}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
+Session ID: 1c3da9492d8b089dc5d0a9aa5dad3c5c<br/>
+*** Element info: {Using=xpath, value=/html/body/div[2]/main/header/a[2]/span}</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)<br />
+              org.openqa.selenium.By$ByXPath.findElement(By.java:396)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)<br />
+              GenericTest.LoginIRT.NotificationPage(LoginIRT.java:92)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br />
+              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)<br />
+              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)<br />
+              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
+              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)<br />
+              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1257)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:770)<br />
+              org.testng.TestRunner.run(TestRunner.java:591)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:402)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:304)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1102)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1032)<br />
+              org.testng.TestNG.run(TestNG.java:1000)<br />
+              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)<br />
+              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  SettingsPage
+      </td>
+  <td class="duration">
+    10.047s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[2]/main/header/button[1]/span&quot;}<br/>
+&nbsp; (Session info: chrome=79.0.3945.88)<br/>
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html<br/>
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;<br/>
+System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.43.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62582}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
+Session ID: 1c3da9492d8b089dc5d0a9aa5dad3c5c<br/>
+*** Element info: {Using=xpath, value=/html/body/div[2]/main/header/button[1]/span}</b></a><br />
+    <div class="stackTrace" id="exception-3">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)<br />
+              org.openqa.selenium.By$ByXPath.findElement(By.java:396)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)<br />
+              GenericTest.LoginIRT.SettingsPage(LoginIRT.java:80)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br />
+              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)<br />
+              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)<br />
+              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
+              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)<br />
+              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1257)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:770)<br />
+              org.testng.TestRunner.run(TestRunner.java:591)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:402)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:304)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1102)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1032)<br />
+              org.testng.TestNG.run(TestNG.java:1000)<br />
+              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)<br />
+              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
@@ -25,10 +309,59 @@
             
 <tr>
   <td class="method">
+<<<<<<< HEAD
                   DeliveryStatus
       </td>
   <td class="duration">
     0.014s
+=======
+                  DeliveryReceiptsPage
+      </td>
+  <td class="duration">
+    4.119s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Login
+      </td>
+  <td class="duration">
+    4.822s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LogoutPage
+      </td>
+  <td class="duration">
+    4.708s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  ManageAdminPage
+      </td>
+  <td class="duration">
+    4.152s
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   </td>
   <td class="result">
         
@@ -95,7 +428,11 @@ Session ID: 3ab334ea03c82ca6f076bc487d5bd2d5<br/>
                   History
       </td>
   <td class="duration">
+<<<<<<< HEAD
     0.015s
+=======
+    4.152s
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   </td>
   <td class="result">
         
@@ -162,7 +499,11 @@ Session ID: 3ab334ea03c82ca6f076bc487d5bd2d5<br/>
                   Last6Months
       </td>
   <td class="duration">
+<<<<<<< HEAD
     0.017s
+=======
+    4.148s
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   </td>
   <td class="result">
         
@@ -229,7 +570,11 @@ Session ID: 3ab334ea03c82ca6f076bc487d5bd2d5<br/>
                   Login
       </td>
   <td class="duration">
+<<<<<<< HEAD
     0.593s
+=======
+    4.134s
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   </td>
   <td class="result">
         
@@ -296,7 +641,11 @@ Session ID: 3ab334ea03c82ca6f076bc487d5bd2d5<br/>
                   NotificationPage
       </td>
   <td class="duration">
+<<<<<<< HEAD
     0.017s
+=======
+    4.111s
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   </td>
   <td class="result">
         
@@ -363,7 +712,11 @@ Session ID: 3ab334ea03c82ca6f076bc487d5bd2d5<br/>
                   OnGoingDeliveries
       </td>
   <td class="duration">
+<<<<<<< HEAD
     0.018s
+=======
+    2.081s
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   </td>
   <td class="result">
         
@@ -430,7 +783,349 @@ Session ID: 3ab334ea03c82ca6f076bc487d5bd2d5<br/>
                   ServingClient
       </td>
   <td class="duration">
+<<<<<<< HEAD
     0.018s
+=======
+    4.103s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  SettingsPage
+      </td>
+  <td class="duration">
+    4.113s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginCustomer</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  CDSSProfilePage
+      </td>
+  <td class="duration">
+    4.133s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  DeliveryReceiptsPage
+      </td>
+  <td class="duration">
+    4.133s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  DeliveryStatusPage
+      </td>
+  <td class="duration">
+    5.250s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  HistoryPage
+      </td>
+  <td class="duration">
+    4.113s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Login
+      </td>
+  <td class="duration">
+    0.307s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NotificationPage
+      </td>
+  <td class="duration">
+    2.664s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  SettingsPage
+      </td>
+  <td class="duration">
+    4.116s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginDispatcher</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  DeliveryHistoryPage
+      </td>
+  <td class="duration">
+    4.139s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Login
+      </td>
+  <td class="duration">
+    3.309s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  ManageReasonsPage
+      </td>
+  <td class="duration">
+    4.138s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NotificationPage
+      </td>
+  <td class="duration">
+    2.682s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  ProblemsReportedPage
+      </td>
+  <td class="duration">
+    4.125s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  SettingsPage
+      </td>
+  <td class="duration">
+    4.112s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginIRT</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  InTransitOrdersPage
+      </td>
+  <td class="duration">
+    4.138s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Login
+      </td>
+  <td class="duration">
+    3.308s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginSales</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  DeliveryStatus
+      </td>
+  <td class="duration">
+    4.131s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  History
+      </td>
+  <td class="duration">
+    4.116s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Last6Months
+      </td>
+  <td class="duration">
+    3.110s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Login
+      </td>
+  <td class="duration">
+    0.299s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NotificationPage
+      </td>
+  <td class="duration">
+    2.684s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  OnGoingDeliveries
+      </td>
+  <td class="duration">
+    4.131s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  ServingClient
+      </td>
+  <td class="duration">
+    4.573s
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   </td>
   <td class="result">
         
@@ -497,7 +1192,11 @@ Session ID: 3ab334ea03c82ca6f076bc487d5bd2d5<br/>
                   SettingsPage
       </td>
   <td class="duration">
+<<<<<<< HEAD
     0.015s
+=======
+    4.143s
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   </td>
   <td class="result">
         

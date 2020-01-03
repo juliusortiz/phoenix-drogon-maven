@@ -4,6 +4,7 @@
            failures="0"
            errors="0"
            skipped="0"
+<<<<<<< HEAD
            time="45.885">
   <properties />
   
@@ -19,5 +20,22 @@
                 <testcase name="ProblemsReportedAndBackloadsPage" time="4.439" classname="GenericTest.LoginAdmin" />
                 <testcase name="ManageStatusesPage" time="4.247" classname="GenericTest.LoginAdmin" />
                 <testcase name="ManageReasonsPage" time="4.261" classname="GenericTest.LoginAdmin" />
+=======
+           time="44.643">
+  <properties />
+  
+  
+            <testcase name="SettingsPage" time="4.113" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageTruckDriversPage" time="4.111" classname="GenericTest.LoginAdmin" />
+                <testcase name="LogoutPage" time="4.708" classname="GenericTest.LoginAdmin" />
+                <testcase name="NotificationPage" time="2.081" classname="GenericTest.LoginAdmin" />
+                <testcase name="DeliveryReceiptsPage" time="4.119" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageAdminPage" time="4.152" classname="GenericTest.LoginAdmin" />
+                <testcase name="Login" time="4.822" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageCustomerPage" time="4.152" classname="GenericTest.LoginAdmin" />
+                <testcase name="ProblemsReportedAndBackloadsPage" time="4.103" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageStatusesPage" time="4.134" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageReasonsPage" time="4.148" classname="GenericTest.LoginAdmin" />
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
       
 </testsuite>

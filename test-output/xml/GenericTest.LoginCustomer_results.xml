@@ -4,6 +4,7 @@
            failures="0"
            errors="0"
            skipped="0"
+<<<<<<< HEAD
            time="27.336">
   <properties />
   
@@ -15,5 +16,18 @@
                 <testcase name="DeliveryReceiptsPage" time="4.248" classname="GenericTest.LoginCustomer" />
                 <testcase name="SettingsPage" time="4.328" classname="GenericTest.LoginCustomer" />
                 <testcase name="NotificationPage" time="2.912" classname="GenericTest.LoginCustomer" />
+=======
+           time="24.716">
+  <properties />
+  
+  
+            <testcase name="Login" time="0.307" classname="GenericTest.LoginCustomer" />
+                <testcase name="DeliveryStatusPage" time="5.250" classname="GenericTest.LoginCustomer" />
+                <testcase name="NotificationPage" time="2.664" classname="GenericTest.LoginCustomer" />
+                <testcase name="SettingsPage" time="4.116" classname="GenericTest.LoginCustomer" />
+                <testcase name="CDSSProfilePage" time="4.133" classname="GenericTest.LoginCustomer" />
+                <testcase name="HistoryPage" time="4.113" classname="GenericTest.LoginCustomer" />
+                <testcase name="DeliveryReceiptsPage" time="4.133" classname="GenericTest.LoginCustomer" />
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
       
 </testsuite>

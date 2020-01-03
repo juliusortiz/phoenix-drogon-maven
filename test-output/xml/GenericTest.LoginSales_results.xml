@@ -4,7 +4,11 @@
            failures="8"
            errors="0"
            skipped="0"
+<<<<<<< HEAD
            time="0.707">
+=======
+           time="27.187">
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
   <properties />
             <testcase name="ServingClient" time="0.018" classname="GenericTest.LoginSales">
                 <failure type="org.openqa.selenium.NoSuchElementException"
@@ -545,4 +549,16 @@ Session ID: 3ab334ea03c82ca6f076bc487d5bd2d5
   
   
   
+<<<<<<< HEAD
+=======
+            <testcase name="DeliveryStatus" time="4.131" classname="GenericTest.LoginSales" />
+                <testcase name="ServingClient" time="4.573" classname="GenericTest.LoginSales" />
+                <testcase name="Last6Months" time="3.110" classname="GenericTest.LoginSales" />
+                <testcase name="OnGoingDeliveries" time="4.131" classname="GenericTest.LoginSales" />
+                <testcase name="NotificationPage" time="2.684" classname="GenericTest.LoginSales" />
+                <testcase name="History" time="4.116" classname="GenericTest.LoginSales" />
+                <testcase name="SettingsPage" time="4.143" classname="GenericTest.LoginSales" />
+                <testcase name="Login" time="0.299" classname="GenericTest.LoginSales" />
+      
+>>>>>>> 2821da23467123f2a27686ad8df1e7363f5ce7a0
 </testsuite>
