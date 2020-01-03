@@ -1,6 +1,7 @@
 package Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -41,8 +42,8 @@ public class SetUp {
         driver.get("https://phoenix_epod_app.dice205.asia/");
         driver.getWindowHandle();
         driver.manage().window().maximize();
-    }
 
+    }
 
 
 }

@@ -72,12 +72,11 @@ public class LoginAdmin extends SetUp {
         Assert.assertTrue(ManageCustomerHeader.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Customer page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
     }
 
     @Test(priority = 4)
     public void ManageTruckDriversPage() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[5]/div[1]")).click(); //manage truck drivers
         WebElement ManageTruckDriverHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));

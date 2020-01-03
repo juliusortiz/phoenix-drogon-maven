@@ -32,24 +32,27 @@ public class LoginDispatcher extends SetUp {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println(CYAN_BOLD_BRIGHT + "Login Dispatcher = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(3000);
        /* WebElement Header = driver.findElement(By.xpath(String.valueOf(sheet.getRow(2).getCell(4))));
         Assert.assertTrue(Header.isDisplayed());
         System.out.println("Login Customer = PASSED");
         driver.quit();*/
+        Thread.sleep(2000);
     }
 
-        @Test(priority = 1)
-        public void DeliveryHistoryPage() throws InterruptedException, IOException {
-            driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-            Thread.sleep(2000);
-            driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click(); //delivery history page
-            WebElement deliveryhistorypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")); //
-            Assert.assertTrue(deliveryhistorypage.isDisplayed());
-            System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Delivery History Page = PASSED" + RESET);
-            System.out.println();
-            Thread.sleep(2000);
-        }
+    @Test(priority = 1)
+    public void DeliveryHistoryPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div")).click(); //delivery history page
+        WebElement deliveryhistorypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div")); //
+        Assert.assertTrue(deliveryhistorypage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Delivery History Page = PASSED" + RESET);
+        System.out.println();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/div/div[2]/div/article[1]/div/footer/a")).click(); //read more
+        Thread.sleep(2000);
+    }
+
         @Test(priority = 2)
         public void ProblemsReportedPage() throws InterruptedException, IOException {
             driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
@@ -61,6 +64,7 @@ public class LoginDispatcher extends SetUp {
             System.out.println();
             Thread.sleep(2000);
         }
+
         @Test(priority = 3)
         public void ManageReasonsPage() throws InterruptedException, IOException {
             driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
@@ -70,8 +74,11 @@ public class LoginDispatcher extends SetUp {
             Assert.assertTrue(managereasonspage.isDisplayed());
             System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Reasons Page = PASSED" + RESET);
             System.out.println();
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div/div/div/div[2]/div")).click(); //backload
             Thread.sleep(2000);
         }
+
         @Test(priority = 4)
         public void SettingsPage() throws InterruptedException, IOException {
             driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
@@ -87,6 +94,7 @@ public class LoginDispatcher extends SetUp {
             System.out.println();
             Thread.sleep(2000);
         }
+
         @Test(priority = 5)
         public void NotificationPage() throws InterruptedException, IOException {
             driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")).click(); //notfication page
@@ -96,6 +104,7 @@ public class LoginDispatcher extends SetUp {
             System.out.println();
             Thread.sleep(2000);
         }
+
         @Test(priority = 6)
          public void LogoutPage() throws InterruptedException, IOException {
              driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
