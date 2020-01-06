@@ -59,23 +59,23 @@ public class LoginCustomer extends SetUp {
         Assert.assertTrue(deliveryreceiptspage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Delivery Receipts Page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
     @Test(priority = 3)
     public void HistoryPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[4]/div/div")).click(); //history page
         WebElement historypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[4]/div/div")); //
         Assert.assertTrue(historypage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to History Page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
     @Test(priority = 4)
     public void CDSSProfilePage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[5]/div/div")).click(); //cdss profile page
         WebElement historypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[5]/div/div")); //
         Assert.assertTrue(historypage.isDisplayed());

@@ -76,7 +76,7 @@ public class LoginAdmin extends SetUp {
 
     @Test(priority = 4)
     public void ManageTruckDriversPage() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[5]/div[1]")).click(); //manage truck drivers
         WebElement ManageTruckDriverHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
@@ -126,7 +126,7 @@ public class LoginAdmin extends SetUp {
     public void SettingsPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a")).click(); //settings page //request box
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")).click(); //settings page //request box
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
         Thread.sleep(1000);
