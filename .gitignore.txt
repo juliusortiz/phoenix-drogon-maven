@@ -1,2 +1,2 @@
-# Untrack xml files
-*.xml
+# Untrack workspace .xml
+.idea/workspace.xml
