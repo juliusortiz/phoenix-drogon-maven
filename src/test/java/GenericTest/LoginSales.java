@@ -60,8 +60,6 @@ public class LoginSales extends SetUp {
     }
     @Test(priority = 3)
     public void ViewDRPage() throws InterruptedException, IOException {
-       driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[1]/div/div")).click(); //dashboard button
         Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[7]/a")).click(); //view dr
