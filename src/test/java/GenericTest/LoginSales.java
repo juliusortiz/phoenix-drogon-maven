@@ -58,19 +58,22 @@ public class LoginSales extends SetUp {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div[2]/div")).click(); //last 6 months
         Thread.sleep(2000);
     }
- /*   @Test(priority = 3)
+    @Test(priority = 3)
     public void ViewDRPage() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/main/table/tbody/tr[2]/td[7]/a")).click(); //view dr
-        WebElement viewdeliveryreceiptpage = driver.findElement(By.xpath("/html/body/div[2]/main/section/main/table/tbody/tr[2]/td[7]/a")); //
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[1]/div/div")).click(); //dashboard button
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[7]/a")).click(); //view dr
+        WebElement viewdeliveryreceiptpage = driver.findElement(By.xpath("/html/body")); //
         Assert.assertTrue(viewdeliveryreceiptpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to View DR page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(1000);
-    }*/
+        Thread.sleep(2000);
+    }
+
     @Test(priority = 4)
     public void OnGoingDeliveries() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click(); //ongodeliveries
         WebElement ongoingdeliveries = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")); //ongodeliveries
         Assert.assertTrue(ongoingdeliveries.isDisplayed());
@@ -147,7 +150,7 @@ public class LoginSales extends SetUp {
         System.out.println();
 
         driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.quit();
     }
 }
