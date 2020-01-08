@@ -1,2 +1,0 @@
-#Ignore testNG.xml
-/testng.xml
