@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="50.696">
+           time="46.256">
   <properties />
   
   
-            <testcase name="Login" time="0.321" classname="GenericTest.LoginSales" />
-                <testcase name="ServingClient" time="7.729" classname="GenericTest.LoginSales" />
-                <testcase name="LogoutPage" time="3.717" classname="GenericTest.LoginSales" />
-                <testcase name="History" time="7.993" classname="GenericTest.LoginSales" />
-                <testcase name="SettingsPage" time="6.224" classname="GenericTest.LoginSales" />
-                <testcase name="OnGoingDeliveries" time="8.568" classname="GenericTest.LoginSales" />
-                <testcase name="DeliveryStatus" time="8.841" classname="GenericTest.LoginSales" />
-                <testcase name="ViewDRPage" time="2.091" classname="GenericTest.LoginSales" />
-                <testcase name="NotificationPage" time="2.077" classname="GenericTest.LoginSales" />
-                <testcase name="Last6Months" time="3.135" classname="GenericTest.LoginSales" />
+            <testcase name="NotificationPage" time="2.140" classname="GenericTest.LoginSales" />
+                <testcase name="ViewDRPage" time="2.155" classname="GenericTest.LoginSales" />
+                <testcase name="LogoutPage" time="4.152" classname="GenericTest.LoginSales" />
+                <testcase name="DeliveryStatus" time="7.303" classname="GenericTest.LoginSales" />
+                <testcase name="ServingClient" time="6.693" classname="GenericTest.LoginSales" />
+                <testcase name="Last6Months" time="3.307" classname="GenericTest.LoginSales" />
+                <testcase name="Login" time="0.873" classname="GenericTest.LoginSales" />
+                <testcase name="OnGoingDeliveries" time="7.244" classname="GenericTest.LoginSales" />
+                <testcase name="SettingsPage" time="6.576" classname="GenericTest.LoginSales" />
+                <testcase name="History" time="5.813" classname="GenericTest.LoginSales" />
       
 </testsuite>

@@ -30,19 +30,19 @@ public class LoginAdmin extends SetUp {
         driver.findElement(By.xpath(String.valueOf(sheet.getRow(6).getCell(0))))
                 .sendKeys(String.valueOf(sheet.getRow(6).getCell(1)));
         driver.findElement(By.xpath(String.valueOf(sheet.getRow(7).getCell(0)))).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         WebElement dashboardchart = driver.findElement(By.cssSelector(String.valueOf(sheet.getRow(1).getCell(5))));
         Assert.assertTrue(dashboardchart.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
     @Test(priority = 1)
     public void ManageAdminPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[2]/div[1]")).click(); //manage admin page
         WebElement ManageAdminheader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(ManageAdminheader.isDisplayed());
@@ -160,7 +160,7 @@ public class LoginAdmin extends SetUp {
         System.out.println();
 
         driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         driver.quit();
     }
 }
