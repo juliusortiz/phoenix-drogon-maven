@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="53.029">
+           time="48.933">
   <properties />
   
   
-            <testcase name="DeliveryStatus" time="9.467" classname="GenericTest.LoginSales" />
-                <testcase name="ViewDRPage" time="6.666" classname="GenericTest.LoginSales" />
-                <testcase name="LogoutPage" time="5.228" classname="GenericTest.LoginSales" />
-                <testcase name="SettingsPage" time="6.826" classname="GenericTest.LoginSales" />
-                <testcase name="NotificationPage" time="2.285" classname="GenericTest.LoginSales" />
-                <testcase name="ServingClient" time="4.908" classname="GenericTest.LoginSales" />
-                <testcase name="Last6Months" time="3.241" classname="GenericTest.LoginSales" />
-                <testcase name="Login" time="0.524" classname="GenericTest.LoginSales" />
-                <testcase name="OnGoingDeliveries" time="6.170" classname="GenericTest.LoginSales" />
-                <testcase name="History" time="7.714" classname="GenericTest.LoginSales" />
+            <testcase name="Last6Months" time="3.271" classname="GenericTest.LoginSales" />
+                <testcase name="Login" time="0.427" classname="GenericTest.LoginSales" />
+                <testcase name="DeliveryStatus" time="8.230" classname="GenericTest.LoginSales" />
+                <testcase name="SettingsPage" time="6.686" classname="GenericTest.LoginSales" />
+                <testcase name="NotificationPage" time="2.176" classname="GenericTest.LoginSales" />
+                <testcase name="ServingClient" time="6.627" classname="GenericTest.LoginSales" />
+                <testcase name="History" time="6.932" classname="GenericTest.LoginSales" />
+                <testcase name="LogoutPage" time="4.049" classname="GenericTest.LoginSales" />
+                <testcase name="ViewDRPage" time="2.191" classname="GenericTest.LoginSales" />
+                <testcase name="OnGoingDeliveries" time="8.344" classname="GenericTest.LoginSales" />
       
 </testsuite>

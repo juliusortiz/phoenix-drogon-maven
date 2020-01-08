@@ -39,7 +39,7 @@ public class LoginDispatcher extends SetUp {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 1)
+/*    @Test(priority = 1)
     public void DeliveryHistoryPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
         Thread.sleep(2000);
@@ -51,21 +51,21 @@ public class LoginDispatcher extends SetUp {
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/div/div[2]/div/article[1]/div/footer/a")).click(); //read more
         Thread.sleep(2000);
-    }
+    }*/
 
-        @Test(priority = 2)
+        @Test(priority = 1)
         public void ProblemsReportedPage() throws InterruptedException, IOException {
             driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-            Thread.sleep(2000);
-            driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")).click(); //problems reported page
-            WebElement problemsreportedpage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")); //
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")).click(); //problems reported page
+            WebElement problemsreportedpage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")); //
             Assert.assertTrue(problemsreportedpage.isDisplayed());
             System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Problems Reported Page = PASSED" + RESET);
             System.out.println();
             Thread.sleep(2000);
         }
 
-        @Test(priority = 3)
+     /*   @Test(priority = 3)
         public void ManageReasonsPage() throws InterruptedException, IOException {
             driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
             Thread.sleep(2000);
@@ -77,9 +77,9 @@ public class LoginDispatcher extends SetUp {
             Thread.sleep(1000);
             driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div/div/div/div[2]/div")).click(); //backload
             Thread.sleep(2000);
-        }
+        }*/
 
-        @Test(priority = 4)
+        @Test(priority = 2)
         public void SettingsPage() throws InterruptedException, IOException {
             driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
             Thread.sleep(2000);
@@ -95,7 +95,7 @@ public class LoginDispatcher extends SetUp {
             Thread.sleep(2000);
         }
 
-        @Test(priority = 5)
+        @Test(priority = 3)
         public void NotificationPage() throws InterruptedException, IOException {
             driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")).click(); //notfication page
             WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")); //
@@ -105,7 +105,7 @@ public class LoginDispatcher extends SetUp {
             Thread.sleep(2000);
         }
 
-        @Test(priority = 6)
+        @Test(priority = 4)
          public void LogoutPage() throws InterruptedException, IOException {
              driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
              Thread.sleep(2000);
@@ -115,7 +115,7 @@ public class LoginDispatcher extends SetUp {
             System.out.println();
 
             driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             driver.quit();
     }
     }
