@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Generic test cases"
-           tests="1"
+           tests="8"
            failures="0"
            errors="0"
            skipped="0"
-           time="1.351">
+           time="35.494">
   <properties />
   
   
-            <testcase name="Login" time="1.351" classname="GenericTest.LoginCustomer" />
+            <testcase name="Login" time="0.299" classname="GenericTest.LoginCustomer" />
+                <testcase name="DeliveryStatusPage" time="5.816" classname="GenericTest.LoginCustomer" />
+                <testcase name="DeliveryReceiptsPage" time="5.114" classname="GenericTest.LoginCustomer" />
+                <testcase name="LogoutPage" time="4.710" classname="GenericTest.LoginCustomer" />
+                <testcase name="NotificationPage" time="2.076" classname="GenericTest.LoginCustomer" />
+                <testcase name="HistoryPage" time="6.133" classname="GenericTest.LoginCustomer" />
+                <testcase name="SettingsPage" time="6.223" classname="GenericTest.LoginCustomer" />
+                <testcase name="CDSSProfilePage" time="5.123" classname="GenericTest.LoginCustomer" />
       
 </testsuite>
