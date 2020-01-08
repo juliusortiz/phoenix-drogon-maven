@@ -1,88 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Generic test cases"
            tests="10"
-           failures="1"
+           failures="0"
            errors="0"
            skipped="0"
-           time="52.922">
+           time="49.320">
   <properties />
-            <testcase name="Login" time="11.033" classname="GenericTest.LoginAdmin">
-                <failure type="org.openqa.selenium.NoSuchElementException"
-                  message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 &gt; canvas.chartjs-render-monitor&quot;}
-  (Session info: chrome=79.0.3945.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
-System info: host: &apos;LAPTOP-OSLLQ5OA&apos;, ip: &apos;192.168.72.162&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:62935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 54ec51569fed2e2db8a990ffb6dd159f
-*** Element info: {Using=css selector, value=main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 &gt; canvas.chartjs-render-monitor}"
-              >
-<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 > canvas.chartjs-render-monitor"}
-  (Session info: chrome=79.0.3945.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
-System info: host: 'LAPTOP-OSLLQ5OA', ip: '192.168.72.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:62935}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 54ec51569fed2e2db8a990ffb6dd159f
-*** Element info: {Using=css selector, value=main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 > canvas.chartjs-render-monitor}
-  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)
-  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)
-  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
-  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-  org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:435)
-  org.openqa.selenium.By$ByCssSelector.findElement(By.java:496)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-  GenericTest.LoginAdmin.Login(LoginAdmin.java:35)
-  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-  java.lang.reflect.Method.invoke(Method.java:498)
-  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-  org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-  org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-  org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-  org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-  org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-  java.util.ArrayList.forEach(ArrayList.java:1257)
-  org.testng.TestRunner.privateRun(TestRunner.java:770)
-  org.testng.TestRunner.run(TestRunner.java:591)
-  org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-  org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-  org.testng.SuiteRunner.run(SuiteRunner.java:304)
-  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-  org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-  org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-  org.testng.TestNG.runSuites(TestNG.java:1032)
-  org.testng.TestNG.run(TestNG.java:1000)
-  com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-  com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
-]]>
-      </failure>
-
-          </testcase>
   
   
-            <testcase name="ManageTruckDriversPage" time="4.236" classname="GenericTest.LoginAdmin" />
-                <testcase name="ProblemsReportedAndBackloadsPage" time="6.968" classname="GenericTest.LoginAdmin" />
-                <testcase name="DeliveryReceiptsPage" time="4.259" classname="GenericTest.LoginAdmin" />
-                <testcase name="SettingsPage" time="6.472" classname="GenericTest.LoginAdmin" />
-                <testcase name="NotificationPage" time="2.122" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageCustomerPage" time="4.266" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageAdminPage" time="4.259" classname="GenericTest.LoginAdmin" />
-                <testcase name="LogoutPage" time="5.066" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageStatusesPage" time="4.241" classname="GenericTest.LoginAdmin" />
+            <testcase name="ManageAdminPage" time="4.408" classname="GenericTest.LoginAdmin" />
+                <testcase name="ProblemsReportedAndBackloadsPage" time="7.514" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageStatusesPage" time="4.417" classname="GenericTest.LoginAdmin" />
+                <testcase name="SettingsPage" time="6.851" classname="GenericTest.LoginAdmin" />
+                <testcase name="LogoutPage" time="5.298" classname="GenericTest.LoginAdmin" />
+                <testcase name="NotificationPage" time="2.234" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageTruckDriversPage" time="4.365" classname="GenericTest.LoginAdmin" />
+                <testcase name="DeliveryReceiptsPage" time="4.433" classname="GenericTest.LoginAdmin" />
+                <testcase name="Login" time="5.427" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageCustomerPage" time="4.373" classname="GenericTest.LoginAdmin" />
       
 </testsuite>

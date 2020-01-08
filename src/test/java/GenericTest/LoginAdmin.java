@@ -36,6 +36,7 @@ public class LoginAdmin extends SetUp {
         Assert.assertTrue(dashboardchart.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();
+        Thread.sleep(2000);
     }
 
     @Test(priority = 1)
@@ -111,6 +112,18 @@ public class LoginAdmin extends SetUp {
         driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div/div/div/div[2]/div")).click();
         Thread.sleep(2000);
     }
+
+   /* @Test(priority = 7)
+    public void ManageReasonsPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[8]/div/div")).click(); //manage reasons page
+        WebElement ManageReasons = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
+        Assert.assertTrue(ManageReasons.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Reasons page = PASSED" + RESET);
+        System.out.println();
+        Thread.sleep(2000);
+    }*/
 
     @Test(priority = 8)
     public void SettingsPage() throws InterruptedException, IOException {

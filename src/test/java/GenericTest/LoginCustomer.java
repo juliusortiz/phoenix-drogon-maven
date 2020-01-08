@@ -75,7 +75,7 @@ public class LoginCustomer extends SetUp {
     @Test(priority = 4)
     public void CDSSProfilePage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[5]/div/div")).click(); //cdss profile page
         WebElement historypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[5]/div/div")); //
         Assert.assertTrue(historypage.isDisplayed());
