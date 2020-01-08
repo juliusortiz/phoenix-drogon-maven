@@ -4,25 +4,25 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="45.780">
+           time="40.217">
   <properties />
-            <testcase name="ViewDRPage" time="1.061" classname="GenericTest.LoginSales">
+            <testcase name="ViewDRPage" time="1.066" classname="GenericTest.LoginSales">
                 <failure type="org.openqa.selenium.ElementClickInterceptedException"
                   message="element click intercepted: Element is not clickable at point (-160, 107)
   (Session info: chrome=79.0.3945.88)
 Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
 System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.72.180&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 80b3e3326862d72ae8332f1bf85f98c6"
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64328}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcd46b82c109469f5ca12c366f8ccbaa"
               >
 <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (-160, 107)
   (Session info: chrome=79.0.3945.88)
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.180', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 80b3e3326862d72ae8332f1bf85f98c6
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64328}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcd46b82c109469f5ca12c366f8ccbaa
   sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
   sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -73,14 +73,14 @@ Session ID: 80b3e3326862d72ae8332f1bf85f98c6
           </testcase>
   
   
-            <testcase name="LogoutPage" time="4.711" classname="GenericTest.LoginSales" />
-                <testcase name="History" time="6.716" classname="GenericTest.LoginSales" />
-                <testcase name="SettingsPage" time="6.301" classname="GenericTest.LoginSales" />
-                <testcase name="Login" time="0.297" classname="GenericTest.LoginSales" />
-                <testcase name="Last6Months" time="3.114" classname="GenericTest.LoginSales" />
+            <testcase name="LogoutPage" time="4.713" classname="GenericTest.LoginSales" />
+                <testcase name="DeliveryStatus" time="6.817" classname="GenericTest.LoginSales" />
                 <testcase name="NotificationPage" time="2.073" classname="GenericTest.LoginSales" />
-                <testcase name="ServingClient" time="6.637" classname="GenericTest.LoginSales" />
-                <testcase name="DeliveryStatus" time="8.150" classname="GenericTest.LoginSales" />
-                <testcase name="OnGoingDeliveries" time="6.720" classname="GenericTest.LoginSales" />
+                <testcase name="ServingClient" time="4.468" classname="GenericTest.LoginSales" />
+                <testcase name="OnGoingDeliveries" time="5.610" classname="GenericTest.LoginSales" />
+                <testcase name="Last6Months" time="3.122" classname="GenericTest.LoginSales" />
+                <testcase name="SettingsPage" time="6.245" classname="GenericTest.LoginSales" />
+                <testcase name="Login" time="0.292" classname="GenericTest.LoginSales" />
+                <testcase name="History" time="5.811" classname="GenericTest.LoginSales" />
       
 </testsuite>

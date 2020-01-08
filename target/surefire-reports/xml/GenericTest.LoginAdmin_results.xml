@@ -4,9 +4,9 @@
            failures="2"
            errors="0"
            skipped="0"
-           time="45.689">
+           time="49.573">
   <properties />
-            <testcase name="Login" time="10.667" classname="GenericTest.LoginAdmin">
+            <testcase name="Login" time="10.749" classname="GenericTest.LoginAdmin">
                 <failure type="org.openqa.selenium.NoSuchElementException"
                   message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 &gt; canvas.chartjs-render-monitor&quot;}
   (Session info: chrome=79.0.3945.88)
@@ -14,8 +14,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
 System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.72.180&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63510}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 4983401b90991b916bcbdaf0fac60cb2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c153802d5bd2e803827407522b627e4c
 *** Element info: {Using=css selector, value=main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 &gt; canvas.chartjs-render-monitor}"
               >
 <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 > canvas.chartjs-render-monitor"}
@@ -24,8 +24,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.180', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63510}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 4983401b90991b916bcbdaf0fac60cb2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c153802d5bd2e803827407522b627e4c
 *** Element info: {Using=css selector, value=main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 > canvas.chartjs-render-monitor}
   sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -77,23 +77,23 @@ Session ID: 4983401b90991b916bcbdaf0fac60cb2
       </failure>
 
           </testcase>
-            <testcase name="ProblemsReportedAndBackloadsPage" time="1.061" classname="GenericTest.LoginAdmin">
+            <testcase name="ManageStatusesPage" time="1.100" classname="GenericTest.LoginAdmin">
                 <failure type="org.openqa.selenium.ElementClickInterceptedException"
                   message="element click intercepted: Element &lt;button class=&quot;navbar__sidebar-toggle&quot;&gt;...&lt;/button&gt; is not clickable at point (32, 42). Other element would receive the click: &lt;div class=&quot;popup display-block&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=79.0.3945.88)
 Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
 System info: host: &apos;DESKTOP-VE18G7S&apos;, ip: &apos;192.168.72.180&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63510}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 4983401b90991b916bcbdaf0fac60cb2"
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c153802d5bd2e803827407522b627e4c"
               >
 <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="navbar__sidebar-toggle">...</button> is not clickable at point (32, 42). Other element would receive the click: <div class="popup display-block">...</div>
   (Session info: chrome=79.0.3945.88)
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.180', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63510}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 4983401b90991b916bcbdaf0fac60cb2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c153802d5bd2e803827407522b627e4c
   sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
   sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -106,7 +106,7 @@ Session ID: 4983401b90991b916bcbdaf0fac60cb2
   org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
   org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
   org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-  GenericTest.LoginAdmin.ProblemsReportedAndBackloadsPage(LoginAdmin.java:104)
+  GenericTest.LoginAdmin.ManageStatusesPage(LoginAdmin.java:56)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -144,13 +144,13 @@ Session ID: 4983401b90991b916bcbdaf0fac60cb2
           </testcase>
   
   
-            <testcase name="ManageStatusesPage" time="4.159" classname="GenericTest.LoginAdmin" />
-                <testcase name="LogoutPage" time="4.707" classname="GenericTest.LoginAdmin" />
-                <testcase name="SettingsPage" time="6.511" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageTruckDriversPage" time="4.115" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageCustomerPage" time="4.122" classname="GenericTest.LoginAdmin" />
-                <testcase name="NotificationPage" time="2.078" classname="GenericTest.LoginAdmin" />
-                <testcase name="DeliveryReceiptsPage" time="4.112" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageAdminPage" time="4.157" classname="GenericTest.LoginAdmin" />
+            <testcase name="ManageCustomerPage" time="5.087" classname="GenericTest.LoginAdmin" />
+                <testcase name="SettingsPage" time="6.232" classname="GenericTest.LoginAdmin" />
+                <testcase name="LogoutPage" time="4.719" classname="GenericTest.LoginAdmin" />
+                <testcase name="ProblemsReportedAndBackloadsPage" time="7.210" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageTruckDriversPage" time="4.119" classname="GenericTest.LoginAdmin" />
+                <testcase name="DeliveryReceiptsPage" time="4.122" classname="GenericTest.LoginAdmin" />
+                <testcase name="NotificationPage" time="2.080" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageAdminPage" time="4.155" classname="GenericTest.LoginAdmin" />
       
 </testsuite>

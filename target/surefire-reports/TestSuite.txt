@@ -1,16 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 42, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 322.98 sec <<< FAILURE! - in TestSuite
-Login(GenericTest.LoginAdmin)  Time elapsed: 10.673 sec  <<< FAILURE!
+Tests run: 42, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 316.601 sec <<< FAILURE! - in TestSuite
+Login(GenericTest.LoginAdmin)  Time elapsed: 10.755 sec  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 > canvas.chartjs-render-monitor"}
   (Session info: chrome=79.0.3945.88)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.180', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63510}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 4983401b90991b916bcbdaf0fac60cb2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c153802d5bd2e803827407522b627e4c
 *** Element info: {Using=css selector, value=main.main-container.remove-overflow-mobile section.home div.home-container.d-flex section.home-mainblock.d-flex.flex-column.pr-5 div.mainblock__chart.d-flex.flex-column.mb-5 section.h-100 > canvas.chartjs-render-monitor}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -28,14 +28,14 @@ Session ID: 4983401b90991b916bcbdaf0fac60cb2
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
 	at GenericTest.LoginAdmin.Login(LoginAdmin.java:35)
 
-ProblemsReportedAndBackloadsPage(GenericTest.LoginAdmin)  Time elapsed: 1.062 sec  <<< FAILURE!
+ManageStatusesPage(GenericTest.LoginAdmin)  Time elapsed: 1.1 sec  <<< FAILURE!
 org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="navbar__sidebar-toggle">...</button> is not clickable at point (32, 42). Other element would receive the click: <div class="popup display-block">...</div>
   (Session info: chrome=79.0.3945.88)
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.180', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63510}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 4983401b90991b916bcbdaf0fac60cb2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64054}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c153802d5bd2e803827407522b627e4c
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -48,16 +48,16 @@ Session ID: 4983401b90991b916bcbdaf0fac60cb2
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at GenericTest.LoginAdmin.ProblemsReportedAndBackloadsPage(LoginAdmin.java:104)
+	at GenericTest.LoginAdmin.ManageStatusesPage(LoginAdmin.java:56)
 
-DeliveryHistoryPage(GenericTest.LoginDispatcher)  Time elapsed: 1.075 sec  <<< FAILURE!
+DeliveryHistoryPage(GenericTest.LoginDispatcher)  Time elapsed: 1.086 sec  <<< FAILURE!
 org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="navbar__sidebar-toggle-icon icomoon i-sort"></span> is not clickable at point (35, 42). Other element would receive the click: <div class="popup display-block">...</div>
   (Session info: chrome=79.0.3945.88)
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.180', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ddfa7ce7fed1d3bb3389c666434c2b1d
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64214}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 93c7cda96a1c8dc320b8fbda80c4dae9
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -72,16 +72,14 @@ Session ID: ddfa7ce7fed1d3bb3389c666434c2b1d
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
 	at GenericTest.LoginDispatcher.DeliveryHistoryPage(LoginDispatcher.java:44)
 
-ProblemsReportedPage(GenericTest.LoginDispatcher)  Time elapsed: 12.796 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/aside/div/nav/a[3]/div/div"}
+ProblemsReportedPage(GenericTest.LoginDispatcher)  Time elapsed: 1.059 sec  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="navbar__sidebar-toggle-icon icomoon i-sort"></span> is not clickable at point (35, 42). Other element would receive the click: <div class="popup display-block">...</div>
   (Session info: chrome=79.0.3945.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.180', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ddfa7ce7fed1d3bb3389c666434c2b1d
-*** Element info: {Using=xpath, value=/html/body/div[2]/aside/div/nav/a[3]/div/div}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64214}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 93c7cda96a1c8dc320b8fbda80c4dae9
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -92,22 +90,18 @@ Session ID: ddfa7ce7fed1d3bb3389c666434c2b1d
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at GenericTest.LoginDispatcher.ProblemsReportedPage(LoginDispatcher.java:60)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at GenericTest.LoginDispatcher.ProblemsReportedPage(LoginDispatcher.java:58)
 
-ManageReasonsPage(GenericTest.LoginDispatcher)  Time elapsed: 12.083 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/aside/div/nav/a[4]/div/div"}
+ManageReasonsPage(GenericTest.LoginDispatcher)  Time elapsed: 1.054 sec  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="navbar__sidebar-toggle-icon icomoon i-sort"></span> is not clickable at point (35, 42). Other element would receive the click: <div class="popup display-block">...</div>
   (Session info: chrome=79.0.3945.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.180', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: ddfa7ce7fed1d3bb3389c666434c2b1d
-*** Element info: {Using=xpath, value=/html/body/div[2]/aside/div/nav/a[4]/div/div}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64214}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 93c7cda96a1c8dc320b8fbda80c4dae9
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -118,20 +112,18 @@ Session ID: ddfa7ce7fed1d3bb3389c666434c2b1d
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:396)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at GenericTest.LoginDispatcher.ManageReasonsPage(LoginDispatcher.java:72)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at GenericTest.LoginDispatcher.ManageReasonsPage(LoginDispatcher.java:70)
 
-ViewDRPage(GenericTest.LoginSales)  Time elapsed: 1.061 sec  <<< FAILURE!
+ViewDRPage(GenericTest.LoginSales)  Time elapsed: 1.066 sec  <<< FAILURE!
 org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (-160, 107)
   (Session info: chrome=79.0.3945.88)
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'DESKTOP-VE18G7S', ip: '192.168.72.180', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63733}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 80b3e3326862d72ae8332f1bf85f98c6
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64328}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dcd46b82c109469f5ca12c366f8ccbaa
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
