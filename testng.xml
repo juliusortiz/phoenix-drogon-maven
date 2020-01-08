@@ -10,7 +10,7 @@
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="GenericTest.LoginAdmin"/>
-            
+
 
         </classes>
     </test>

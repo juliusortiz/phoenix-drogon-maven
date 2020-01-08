@@ -4,17 +4,17 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="36.906">
+           time="37.344">
   <properties />
   
   
-            <testcase name="SettingsPage" time="6.531" classname="GenericTest.LoginCustomer" />
-                <testcase name="DeliveryReceiptsPage" time="5.248" classname="GenericTest.LoginCustomer" />
-                <testcase name="HistoryPage" time="6.271" classname="GenericTest.LoginCustomer" />
-                <testcase name="CDSSProfilePage" time="5.277" classname="GenericTest.LoginCustomer" />
-                <testcase name="NotificationPage" time="2.177" classname="GenericTest.LoginCustomer" />
-                <testcase name="DeliveryStatusPage" time="5.606" classname="GenericTest.LoginCustomer" />
-                <testcase name="Login" time="0.813" classname="GenericTest.LoginCustomer" />
-                <testcase name="LogoutPage" time="4.983" classname="GenericTest.LoginCustomer" />
+            <testcase name="Login" time="0.852" classname="GenericTest.LoginCustomer" />
+                <testcase name="HistoryPage" time="6.267" classname="GenericTest.LoginCustomer" />
+                <testcase name="CDSSProfilePage" time="5.751" classname="GenericTest.LoginCustomer" />
+                <testcase name="DeliveryReceiptsPage" time="5.218" classname="GenericTest.LoginCustomer" />
+                <testcase name="NotificationPage" time="2.191" classname="GenericTest.LoginCustomer" />
+                <testcase name="SettingsPage" time="6.509" classname="GenericTest.LoginCustomer" />
+                <testcase name="LogoutPage" time="5.072" classname="GenericTest.LoginCustomer" />
+                <testcase name="DeliveryStatusPage" time="5.484" classname="GenericTest.LoginCustomer" />
       
 </testsuite>

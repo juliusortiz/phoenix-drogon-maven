@@ -55,6 +55,7 @@ public class LoginDispatcher extends SetUp {
 
         @Test(priority = 1)
         public void ProblemsReportedPage() throws InterruptedException, IOException {
+            Thread.sleep(1000);
             driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
             Thread.sleep(1000);
             driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")).click(); //problems reported page
