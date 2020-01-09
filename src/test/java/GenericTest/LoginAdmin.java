@@ -39,7 +39,7 @@ public class LoginAdmin extends SetUp {
         Assert.assertTrue(dashboardchart.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();*/
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
 
     @Test(priority = 1)
@@ -99,7 +99,7 @@ public class LoginAdmin extends SetUp {
         Assert.assertTrue(DeliveryReceipts.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Truck Drivers page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     @Test(priority = 6)

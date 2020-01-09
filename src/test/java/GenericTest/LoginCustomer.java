@@ -42,7 +42,7 @@ public class LoginCustomer extends SetUp {
     @Test(priority = 1)
     public void DeliveryStatusPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div/div")).click(); //delivery status page
         WebElement deliverystatuspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div/div")); //
         Assert.assertTrue(deliverystatuspage.isDisplayed());
@@ -59,7 +59,7 @@ public class LoginCustomer extends SetUp {
         Assert.assertTrue(deliveryreceiptspage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Delivery Receipts Page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(3000);
+       Thread.sleep(3000);
     }
     @Test(priority = 3)
     public void HistoryPage() throws InterruptedException, IOException {
@@ -81,12 +81,12 @@ public class LoginCustomer extends SetUp {
         Assert.assertTrue(historypage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to CDSS Profile Page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
     @Test(priority = 5)
     public void SettingsPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/footer/div/section[1]/a/span")).click(); //settings page
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
@@ -106,20 +106,20 @@ public class LoginCustomer extends SetUp {
         Assert.assertTrue(notificationpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
     }
     @Test(priority = 7)
     public void LogoutPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")); //
         Assert.assertTrue(logoutpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Logout Page = PASSED" + RESET);
         System.out.println();
 
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/footer/div/section[2]/button/span")).click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         driver.quit();
     }
 }

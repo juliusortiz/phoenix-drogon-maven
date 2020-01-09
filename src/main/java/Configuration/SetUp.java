@@ -39,7 +39,7 @@ public class SetUp {
             options.addArguments("windows-size=1366,768");*/
 
         }
-        driver.get("https://phoenix_epod_app.dice205.asia/");
+        driver.get("https://phoenix_epod_app.dice205.asia/"); 
         driver.getWindowHandle();
         driver.manage().window().maximize();
 

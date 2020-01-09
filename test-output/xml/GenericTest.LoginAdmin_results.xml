@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="44.734">
+           time="46.821">
   <properties />
   
   
-            <testcase name="DeliveryReceiptsPage" time="4.264" classname="GenericTest.LoginAdmin" />
-                <testcase name="ProblemsReportedAndBackloadsPage" time="6.621" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageStatusesPage" time="4.250" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageCustomerPage" time="4.308" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageTruckDriversPage" time="4.304" classname="GenericTest.LoginAdmin" />
-                <testcase name="NotificationPage" time="2.169" classname="GenericTest.LoginAdmin" />
-                <testcase name="ManageAdminPage" time="4.269" classname="GenericTest.LoginAdmin" />
-                <testcase name="Login" time="3.956" classname="GenericTest.LoginAdmin" />
-                <testcase name="SettingsPage" time="6.456" classname="GenericTest.LoginAdmin" />
-                <testcase name="LogoutPage" time="4.137" classname="GenericTest.LoginAdmin" />
+            <testcase name="LogoutPage" time="3.930" classname="GenericTest.LoginAdmin" />
+                <testcase name="Login" time="6.085" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageCustomerPage" time="4.282" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageTruckDriversPage" time="4.320" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageStatusesPage" time="4.213" classname="GenericTest.LoginAdmin" />
+                <testcase name="DeliveryReceiptsPage" time="4.222" classname="GenericTest.LoginAdmin" />
+                <testcase name="SettingsPage" time="6.464" classname="GenericTest.LoginAdmin" />
+                <testcase name="ManageAdminPage" time="3.827" classname="GenericTest.LoginAdmin" />
+                <testcase name="NotificationPage" time="2.192" classname="GenericTest.LoginAdmin" />
+                <testcase name="ProblemsReportedAndBackloadsPage" time="7.286" classname="GenericTest.LoginAdmin" />
       
 </testsuite>
