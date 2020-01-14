@@ -4,17 +4,17 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="35.067">
+           time="35.047">
   <properties />
   
   
-            <testcase name="ServingClient" time="7.819" classname="GenericTest.LoginSales" />
-                <testcase name="History" time="7.799" classname="GenericTest.LoginSales" />
-                <testcase name="ViewDetailsPage" time="3.148" classname="GenericTest.LoginSales" />
-                <testcase name="LogoutPage" time="4.012" classname="GenericTest.LoginSales" />
-                <testcase name="SettingsPage" time="6.446" classname="GenericTest.LoginSales" />
-                <testcase name="Last6Months" time="3.278" classname="GenericTest.LoginSales" />
-                <testcase name="NotificationPage" time="2.143" classname="GenericTest.LoginSales" />
-                <testcase name="Login" time="0.422" classname="GenericTest.LoginSales" />
+            <testcase name="LogoutPage" time="3.980" classname="GenericTest.LoginSales" />
+                <testcase name="NotificationPage" time="2.171" classname="GenericTest.LoginSales" />
+                <testcase name="Login" time="0.448" classname="GenericTest.LoginSales" />
+                <testcase name="ServingClient" time="8.214" classname="GenericTest.LoginSales" />
+                <testcase name="SettingsPage" time="6.462" classname="GenericTest.LoginSales" />
+                <testcase name="History" time="7.365" classname="GenericTest.LoginSales" />
+                <testcase name="ViewDetailsPage" time="3.149" classname="GenericTest.LoginSales" />
+                <testcase name="Last6Months" time="3.258" classname="GenericTest.LoginSales" />
       
 </testsuite>

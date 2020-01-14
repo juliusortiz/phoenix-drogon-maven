@@ -51,8 +51,8 @@ public class LoginSales extends SetUp {
     // Thread.sleep(1000);
     @Test(priority = 2)
     public void Last6Months() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[2]/div")).click();
-        WebElement last6months = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]")); //last 6 months
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div[2]")).click();
+        WebElement last6months = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div[2]")); //last 6 months
         Assert.assertTrue(last6months.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Last 6 Months = PASSED" + RESET);
         System.out.println();

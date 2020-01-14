@@ -4,25 +4,25 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="17.337">
+           time="18.168">
   <properties />
-            <testcase name="ProblemsReportedPage" time="1.197" classname="GenericTest.LoginDispatcher">
+            <testcase name="ProblemsReportedPage" time="1.146" classname="GenericTest.LoginDispatcher">
                 <failure type="org.openqa.selenium.ElementClickInterceptedException"
                   message="element click intercepted: Element &lt;span class=&quot;navbar__sidebar-toggle-icon icomoon i-sort&quot;&gt;&lt;/span&gt; is not clickable at point (35, 41). Other element would receive the click: &lt;div class=&quot;popup display-block&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=79.0.3945.88)
+  (Session info: chrome=79.0.3945.117)
 Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
 System info: host: &apos;LAPTOP-OSLLQ5OA&apos;, ip: &apos;192.168.72.162&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61222}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2db94c3a9047655c5ee2b4e4d003de2e"
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54041}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 49d7c028f22bd3d4888340ef35d38b65"
               >
 <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="navbar__sidebar-toggle-icon icomoon i-sort"></span> is not clickable at point (35, 41). Other element would receive the click: <div class="popup display-block">...</div>
-  (Session info: chrome=79.0.3945.88)
+  (Session info: chrome=79.0.3945.117)
 Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
 System info: host: 'LAPTOP-OSLLQ5OA', ip: '192.168.72.162', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61222}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2db94c3a9047655c5ee2b4e4d003de2e
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54041}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 49d7c028f22bd3d4888340ef35d38b65
   sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
   sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -69,9 +69,9 @@ Session ID: 2db94c3a9047655c5ee2b4e4d003de2e
           </testcase>
   
   
-            <testcase name="LogoutPage" time="4.022" classname="GenericTest.LoginDispatcher" />
-                <testcase name="NotificationPage" time="2.141" classname="GenericTest.LoginDispatcher" />
-                <testcase name="Login" time="3.446" classname="GenericTest.LoginDispatcher" />
-                <testcase name="SettingsPage" time="6.531" classname="GenericTest.LoginDispatcher" />
+            <testcase name="LogoutPage" time="3.965" classname="GenericTest.LoginDispatcher" />
+                <testcase name="Login" time="4.418" classname="GenericTest.LoginDispatcher" />
+                <testcase name="SettingsPage" time="6.500" classname="GenericTest.LoginDispatcher" />
+                <testcase name="NotificationPage" time="2.139" classname="GenericTest.LoginDispatcher" />
       
 </testsuite>
