@@ -1,3 +1,4 @@
 .idea
 test-output
-textng.xml
+testng.xml
+target
