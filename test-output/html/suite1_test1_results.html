@@ -12,11 +12,81 @@
 <body>
 <h1>Generic test cases</h1>
 <p>
-  Test duration: 96.900s
+  Test duration: 203.057s
 </p>
 
 
 
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginDispatcher</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  ProblemsReportedPage
+      </td>
+  <td class="duration">
+    1.197s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;navbar__sidebar-toggle-icon icomoon i-sort&quot;&gt;&lt;/span&gt; is not clickable at point (35, 41). Other element would receive the click: &lt;div class=&quot;popup display-block&quot;&gt;...&lt;/div&gt;<br/>
+&nbsp; (Session info: chrome=79.0.3945.88)<br/>
+Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;<br/>
+System info: host: &apos;LAPTOP-OSLLQ5OA&apos;, ip: &apos;192.168.72.162&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\DICE205\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61222}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
+Session ID: 2db94c3a9047655c5ee2b4e4d003de2e</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)<br />
+              org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)<br />
+              org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)<br />
+              GenericTest.LoginDispatcher.ProblemsReportedPage(LoginDispatcher.java:58)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)<br />
+              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)<br />
+              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)<br />
+              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
+              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)<br />
+              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1257)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:770)<br />
+              org.testng.TestRunner.run(TestRunner.java:591)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:402)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:304)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1102)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1032)<br />
+              org.testng.TestNG.run(TestNG.java:1000)<br />
+              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)<br />
+              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)<br />
+                </div>
+      </td>
+</tr>
+      </table>
 
 
   <table class="resultsTable">
@@ -30,7 +100,7 @@
                   DeliveryReceiptsPage
       </td>
   <td class="duration">
-    5.198s
+    4.222s
   </td>
   <td class="result">
         
@@ -44,7 +114,7 @@
                   Login
       </td>
   <td class="duration">
-    6.135s
+    6.085s
   </td>
   <td class="result">
         
@@ -58,7 +128,7 @@
                   LogoutPage
       </td>
   <td class="duration">
-    4.164s
+    3.930s
   </td>
   <td class="result">
         
@@ -72,7 +142,7 @@
                   ManageAdminPage
       </td>
   <td class="duration">
-    3.265s
+    3.827s
   </td>
   <td class="result">
         
@@ -86,7 +156,7 @@
                   ManageCustomerPage
       </td>
   <td class="duration">
-    4.226s
+    4.282s
   </td>
   <td class="result">
         
@@ -100,7 +170,7 @@
                   ManageStatusesPage
       </td>
   <td class="duration">
-    4.264s
+    4.213s
   </td>
   <td class="result">
         
@@ -114,7 +184,7 @@
                   ManageTruckDriversPage
       </td>
   <td class="duration">
-    4.433s
+    4.320s
   </td>
   <td class="result">
         
@@ -128,7 +198,7 @@
                   NotificationPage
       </td>
   <td class="duration">
-    2.169s
+    2.192s
   </td>
   <td class="result">
         
@@ -142,7 +212,7 @@
                   ProblemsReportedAndBackloadsPage
       </td>
   <td class="duration">
-    6.884s
+    7.286s
   </td>
   <td class="result">
         
@@ -156,7 +226,7 @@
                   SettingsPage
       </td>
   <td class="duration">
-    6.474s
+    6.464s
   </td>
   <td class="result">
         
@@ -174,7 +244,7 @@
                   CDSSProfilePage
       </td>
   <td class="duration">
-    4.920s
+    4.239s
   </td>
   <td class="result">
         
@@ -188,7 +258,7 @@
                   DeliveryReceiptsPage
       </td>
   <td class="duration">
-    6.209s
+    5.176s
   </td>
   <td class="result">
         
@@ -202,7 +272,7 @@
                   DeliveryStatusPage
       </td>
   <td class="duration">
-    4.870s
+    4.545s
   </td>
   <td class="result">
         
@@ -216,7 +286,7 @@
                   HistoryPage
       </td>
   <td class="duration">
-    6.904s
+    6.229s
   </td>
   <td class="result">
         
@@ -230,7 +300,7 @@
                   Login
       </td>
   <td class="duration">
-    0.463s
+    0.494s
   </td>
   <td class="result">
         
@@ -244,7 +314,7 @@
                   LogoutPage
       </td>
   <td class="duration">
-    2.959s
+    2.938s
   </td>
   <td class="result">
         
@@ -258,7 +328,7 @@
                   NotificationPage
       </td>
   <td class="duration">
-    1.151s
+    1.162s
   </td>
   <td class="result">
         
@@ -272,7 +342,285 @@
                   SettingsPage
       </td>
   <td class="duration">
-    5.428s
+    5.472s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginDispatcher</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Login
+      </td>
+  <td class="duration">
+    3.446s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LogoutPage
+      </td>
+  <td class="duration">
+    4.022s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NotificationPage
+      </td>
+  <td class="duration">
+    2.141s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  SettingsPage
+      </td>
+  <td class="duration">
+    6.531s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginIRT</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  AcceptedOrdersPage
+      </td>
+  <td class="duration">
+    4.251s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  ImageSubmittedPage
+      </td>
+  <td class="duration">
+    4.244s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  InTransitOrdersPage
+      </td>
+  <td class="duration">
+    4.245s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Login
+      </td>
+  <td class="duration">
+    3.411s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LogoutPage
+      </td>
+  <td class="duration">
+    5.015s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NotificationPage
+      </td>
+  <td class="duration">
+    2.139s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  SettingsPage
+      </td>
+  <td class="duration">
+    6.399s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">GenericTest.LoginSales</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  History
+      </td>
+  <td class="duration">
+    7.799s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Last6Months
+      </td>
+  <td class="duration">
+    3.278s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Login
+      </td>
+  <td class="duration">
+    0.422s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LogoutPage
+      </td>
+  <td class="duration">
+    4.012s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  NotificationPage
+      </td>
+  <td class="duration">
+    2.143s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  ServingClient
+      </td>
+  <td class="duration">
+    7.819s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  SettingsPage
+      </td>
+  <td class="duration">
+    6.446s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  ViewDetailsPage
+      </td>
+  <td class="duration">
+    3.148s
   </td>
   <td class="result">
         
