@@ -59,7 +59,7 @@ public class LoginCustomer extends SetUp {
         Assert.assertTrue(deliveryreceiptspage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Delivery Receipts Page = PASSED" + RESET);
         System.out.println();
-       Thread.sleep(4000);
+       Thread.sleep(3000);
     }
     @Test(priority = 3)
     public void HistoryPage() throws InterruptedException, IOException {

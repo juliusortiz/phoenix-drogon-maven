@@ -36,7 +36,7 @@ public class LoginDispatcher extends SetUp {
         Assert.assertTrue(Header.isDisplayed());
         System.out.println("Login Customer = PASSED");
         driver.quit();*/
-        Thread.sleep(4000);
+        Thread.sleep(3000);
     }
 
 /*    @Test(priority = 1)
