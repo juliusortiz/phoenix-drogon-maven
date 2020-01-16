@@ -25,10 +25,10 @@ public class LoginSales extends SetUp {
         Select businesstype = new Select(driver.findElement(By.xpath(String.valueOf(sheet.getRow(0).getCell(0)))));
         businesstype.selectByVisibleText(String.valueOf(sheet.getRow(0).getCell(1)));
 
-        driver.findElement(By.xpath(String.valueOf(sheet.getRow(1).getCell(0))))
+        driver.findElement(By.xpath("//input[@name='username']"))
                 .sendKeys(String.valueOf(sheet.getRow(5).getCell(1)));
-        driver.findElement(By.xpath(String.valueOf(sheet.getRow(6).getCell(0))))
-                .sendKeys(String.valueOf(sheet.getRow(6).getCell(1)));
+        driver.findElement(By.xpath("//input[@name='pass']"))
+                .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
         driver.findElement(By.xpath(String.valueOf(sheet.getRow(7).getCell(0)))).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println(CYAN_BOLD_BRIGHT + "Login Sales = PASSED" + RESET);
