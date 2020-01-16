@@ -29,7 +29,7 @@ public class LoginSales extends SetUp {
                 .sendKeys(String.valueOf(sheet.getRow(5).getCell(1)));
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
-        driver.findElement(By.xpath(String.valueOf(sheet.getRow(7).getCell(0)))).click();
+        driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.println(CYAN_BOLD_BRIGHT + "Login Sales = PASSED" + RESET);
         System.out.println();

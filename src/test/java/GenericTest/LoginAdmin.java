@@ -29,7 +29,7 @@ public class LoginAdmin extends SetUp {
                 .sendKeys(String.valueOf(sheet.getRow(1).getCell(1)));
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
-        driver.findElement(By.xpath(String.valueOf(sheet.getRow(7).getCell(0)))).click();
+        driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();
@@ -165,7 +165,7 @@ public class LoginAdmin extends SetUp {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
         Thread.sleep(1000);
         driver.quit();
-    }
+}
 }
 
 

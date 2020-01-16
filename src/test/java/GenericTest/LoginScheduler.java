@@ -16,21 +16,25 @@ public class LoginScheduler extends SetUp {
 
     @Test(priority = 0)
     public void Login() throws InterruptedException, IOException {
-    InputStream inputStream = getClass().getClassLoader().getResourceAsStream("WebElements.xlsx");
-    assert inputStream != null;
-    XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
-    XSSFSheet sheet = workbook.getSheetAt(0);
-    Select businesstype = new Select(driver.findElement(By.xpath(String.valueOf(sheet.getRow(0).getCell(0)))));
-    businesstype.selectByVisibleText(String.valueOf(sheet.getRow(0).getCell(1)));
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("WebElements.xlsx");
+        assert inputStream != null;
+        XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
+        XSSFSheet sheet = workbook.getSheetAt(0);
+        Select businesstype = new Select(driver.findElement(By.xpath(String.valueOf(sheet.getRow(0).getCell(0)))));
+        businesstype.selectByVisibleText(String.valueOf(sheet.getRow(0).getCell(1)));
 
         driver.findElement(By.xpath("//input[@name='username']"))
                 .sendKeys(String.valueOf(sheet.getRow(6).getCell(1)));
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
-        driver.findElement(By.xpath(String.valueOf(sheet.getRow(7).getCell(0)))).click();
+        driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
+        System.out.print(CYAN_BOLD_BRIGHT + "Login Scheduler = PASSED" + RESET);
         System.out.println();
-}
+
+
+        Thread.sleep(1000);
+        driver.quit();
+    }
 }
 
