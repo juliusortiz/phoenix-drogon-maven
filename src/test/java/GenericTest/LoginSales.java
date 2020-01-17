@@ -37,27 +37,27 @@ public class LoginSales extends SetUp {
 
     //lester
     @Test(priority = 1)
-    public void ServingClient() throws InterruptedException, IOException {
+    public void FilterDropdown() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")).click(); //ser client
-        WebElement servingclient = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")); //ser client
-        Assert.assertTrue(servingclient.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Serving Client = PASSED" + RESET);
+        WebElement filterdropdown = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")); //ser client
+        Assert.assertTrue(filterdropdown.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Filter Dropdown = PASSED" + RESET);
         System.out.println();
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")).click(); //ser client
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
     // Thread.sleep(1000);
     @Test(priority = 2)
-    public void Last6Months() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[2]/div")).click();
-        WebElement last6months = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]")); //last 6 months
-        Assert.assertTrue(last6months.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Last 6 Months = PASSED" + RESET);
+    public void TodayDropdown() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div/div[2]")).click();
+        WebElement todaydropdown = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div/div[2]")); //today dropdown
+        Assert.assertTrue(todaydropdown.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Today Dropdown = PASSED" + RESET);
         System.out.println();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]")).click(); //last 6 months
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div/div[2]")).click(); //today dropdown
         Thread.sleep(2000);
     }
     @Test(priority = 3)

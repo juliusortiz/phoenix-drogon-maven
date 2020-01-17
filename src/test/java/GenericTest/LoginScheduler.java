@@ -34,6 +34,44 @@ public class LoginScheduler extends SetUp {
 
 
         Thread.sleep(1000);
+    }
+    @Test(priority = 7)
+    public void SettingsPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")).click(); //settings page
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")).click(); //about this app
+        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")); //
+        Assert.assertTrue(settingspage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Settings Page = PASSED" + RESET);
+        System.out.println();
+        Thread.sleep(2000);
+    }
+
+    @Test(priority = 8)
+    public void NotificationPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")).click(); //notfication page
+        WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")); //
+        Assert.assertTrue(notificationpage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
+        System.out.println();
+        Thread.sleep(2000);
+    }
+
+    @Test(priority = 9)
+    public void LogoutPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
+        Thread.sleep(2000);
+        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
+        Assert.assertTrue(logoutpage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Logout Page = PASSED" + RESET);
+        System.out.println();
+
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
+        Thread.sleep(1000);
         driver.quit();
     }
 }
