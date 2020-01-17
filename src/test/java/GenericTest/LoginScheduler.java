@@ -35,7 +35,7 @@ public class LoginScheduler extends SetUp {
 
         Thread.sleep(1000);
     }
-    @Test(priority = 7)
+    @Test(priority = 1)
     public void SettingsPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
         Thread.sleep(2000);
@@ -51,7 +51,7 @@ public class LoginScheduler extends SetUp {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 8)
+    @Test(priority = 2)
     public void NotificationPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")).click(); //notfication page
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")); //
@@ -61,7 +61,7 @@ public class LoginScheduler extends SetUp {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 9)
+    @Test(priority = 3)
     public void LogoutPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
         Thread.sleep(2000);
