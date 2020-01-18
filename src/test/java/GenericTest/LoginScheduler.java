@@ -16,7 +16,7 @@ public class LoginScheduler extends SetUp {
 
     @Test(priority = 0)
     public void Login() throws InterruptedException, IOException {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("WebElements.xlsx");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Credentials.xlsx");
         assert inputStream != null;
         XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
         XSSFSheet sheet = workbook.getSheetAt(0);
