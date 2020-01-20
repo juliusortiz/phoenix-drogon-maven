@@ -110,7 +110,9 @@ public class LoginSales extends SetUp {
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to History page = PASSED" + RESET);
         System.out.println();
         Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")).click(); //filter
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")).click(); //filter
         Thread.sleep(2000);
     }
 

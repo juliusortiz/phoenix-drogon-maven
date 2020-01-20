@@ -43,13 +43,13 @@ public class LoginAdmin extends SetUp {
     }
 
     @Test(priority = 1)
-    public void ManageAdminPage() throws InterruptedException, IOException {
+    public void ManageUsersPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         Thread.sleep(1000);
-        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[2]/div[1]")).click(); //manage admin page
-        WebElement ManageAdminheader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
-        Assert.assertTrue(ManageAdminheader.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Admins page = PASSED" + RESET);
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[2]/div[1]")).click(); //manage user page
+        WebElement ManageUserheader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
+        Assert.assertTrue(ManageUserheader.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Users page = PASSED" + RESET);
         System.out.println();
         Thread.sleep(2000);
     }
