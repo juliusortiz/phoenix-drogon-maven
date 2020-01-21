@@ -30,13 +30,15 @@ public class SetUp {
             options.addArguments("--disable-gpu");
             driver = new ChromeDriver(options);
 
-
+            
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
            /* FirefoxOptions options = new FirefoxOptions();   //For headless browser
             options.addArguments("--headless");                 //
             options.addArguments("windows-size=1366,768");*/
+
+
 
         }
         driver.get("https://phoenix_epod_app.dice205.asia/"); 
