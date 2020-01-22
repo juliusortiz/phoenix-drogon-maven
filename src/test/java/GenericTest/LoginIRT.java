@@ -78,8 +78,8 @@ public class LoginIRT extends SetUp {
     @Test(priority = 4)
     public void SettingsPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/p")).click(); //settings page
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a")).click(); //settings page
         Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
         Thread.sleep(1000);
