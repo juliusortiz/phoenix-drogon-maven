@@ -123,6 +123,18 @@ public class LoginAdmin extends SetUp {
     }
 
     @Test(priority = 8)
+    public void CreateCustomerPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button")).click(); //create user page
+        Thread.sleep(2000);
+        WebElement CreateCustomerpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button"));
+        Assert.assertTrue(CreateCustomerpage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Create Customer page = PASSED" + RESET);
+        System.out.println();
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button/span")).click(); //close
+        Thread.sleep(2000);
+    }
+
+    @Test(priority = 9)
     public void ManageTruckDriversPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         Thread.sleep(2000);
@@ -133,8 +145,19 @@ public class LoginAdmin extends SetUp {
         System.out.println();
         Thread.sleep(2000);
     }
+    @Test(priority = 10)
+    public void CreateDriverPage() throws InterruptedException, IOException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button")).click(); //create user page
+        Thread.sleep(2000);
+        WebElement CreateDriverpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button"));
+        Assert.assertTrue(CreateDriverpage.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Create Driver page = PASSED" + RESET);
+        System.out.println();
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button/span")).click(); //close
+        Thread.sleep(2000);
+    }
 
-    @Test(priority = 9)
+    @Test(priority = 11)
     public void DeliveryReceiptsPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         Thread.sleep(2000);
@@ -146,7 +169,7 @@ public class LoginAdmin extends SetUp {
         Thread.sleep(3000);
     }
 
-    @Test(priority = 10)
+    @Test(priority = 12)
     public void ProblemsReportedAndBackloadsPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         Thread.sleep(3000);
@@ -164,7 +187,7 @@ public class LoginAdmin extends SetUp {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 11)
+    @Test(priority = 13)
     public void SettingsPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
         Thread.sleep(1000);
@@ -180,7 +203,7 @@ public class LoginAdmin extends SetUp {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 12)
+    @Test(priority = 14)
     public void NotificationPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")).click(); //notfication page
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")); //
@@ -189,7 +212,7 @@ public class LoginAdmin extends SetUp {
         System.out.println();
         Thread.sleep(2000);
     }
-    @Test(priority = 13)
+    @Test(priority = 15)
     public void LogoutPage() throws InterruptedException, IOException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
         Thread.sleep(2000);
