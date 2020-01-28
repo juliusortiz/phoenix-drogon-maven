@@ -46,8 +46,6 @@ public class SetUp {
         driver.manage().window().maximize();
 
     }
-
-
 }
 
 

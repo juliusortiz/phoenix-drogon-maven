@@ -1,4 +1,4 @@
-package GenericTest;
+package StepClasses;
 
 public class LoginInvoicingClerk {
 }

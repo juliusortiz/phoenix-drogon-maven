@@ -1,4 +1,4 @@
-package GenericTest;
+package StepClasses;
 import org.openqa.selenium.By;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,10 +8,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import Configuration.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.thread.IThreadWorkerFactory;
 
 
 public class LoginSales extends SetUp {
