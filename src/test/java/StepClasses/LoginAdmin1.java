@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
@@ -54,7 +55,7 @@ public class LoginAdmin1 extends SetUp {
         Assert.assertTrue(dashboardchart.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();*/
-        Thread.sleep(5000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @And("^navigate to status page from the dashboard$")
@@ -64,9 +65,9 @@ public class LoginAdmin1 extends SetUp {
         Assert.assertTrue(Statuspage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Status page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]")).click(); //home
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @And("^navigate to customer page from the dashboard$")
@@ -76,9 +77,9 @@ public class LoginAdmin1 extends SetUp {
         Assert.assertTrue(Customerpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Customer page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]/img")).click(); //home
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @And("^navigate to truck driver page from the dashboard$")
@@ -88,22 +89,26 @@ public class LoginAdmin1 extends SetUp {
         Assert.assertTrue(Truckdriverpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Truck Driver page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]/img")).click(); //home
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+
+    @And("^navigate to Manage Users page$")
+    public void navigateToManageUsersPage()  throws InterruptedException{
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[2]/div[1]")).click(); //manage user page
+        WebElement ManageUserheader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]"));
+        Assert.assertTrue(ManageUserheader.isDisplayed());
+        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Users page = PASSED" + RESET);
+        System.out.println();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
 
-
-
-
-    @Then("^logout admin user$")
-    public void logoutAdminUser() throws InterruptedException {
+    @Then("^Logout$")
+    public void logout() throws InterruptedException{
         driver.quit();
-    }
-
-    @And("^navigate to manage users page$")
-    public void navigateToManageUsersPage() {
-
     }
 }

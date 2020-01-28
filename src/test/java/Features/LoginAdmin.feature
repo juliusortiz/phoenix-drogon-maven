@@ -7,9 +7,8 @@
     And navigate to status page from the dashboard
     And navigate to customer page from the dashboard
     And navigate to truck driver page from the dashboard
-    And navigate to manage users page
+    And navigate to Manage Users page
 
+    Then Logout
 
-
-    Then logout admin user
 
