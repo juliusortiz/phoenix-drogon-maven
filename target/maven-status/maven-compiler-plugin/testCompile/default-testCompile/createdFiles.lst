@@ -1,9 +1,0 @@
-StepClasses\LoginIRT.class
-StepClasses\LoginScheduler.class
-StepClasses\LoginAdmin1.class
-StepClasses\LoginSales.class
-TestRunner\TestRunner.class
-StepClasses\LoginAdmin.class
-StepClasses\LoginDispatcher.class
-StepClasses\LoginCustomer.class
-StepClasses\LoginInvoicingClerk.class
