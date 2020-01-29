@@ -18,7 +18,7 @@ public class SetUp {
     protected static final String RESET = "\033[0m";
     protected static WebDriver driver;
 
-    @Parameters("browser")
+/*    @Parameters("browser")
     @BeforeClass
 
     public void beforeTest(String browser) {
@@ -34,9 +34,9 @@ public class SetUp {
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
-           /* FirefoxOptions options = new FirefoxOptions();   //For headless browser
+           *//* FirefoxOptions options = new FirefoxOptions();   //For headless browser
             options.addArguments("--headless");                 //
-            options.addArguments("windows-size=1366,768");*/
+            options.addArguments("windows-size=1366,768");*//*
 
 
 
@@ -45,7 +45,7 @@ public class SetUp {
         driver.getWindowHandle();
         driver.manage().window().maximize();
 
-    }
+    }*/
 }
 
 
