@@ -44,7 +44,7 @@ public class LoginDispatcher1 extends SetUp {
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         System.out.println(CYAN_BOLD_BRIGHT + "Login Dispatcher = PASSED" + RESET);
         System.out.println();
        /* WebElement Header = driver.findElement(By.xpath(String.valueOf(sheet.getRow(2).getCell(4))));
@@ -57,7 +57,7 @@ public class LoginDispatcher1 extends SetUp {
     @And("^navigate to Problems Reported page$")
     public void navigateToProblemsReportedPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")).click(); //problems reported page
         WebElement problemsreportedpage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")); //
         Assert.assertTrue(problemsreportedpage.isDisplayed());
@@ -69,17 +69,17 @@ public class LoginDispatcher1 extends SetUp {
     @And("^navigate to Dispatcher Settings page$")
     public void navigateToDispatcherSettingsPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")).click(); //settings page
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")).click(); //about this app
         WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")); //
         Assert.assertTrue(settingspage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Settings Page = PASSED" + RESET);
         System.out.println();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @And("^navigate to Dispatcher Notification page$")
@@ -89,7 +89,7 @@ public class LoginDispatcher1 extends SetUp {
             Assert.assertTrue(notificationpage.isDisplayed());
             System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
             System.out.println();
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @Then("^Dispatcher Logout$")

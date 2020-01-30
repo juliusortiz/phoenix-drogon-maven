@@ -1,4 +1,4 @@
-@SmokeTest2
+@SmokeTest
 Feature: Login Dispatcher
   This feature deals with the admin page accessibility and navigations
 
