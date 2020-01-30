@@ -24,7 +24,7 @@ public class LoginAdmin extends SetUp {
     public void loggedInAsAdminUser() throws IOException, InterruptedException {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+     //   options.addArguments("--headless");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-gpu");
         driver = new ChromeDriver(options);
