@@ -1,20 +1,37 @@
 package StepClasses;
+
+import Configuration.SetUp;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import Configuration.*;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
-public class LoginScheduler extends SetUp {
+public class LoginScheduler1 extends SetUp {
+    @Given("^logged in as Scheduler user$")
+    public void loggedInAsSchedulerUser() throws IOException, InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+//      options.addArguments("--headless");
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-gpu");
+        driver = new ChromeDriver(options);
 
-    @Test(priority = 0)
-    public void Login() throws InterruptedException, IOException {
+        driver.get("https://phoenix_epod_app.dice205.asia/");
+        driver.getWindowHandle();
+        driver.manage().window().maximize();
+
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Credentials.xlsx");
         assert inputStream != null;
         XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
@@ -27,54 +44,34 @@ public class LoginScheduler extends SetUp {
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         System.out.print(CYAN_BOLD_BRIGHT + "Login Scheduler = PASSED" + RESET);
         System.out.println();
 
-
-        Thread.sleep(1000);
-    }
-    @Test(priority = 1)
-    public void SettingsPage() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")).click(); //settings page
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")).click(); //about this app
-        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")); //
-        Assert.assertTrue(settingspage.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Settings Page = PASSED" + RESET);
-        System.out.println();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    @Test(priority = 2)
-    public void NotificationPage() throws InterruptedException, IOException {
+    @And("^navigate to Scheduler Notification page$")
+    public void navigateToSchedulerNotificationPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")).click(); //notfication page
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")); //
         Assert.assertTrue(notificationpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    @Test(priority = 3)
-    public void LogoutPage() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
-        Thread.sleep(2000);
+    @Then("^Scheduler Logout page$")
+    public void schedulerLogoutPage() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img")).click(); //logout page
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
         Assert.assertTrue(logoutpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Logout Page = PASSED" + RESET);
         System.out.println();
 
         driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.quit();
     }
 }
-
-/*    And navigate to Bulk Shipment Type Dropdown from the dashboard
-    And naviagate to TTP Dropdown from the dashboard
-    And navigate to Vehicle Code Dropdown rom the dashboard*/
