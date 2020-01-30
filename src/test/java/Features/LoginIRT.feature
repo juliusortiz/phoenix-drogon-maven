@@ -1,4 +1,4 @@
-@SmokeTest3
+@SmokeTest
 Feature: Login IRT
   This feature deals with the IRT page accessibility and navigations
 

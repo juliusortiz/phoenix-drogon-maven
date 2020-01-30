@@ -1,4 +1,4 @@
-@SmokeTest4
+@SmokeTest
 Feature: Login Sales
   This feature deals with the Sales page accessibility and navigations
 
@@ -7,7 +7,6 @@ Feature: Login Sales
     And navigate to Filter Dropdown from the dashboard
     And navigate to Today Dropdown from the dashboard
     And navigate to Sales History page
-    And navigate to View Details page from History page
     And navigate to Sales Settings page
     And navigate to Sales Notification page
 

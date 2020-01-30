@@ -1,21 +1,37 @@
 package StepClasses;
+
+import Configuration.SetUp;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import Configuration.*;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 
 public class LoginSales extends SetUp {
+    @Given("^logged in as Sales user$")
+    public void loggedInAsSalesUser() throws IOException, InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+//      options.addArguments("--headless");
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-gpu");
+        driver = new ChromeDriver(options);
 
-    @Test(priority = 0)
-    public void Login() throws InterruptedException, IOException {
+        driver.get("https://phoenix_epod_app.dice205.asia/");
+        driver.getWindowHandle();
+        driver.manage().window().maximize();
+
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Credentials.xlsx");
         assert inputStream != null;
         XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
@@ -28,140 +44,88 @@ public class LoginSales extends SetUp {
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         System.out.println(CYAN_BOLD_BRIGHT + "Login Sales = PASSED" + RESET);
         System.out.println();
     }
 
-    //lester
-    @Test(priority = 1)
-    public void FilterDropdown() throws InterruptedException, IOException {
+    @And("^navigate to Filter Dropdown from the dashboard$")
+    public void navigateToFilterDropdownFromTheDashboard() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")).click(); //ser client
         WebElement filterdropdown = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")); //ser client
         Assert.assertTrue(filterdropdown.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Filter Dropdown = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")).click(); //ser client
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    // Thread.sleep(1000);
-    @Test(priority = 2)
-    public void TodayDropdown() throws InterruptedException, IOException {
+    @And("^navigate to Today Dropdown from the dashboard$")
+    public void navigateToTodayDropdownFromTheDashboard() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div/div[2]")).click();
         WebElement todaydropdown = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div/div[2]")); //today dropdown
         Assert.assertTrue(todaydropdown.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Today Dropdown = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div/div[2]")).click(); //today dropdown
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-   /* @Test(priority = 4)
-    public void OnGoingDeliveries() throws InterruptedException, IOException {
+    @And("^navigate to Sales History page$")
+    public void navigateToSalesHistoryPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click(); //ongodeliveries
-        WebElement ongoingdeliveries = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")); //ongodeliveries
-        Assert.assertTrue(ongoingdeliveries.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to On Going Deliveries page = PASSED" + RESET);
-        System.out.println();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div/div/div/div[2]/div")).click(); //servicing client
-        Thread.sleep(2000);
-    }
-
-    @Test(priority = 5)
-    public void DeliveryStatus() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")).click();
-        WebElement deliverystatus = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")); //deliverystatus
-        Assert.assertTrue(deliverystatus.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Delivery Status page = PASSED" + RESET);
-        System.out.println();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div/div[2]/div")).click(); //servicing client
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[2]/div/div/div[2]/div")).click(); //all
-        Thread.sleep(2000);
-    }*/
-
-    @Test(priority = 3)
-    public void History() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click();
         WebElement history = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")); //history
         Assert.assertTrue(history.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to History page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")).click(); //filter
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")).click(); //filter
-        Thread.sleep(2000);
-    }
-    @Test(priority = 4)
-    public void ViewDetailsPage() throws InterruptedException, IOException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/main/table/tbody/tr[1]/td[6]/a")).click(); //view details
-        WebElement viewdetailspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div")); //
-        Assert.assertTrue(viewdetailspage.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to View Details page = PASSED" + RESET);
-        System.out.println();
-        Thread.sleep(3000);
-        driver.findElement(By.xpath(" /html/body/div[2]/main/section/div/header/button")).click(); //back
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    @Test(priority = 5)
-    public void SettingsPage() throws InterruptedException, IOException {
+    @And("^navigate to Sales Settings page$")
+    public void navigateToSalesSettingsPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")).click(); //settings page
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")).click(); //about this app
         WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")); //
         Assert.assertTrue(settingspage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Settings Page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    @Test(priority = 6)
-    public void NotificationPage() throws InterruptedException, IOException {
+    @And("^navigate to Sales Notification page$")
+    public void navigateToSalesNotificationPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")).click(); //notfication page
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]/span")); //
         Assert.assertTrue(notificationpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Notification Page = PASSED" + RESET);
         System.out.println();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    @Test(priority = 7)
-    public void LogoutPage() throws InterruptedException, IOException {
+    @Then("^Sales Logout$")
+    public void salesLogout() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
         Assert.assertTrue(logoutpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Logout Page = PASSED" + RESET);
         System.out.println();
 
         driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.quit();
     }
 }
-
-
-
-
-
-
-
-
-
