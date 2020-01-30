@@ -29,7 +29,7 @@ public class LoginDispatcher extends SetUp {
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         System.out.println(CYAN_BOLD_BRIGHT + "Login Dispatcher = PASSED" + RESET);
         System.out.println();
        /* WebElement Header = driver.findElement(By.xpath(String.valueOf(sheet.getRow(2).getCell(4))));

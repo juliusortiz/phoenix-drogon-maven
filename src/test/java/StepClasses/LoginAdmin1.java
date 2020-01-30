@@ -49,16 +49,17 @@ public class LoginAdmin1 extends SetUp {
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
 
     /*    WebElement dashboardchart = driver.findElement(By.cssSelector(String.valueOf(sheet.getRow(1).getCell(5))));
         Assert.assertTrue(dashboardchart.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
         System.out.println();*/
-     //   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+     //   driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @And("^navigate to status page from the dashboard$")
@@ -68,9 +69,9 @@ public class LoginAdmin1 extends SetUp {
         Assert.assertTrue(Statuspage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Status page = PASSED" + RESET);
         System.out.println();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]/img")).click(); //home
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @And("^navigate to customer page from the dashboard$")
@@ -80,7 +81,7 @@ public class LoginAdmin1 extends SetUp {
         Assert.assertTrue(Customerpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Customer page = PASSED" + RESET);
         System.out.println();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]/img")).click(); //home
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
@@ -92,7 +93,7 @@ public class LoginAdmin1 extends SetUp {
         Assert.assertTrue(Truckdriverpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Truck Driver page = PASSED" + RESET);
         System.out.println();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]/img")).click(); //home
         Thread.sleep(2000);
     }
@@ -100,19 +101,19 @@ public class LoginAdmin1 extends SetUp {
     @And("^navigate to Manage Users page$")
     public void navigateToManageUsersPage()  throws InterruptedException{
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[2]/div[1]")).click(); //manage user page
         WebElement ManageUserheader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]"));
         Assert.assertTrue(ManageUserheader.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Users page = PASSED" + RESET);
         System.out.println();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @And("^navigate to Create User page from Manage Users$")
     public void navigateToCreateUserPageFromManageUsers()  throws InterruptedException{
         driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button")).click(); //create user page
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement CreateUserpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button"));
         Assert.assertTrue(CreateUserpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Create Users page = PASSED" + RESET);
@@ -125,7 +126,7 @@ public class LoginAdmin1 extends SetUp {
     @And("^navigate to Manage Status page$")
     public void navigateToManageStatusPage() throws InterruptedException{
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[3]/div[1]/div[1]")).click(); //status
         WebElement ManageStatusHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(ManageStatusHeader.isDisplayed());
@@ -137,7 +138,7 @@ public class LoginAdmin1 extends SetUp {
     @And("^navigate to Manage Customer page$")
     public void navigateToManageCustomerPage() throws InterruptedException{
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[4]/div[1]")).click(); //manage customer
         WebElement ManageCustomerHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(ManageCustomerHeader.isDisplayed());
@@ -149,7 +150,7 @@ public class LoginAdmin1 extends SetUp {
     @And("^navigate to Create Customer page from Manage Customer$")
     public void navigateToCreateCustomerPageFromManageCustomer() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button")).click(); //create user page
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement CreateCustomerpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button"));
         Assert.assertTrue(CreateCustomerpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Create Customer page = PASSED" + RESET);
@@ -161,7 +162,7 @@ public class LoginAdmin1 extends SetUp {
     @And("^navigate to Manage Truck Drivers page$")
     public void navigateToManageTruckDriversPage() throws InterruptedException{
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[5]/div[1]")).click(); //manage truck drivers
         WebElement ManageTruckDriverHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(ManageTruckDriverHeader.isDisplayed());
