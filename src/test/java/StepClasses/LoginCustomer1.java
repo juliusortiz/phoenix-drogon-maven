@@ -150,7 +150,7 @@ public class LoginCustomer1 extends SetUp {
         Assert.assertTrue(logoutpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Logout Page = PASSED" + RESET);
         System.out.println();
-
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/footer/div/section[2]/button/span")).click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.quit();
