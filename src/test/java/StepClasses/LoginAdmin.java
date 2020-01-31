@@ -170,7 +170,7 @@ public class LoginAdmin extends SetUp {
     @And("^navigate to Create Driver page from Manage Truck Drivers$")
     public void navigateToCreateDriverPageFromManageTruckDrivers() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button")).click(); //create user page
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement CreateDriverpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button"));
         Assert.assertTrue(CreateDriverpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Create Driver page = PASSED" + RESET);
@@ -182,7 +182,7 @@ public class LoginAdmin extends SetUp {
     @And("^navigate to Delivery Receipts page$")
     public void navigateToDeliveryReceiptsPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[6]/div[1]")).click(); // delivery receipts //all
         WebElement DeliveryReceipts = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(DeliveryReceipts.isDisplayed());
@@ -216,7 +216,7 @@ public class LoginAdmin extends SetUp {
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/a")).click(); //settings page
         Thread.sleep(500);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")).click(); //about this app
         WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")); //
         Assert.assertTrue(settingspage.isDisplayed());
@@ -238,14 +238,14 @@ public class LoginAdmin extends SetUp {
     @Then("^Logout page$")
     public void logoutPage() {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
         Assert.assertTrue(logoutpage.isDisplayed());
         System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Logout Page = PASSED" + RESET);
         System.out.println();
 
         driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.quit();
     }
 }
