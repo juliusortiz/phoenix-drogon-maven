@@ -1,52 +1,35 @@
 package StepClasses;
 
-import Configuration.SetUp;
+import Base.BaseUtil;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class CreateUser extends SetUp {
+public class CreateUser extends BaseUtil {
     @Given("^logged in as Admin user$")
     public void loggedInAsAdminUser()  throws IOException, InterruptedException {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        //   options.addArguments("--headless");
-        options.addArguments("--disable-notifications");
-        options.addArguments("--disable-gpu");
-        driver = new ChromeDriver(options);
+        FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());
+        Properties prop = new Properties();
+        prop.load(fis);
 
-        driver.get("https://phoenix_epod_app.dice205.asia/");
-        driver.getWindowHandle();
-        driver.manage().window().maximize();
-
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("Credentials.xlsx");
-        assert inputStream != null;
-        XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
-        XSSFSheet sheet = workbook.getSheetAt(0);
-        Select businesstype = new Select(driver.findElement(By.xpath(String.valueOf(sheet.getRow(0).getCell(0)))));
-        businesstype.selectByVisibleText(String.valueOf(sheet.getRow(0).getCell(1)));
+        Select businesstype = new Select(driver.findElement(By.xpath("//select[@name='businesstype']")));
+        businesstype.selectByVisibleText(String.valueOf("Phoenix Petroleum"));
 
         driver.findElement(By.xpath("//input[@name='username']"))
-                .sendKeys(String.valueOf(sheet.getRow(1).getCell(1)));
+                .sendKeys(prop.getProperty("sa.username"));
         driver.findElement(By.xpath("//input[@name='pass']"))
-                .sendKeys(String.valueOf(sheet.getRow(8).getCell(1)));
+                .sendKeys(prop.getProperty("password"));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        System.out.print(CYAN_BOLD_BRIGHT + "Login Admin = PASSED" + RESET);
-        System.out.println();
        Thread.sleep(5000);
     }
 
@@ -57,8 +40,6 @@ public class CreateUser extends SetUp {
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[2]/div[1]")).click(); //manage user page
         WebElement ManageUserheader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]"));
         Assert.assertTrue(ManageUserheader.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Manage Users page = PASSED" + RESET);
-        System.out.println();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
@@ -68,8 +49,6 @@ public class CreateUser extends SetUp {
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement CreateUserpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button"));
         Assert.assertTrue(CreateUserpage.isDisplayed());
-        System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Create Users page = PASSED" + RESET);
-        System.out.println();
     }
 
     @And("^create a dispatcher user from create user page$")
@@ -94,12 +73,9 @@ public class CreateUser extends SetUp {
             driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
             WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
             Assert.assertTrue(logoutpage.isDisplayed());
-            System.out.print(CYAN_BOLD_BRIGHT + "Navigation to Logout Page = PASSED" + RESET);
-            System.out.println();
 
             driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
             driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-            driver.quit();
         }
     }
 
