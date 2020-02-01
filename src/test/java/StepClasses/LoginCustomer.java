@@ -23,7 +23,7 @@ public class LoginCustomer extends BaseUtil {
         prop.load(fis);
 
         Select businesstype = new Select(driver.findElement(By.xpath("//select[@name='businesstype']")));
-        businesstype.selectByVisibleText(String.valueOf("Phoenix Petroleum"));
+        businesstype.selectByVisibleText("Phoenix Petroleum");
 
         driver.findElement(By.xpath("//input[@name='username']"))
                 .sendKeys(prop.getProperty("cus.username"));
