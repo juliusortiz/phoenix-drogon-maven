@@ -26,11 +26,11 @@ public class LoginScheduler extends BaseUtil {
         businesstype.selectByVisibleText("Phoenix Petroleum");
 
         driver.findElement(By.xpath("//input[@name='username']"))
-                .sendKeys(prop.getProperty("pp.sch"));
+                .sendKeys(prop.getProperty("sch.username"));
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(prop.getProperty("password"));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        Thread.sleep(2000);
     }
 
     @And("^navigate to Scheduler Notification page$")

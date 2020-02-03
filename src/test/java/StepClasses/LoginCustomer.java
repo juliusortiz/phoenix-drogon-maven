@@ -107,12 +107,11 @@ public class LoginCustomer extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/a")).click(); //notfication page
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/a")); //
         Assert.assertTrue(notificationpage.isDisplayed());
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+       Thread.sleep(4000);
     }
 
-
-    @Then("^Cutomer Logout$")
-    public void cutomerLogout() throws InterruptedException {
+    @Then("^Customer Logout$")
+    public void customerLogout() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")); //
@@ -121,4 +120,7 @@ public class LoginCustomer extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/footer/div/section[2]/button/span")).click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
-}
+    }
+
+
+

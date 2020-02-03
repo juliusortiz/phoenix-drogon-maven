@@ -11,4 +11,4 @@
       And navigate to Customer Settings page
       And navigate to Customer Notification page
 
-      Then Cutomer Logout
+      Then Customer Logout
