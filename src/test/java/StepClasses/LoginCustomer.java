@@ -90,9 +90,9 @@ public class LoginCustomer extends BaseUtil {
 
     @And("^navigate to Customer Settings page$")
     public void navigateToCustomerSettingsPage() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/footer/div/section[1]/a/span")).click(); //settings page
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img")).click(); //dropdown
+        Thread.sleep(500);
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/article/footer/section[1]/a")).click(); //settings page
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
@@ -112,12 +112,12 @@ public class LoginCustomer extends BaseUtil {
 
     @Then("^Customer Logout$")
     public void customerLogout() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img")).click(); //logout page
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")); //
+        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img")); //
         Assert.assertTrue(logoutpage.isDisplayed());
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/footer/div/section[2]/button/span")).click();
+
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/article/footer/section[2]/label")).click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
     }

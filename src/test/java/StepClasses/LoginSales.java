@@ -69,9 +69,9 @@ public class LoginSales extends BaseUtil {
 
     @And("^navigate to Sales Settings page$")
     public void navigateToSalesSettingsPage() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //dropdown
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a/span")).click(); //settings page
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[1]/a")).click(); //settings page
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);

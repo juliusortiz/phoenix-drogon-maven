@@ -64,9 +64,9 @@ public class LoginIRT extends BaseUtil {
 
     @And("^navigate to IRT Settings Page$")
     public void navigateToIRTSettingsPage() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //dropdown
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/a")).click(); //settings page
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[1]/a")).click(); //settings page
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
