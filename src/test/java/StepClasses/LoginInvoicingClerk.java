@@ -50,15 +50,4 @@ public class LoginInvoicingClerk extends BaseUtil {
         Assert.assertTrue(notificationpage.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
-
-    @Then("^Invoicing Clerk Logout page$")
-    public void invoicingClerkLogoutPage() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img")).click(); //logout page
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
-        Assert.assertTrue(logoutpage.isDisplayed());
-
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-    }
 }

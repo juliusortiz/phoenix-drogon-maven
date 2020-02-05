@@ -6,4 +6,4 @@ Feature: Login Scheduler
     Given logged in as Scheduler user
     And navigate to Scheduler Notification page
 
-    Then Scheduler Logout page
+    Then Logout page

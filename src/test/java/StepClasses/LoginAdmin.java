@@ -48,9 +48,9 @@ public class LoginAdmin extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/section/button[2]/a")).click(); //customer page
         WebElement Customerpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
         Assert.assertTrue(Customerpage.isDisplayed());
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]/img")).click(); //home
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @And("^navigate to truck driver page from the dashboard$")
@@ -180,16 +180,5 @@ public class LoginAdmin extends BaseUtil {
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")); //
         Assert.assertTrue(notificationpage.isDisplayed());
         Thread.sleep(2000);
-    }
-
-    @Then("^Logout page$")
-    public void logoutPage() {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
-        Assert.assertTrue(logoutpage.isDisplayed());
-
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 }

@@ -8,4 +8,4 @@ Feature: Login Dispatcher
     And navigate to Dispatcher Settings page
     And navigate to Dispatcher Notification page
 
-    Then Dispatcher Logout
+    Then Logout page

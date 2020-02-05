@@ -7,4 +7,4 @@ Feature: Login Invoicing Clerk
     And navigate to View Details page from the dashboard
     And navigate to Invoicing Clerk notification page
 
-    Then Invoicing Clerk Logout page
+    Then Logout page

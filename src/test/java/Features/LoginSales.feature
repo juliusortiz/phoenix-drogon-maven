@@ -10,5 +10,5 @@ Feature: Login Sales
     And navigate to Sales Settings page
     And navigate to Sales Notification page
 
-    Then Sales Logout
+    Then Logout page
 

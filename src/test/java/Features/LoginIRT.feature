@@ -10,4 +10,4 @@ Feature: Login IRT
     And navigate to IRT Settings Page
     And navigate to IRT Notification page
 
-    Then IRT Logout
+    Then Logout page

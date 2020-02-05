@@ -110,17 +110,17 @@ public class LoginCustomer extends BaseUtil {
        Thread.sleep(4000);
     }
 
-    @Then("^Customer Logout$")
-    public void customerLogout() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img")).click(); //logout page
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img")); //
-        Assert.assertTrue(logoutpage.isDisplayed());
+    @Then("^Customer Logout page$")
+    public void customerLogoutPage() throws InterruptedException {
+            driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img")).click(); //logout page
+            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+            WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img"));
+            Assert.assertTrue(logoutpage.isDisplayed());
 
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/article/footer/section[2]/label")).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+            driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/article/footer/section[2]/label")).click();
+            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
-    }
+}
 
 
 
