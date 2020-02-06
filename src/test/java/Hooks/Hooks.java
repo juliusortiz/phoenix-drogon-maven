@@ -18,7 +18,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Hooks extends BaseUtil {
 
-
     @Before
     public void InitializeTest() throws IOException {
         FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());
@@ -27,7 +26,7 @@ public class Hooks extends BaseUtil {
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+       /* options.addArguments("--headless");*/
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-gpu");
         driver = new ChromeDriver(options);
