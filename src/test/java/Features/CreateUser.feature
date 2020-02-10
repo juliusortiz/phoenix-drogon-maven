@@ -1,4 +1,4 @@
-@Smoketest1
+@Smoketest
 Feature: Create User
   This feature deals with the admin page in creating a user or role
 

@@ -43,6 +43,16 @@ public class LoginScheduler extends BaseUtil {
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
+    @And("^navigate to TTP dropdown from the dashboard$")
+    public void navigateToTTPDropdownFromTheDashboard() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div[2]/div[1]/div/div[2]")).click(); //ttp
+        WebElement TTP = driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div[2]/div[1]/div/div[2]"));
+        Assert.assertTrue(TTP.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div[2]/div[1]/div/div[2]")).click();
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+    }
+
     @And("^navigate to Vehicle Code dropdown from the dashboard$")
     public void navigateToVehicleCodeDropdownFromTheDashboard() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div/div[1]/div/div[2]")).click(); //vehicle code
@@ -52,30 +62,21 @@ public class LoginScheduler extends BaseUtil {
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    @And("^navigate to TTP dropdown from the dashboard$")
-    public void navigateToTTPDropdownFromTheDashboard() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[1]/div[2]/div/div[1]/div/div[2]")).click(); //vehicle code
-        WebElement TTP = driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[1]/div[2]/div/div[1]/div/div[2]"));
-        Assert.assertTrue(TTP.isDisplayed());
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[1]/div[2]/div/div[1]/div/div[2]")).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-    }
-
-    @And("^navigate to Dispatcher page$")
+    @And("^navigate to Current Delivery page$")
     public void navigateToDispatcherPage() throws InterruptedException {
             driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
             driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
             driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click(); //dispatcher page
-            WebElement ManageTruckDriverHeader = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div"));
-            Assert.assertTrue(ManageTruckDriverHeader.isDisplayed());
+            WebElement CurrentDelivery = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div"));
+            Assert.assertTrue(CurrentDelivery.isDisplayed());
             driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    @And("^navigate to Track Delivery page from the Dispatcher page$")
+    @And("^navigate to Track Delivery page from the Current Delivery page$")
     public void navigateToTrackDeliveryPageFromTheDispatcherPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div/table/tbody/tr[1]/td[6]/a")).click(); //track delivery
-        WebElement ManageTruckDriverHeader = driver.findElement(By.xpath("/html/body/div[2]/main/section"));
-        Assert.assertTrue(ManageTruckDriverHeader.isDisplayed());
+        WebElement TrackDelivery = driver.findElement(By.xpath("/html/body/div[2]/main/section"));
+        Assert.assertTrue(TrackDelivery.isDisplayed());
         Thread.sleep(2000);
     }
 
@@ -84,8 +85,18 @@ public class LoginScheduler extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")).click(); //dispatcher page
-        WebElement ManageTruckDriverHeader = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div"));
-        Assert.assertTrue(ManageTruckDriverHeader.isDisplayed());
+        WebElement ProblemsReportedpage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div"));
+        Assert.assertTrue(ProblemsReportedpage.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+    }
+
+    @And("^navigate to Manage Reasons Page$")
+    public void navigateToManageReasonspage() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //manage reasons page
+        WebElement ManageReasonspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div"));
+        Assert.assertTrue(ManageReasonspage.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 

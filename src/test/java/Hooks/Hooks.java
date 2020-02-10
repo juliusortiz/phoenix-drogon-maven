@@ -26,7 +26,7 @@ public class Hooks extends BaseUtil {
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-       /* options.addArguments("--headless");*/
+      options.addArguments("--headless");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-gpu");
         driver = new ChromeDriver(options);

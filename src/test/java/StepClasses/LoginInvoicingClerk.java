@@ -35,7 +35,7 @@ public class LoginInvoicingClerk extends BaseUtil {
 
     @And("^navigate to View Details page from the dashboard$")
     public void navigateToViewDetailsPageFromTheDashboard() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/div[1]/table/tbody/tr[1]/td[5]/a/button")).click(); //view details page
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div[1]/table/tbody/tr[1]/td[8]/a/button")).click(); //view details page
         WebElement Statuspage = driver.findElement(By.xpath("/html/body/div[2]/main/section"));
         Assert.assertTrue(Statuspage.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
