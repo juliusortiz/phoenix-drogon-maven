@@ -34,6 +34,16 @@ public class LoginDispatcher extends BaseUtil {
        Thread.sleep(5000);
     }
 
+    @And("^navigate to Deliveries History$")
+    public void navigateToDeliveriesHistory() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click(); //problems reported page
+        WebElement deliverieshistory = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")); //
+        Assert.assertTrue(deliverieshistory.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+    }
+
     @And("^navigate to Problems Reported page$")
     public void navigateToProblemsReportedPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
@@ -41,7 +51,17 @@ public class LoginDispatcher extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")).click(); //problems reported page
         WebElement problemsreportedpage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")); //
         Assert.assertTrue(problemsreportedpage.isDisplayed());
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+    }
+
+    @And("^navigate to Manage Reasons page$")
+    public void navigateToManageReasonsPage() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //dashboard
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //manage reasons page
+        WebElement managereasonspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")); //
+        Assert.assertTrue(managereasonspage.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @And("^navigate to Dispatcher Settings page$")
