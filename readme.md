@@ -1,17 +1,18 @@
-## Phoenix Drogon(PDS)
+## **Phoenix Drogon(PDS)**
 
-### IDE 
-    - IntelliJ
+#### Integrated Development Environment(IDE) 
+- IntelliJ
     
-### Frameworks used 
-    - Selenium 
-    - TestNG 
-    - Cucumber
+#### Frameworks used 
+- Selenium 
+- TestNG 
+- Cucumber
 
-### Plugins
-    - Cucumber for Java
-    - Gherkin
-    - MavenPlugin
+#### Plugins to be installed by using IntelliJ IDE
+- Cucumber for Java
+- Gherkin
+- MavenPlugin
      
-### Dependencies in POM.xml
+#### Dependencies installed in POM.xml
+
     
