@@ -62,24 +62,18 @@ public class LoginCustomer extends BaseUtil {
     public void navigateToHistoryPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/button[1]")).click(); //all
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[4]/div/div")).click(); //history page
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/button[2]")).click(); //successfull
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/button[3]")).click(); //rejected
-        WebElement historypage = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/button[3]")); //
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[3]/div/div")).click(); //history
+        WebElement historypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[3]/div/div")); //
         Assert.assertTrue(historypage.isDisplayed());
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        Thread.sleep(500);
     }
 
     @And("^navigate to CDSS Profile page$")
     public void navigateToCDSSProfilePage() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[5]/div/div")).click(); //cdss profile page
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button")).click(); //dashboard
+        Thread.sleep(500);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[4]/div/div")).click(); //cdss profile page
+        Thread.sleep(500);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/button[2]")).click(); //create a new cdss
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/button[3]")).click(); //terms and condition
