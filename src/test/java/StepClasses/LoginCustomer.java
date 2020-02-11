@@ -37,14 +37,14 @@ public class LoginCustomer extends BaseUtil {
     @And("^navigate to Delivery Status page$")
     public void navigateToDeliveryStatusPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div/div")).click(); //delivery status page
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div")).click(); //delivery status page
         WebElement deliverystatuspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div/div")); //
         Assert.assertTrue(deliverystatuspage.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    @And("^navigate to Delivery Receipt page$")
+  /*  @And("^navigate to Delivery Receipt page$")
     public void navigateToDeliveryReceiptPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
@@ -56,7 +56,7 @@ public class LoginCustomer extends BaseUtil {
         WebElement deliveryreceiptspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/button[3]")); //
         Assert.assertTrue(deliveryreceiptspage.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-    }
+    }*/
 
     @And("^navigate to History page$")
     public void navigateToHistoryPage() throws InterruptedException {
