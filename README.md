@@ -1,17 +1,17 @@
-Phoenix Drogon(PDS)
+#Phoenix Drogon(PDS)
 
-IDE 
+##IDE 
     -IntelliJ
     
-Frameworks used 
+##Frameworks used 
     -Selenium 
     -TestNG 
     -Cucumber
 
-Plugins
+##Plugins
     -Cucumber for Java
     -Gherkin
     -MavenPlugin
      
-Dependencis in POM.xml
+##Dependencies in POM.xml
     
