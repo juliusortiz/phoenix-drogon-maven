@@ -29,7 +29,7 @@
 ### Dependencies installed in pom.xml
 * Please check pom.xml for plugin builds and dependencies
 
-### Run the project using in terminal
+### Run the project using cmd or terminal
 - Example change directory to your project
 ```cmd
         cd c:/xampp/htdocs/phoenix-drogon-maven
