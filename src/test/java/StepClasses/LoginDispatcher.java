@@ -1,10 +1,12 @@
 package StepClasses;
 
-import Base.BaseUtil;
+
+import Utility.Hook;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -14,7 +16,13 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class LoginDispatcher extends BaseUtil {
+public class LoginDispatcher {
+
+    private final WebDriver driver;
+
+    public LoginDispatcher() {
+        this.driver = Hook.getDriver();
+    }
 
     @Given("^logged in as dispatcher user$")
     public void loggedInAsDispatcherUser() throws IOException, InterruptedException {
@@ -31,7 +39,7 @@ public class LoginDispatcher extends BaseUtil {
                 .sendKeys(prop.getProperty("password"));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-       Thread.sleep(5000);
+        Thread.sleep(5000);
     }
 
     @And("^navigate to Deliveries History$")
@@ -80,9 +88,9 @@ public class LoginDispatcher extends BaseUtil {
 
     @And("^navigate to Dispatcher Notification page$")
     public void navigateToDispatcherNotificationPage() throws InterruptedException {
-            driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")).click(); //notfication page
-            WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")); //
-            Assert.assertTrue(notificationpage.isDisplayed());
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")).click(); //notfication page
+        WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")); //
+        Assert.assertTrue(notificationpage.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 }

@@ -1,10 +1,12 @@
 package StepClasses;
 
-import Base.BaseUtil;
+
+import Utility.Hook;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -14,10 +16,16 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class LoginInvoicingClerk extends BaseUtil {
+public class LoginInvoicingClerk {
+
+    private final WebDriver driver;
+
+    public LoginInvoicingClerk() {
+        this.driver = Hook.getDriver();
+    }
 
     @Given("^logged in as Invoicing Clerk user$")
-    public void loggedInAsInvoicingClerkUser()  throws IOException, InterruptedException {
+    public void loggedInAsInvoicingClerkUser() throws IOException, InterruptedException {
         FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());
         Properties prop = new Properties();
         prop.load(fis);

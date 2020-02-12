@@ -1,10 +1,12 @@
 package StepClasses;
 
-import Base.BaseUtil;
+
+import Utility.Hook;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -14,7 +16,14 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class LoginIRT extends BaseUtil {
+public class LoginIRT {
+
+    private final WebDriver driver;
+
+    public LoginIRT() {
+        this.driver = Hook.getDriver();
+    }
+
     @Given("^logged in as IRT user$")
     public void loggedInAsIRTUser() throws IOException, InterruptedException {
         FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());

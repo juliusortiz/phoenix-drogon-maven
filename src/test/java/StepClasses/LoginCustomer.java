@@ -1,10 +1,11 @@
 package StepClasses;
 
-import Base.BaseUtil;
+import Utility.Hook;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -14,7 +15,13 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class LoginCustomer extends BaseUtil {
+public class LoginCustomer {
+
+    private final WebDriver driver;
+
+    public LoginCustomer() {
+        this.driver = Hook.getDriver();
+    }
 
     @Given("^logged in as customer user$")
     public void loggedInAsCustomerUser() throws IOException, InterruptedException {
@@ -101,18 +108,18 @@ public class LoginCustomer extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/a")).click(); //notfication page
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/a")); //
         Assert.assertTrue(notificationpage.isDisplayed());
-       Thread.sleep(4000);
+        Thread.sleep(4000);
     }
 
     @Then("^Customer Logout page$")
     public void customerLogoutPage() throws InterruptedException {
-            driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img")).click(); //logout page
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-            WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img"));
-            Assert.assertTrue(logoutpage.isDisplayed());
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img")).click(); //logout page
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img"));
+        Assert.assertTrue(logoutpage.isDisplayed());
 
-            driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/article/footer/section[2]/label")).click();
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/article/footer/section[2]/label")).click();
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 }
 

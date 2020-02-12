@@ -1,21 +1,26 @@
 package StepClasses;
 
-import Base.BaseUtil;
+import Utility.Hook;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.reporters.jq.INavigatorPanel;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class LoginScheduler extends BaseUtil {
+public class LoginScheduler {
+
+    private final WebDriver driver;
+
+    public LoginScheduler() {
+        this.driver = Hook.getDriver();
+    }
 
     @Given("^logged in as Scheduler user$")
     public void loggedInAsSchedulerUser() throws IOException, InterruptedException {
@@ -64,12 +69,12 @@ public class LoginScheduler extends BaseUtil {
 
     @And("^navigate to Current Delivery page$")
     public void navigateToDispatcherPage() throws InterruptedException {
-            driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-            driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click(); //dispatcher page
-            WebElement CurrentDelivery = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div"));
-            Assert.assertTrue(CurrentDelivery.isDisplayed());
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")).click(); //dispatcher page
+        WebElement CurrentDelivery = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div"));
+        Assert.assertTrue(CurrentDelivery.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @And("^navigate to Track Delivery page from the Current Delivery page$")

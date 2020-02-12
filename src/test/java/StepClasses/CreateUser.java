@@ -1,10 +1,11 @@
 package StepClasses;
 
-import Base.BaseUtil;
+import Utility.Hook;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -14,9 +15,16 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class CreateUser extends BaseUtil {
-    @Given("^logged in as Admin user$")
-    public void loggedInAsAdminUser()  throws IOException, InterruptedException {
+public class CreateUser {
+
+    private final WebDriver driver;
+
+    public CreateUser() {
+        this.driver = Hook.getDriver();
+    }
+
+    @Given("^logged in as Aadmin user$")
+    public void loggedInAsAdminUser() throws IOException, InterruptedException {
         FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());
         Properties prop = new Properties();
         prop.load(fis);
@@ -30,7 +38,7 @@ public class CreateUser extends BaseUtil {
                 .sendKeys(prop.getProperty("password"));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-       Thread.sleep(5000);
+        Thread.sleep(5000);
     }
 
     @And("^navigate to Manage users page$")
@@ -69,13 +77,13 @@ public class CreateUser extends BaseUtil {
 
     @Then("^admin logout page$")
     public void adminLogoutPage() throws InterruptedException {
-            driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-            WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
-            Assert.assertTrue(logoutpage.isDisplayed());
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[2]/img")).click(); //logout page
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")); //
+        Assert.assertTrue(logoutpage.isDisplayed());
 
-            driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
-            driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        }
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
+}
 
