@@ -1,18 +1,54 @@
-## **Phoenix Drogon(PDS)**
+## **Phoenix Drogon(Phoenix Delivery System)**
 
-#### Integrated Development Environment(IDE) 
-- IntelliJ
+### Pre-requisites
+- Java installed and configured variables for global command usage in your local computer
+    - jdk-8u221-windows-x64
+    - jre-8u221-windows-x64
     
-#### Frameworks used 
+- Maven installed and configured variables for global command usage in your local computer
+    - apache-maven-3.6.2-bin
+    
+### Integrated Development Environment(IDE) 
+- IntelliJ
+
+### Project build 
+- Maven
+
+### Frameworks used 
+- Behavioral Driven Development(BDD)
 - Selenium 
 - TestNG 
 - Cucumber
+- junit
 
-#### Plugins to be installed by using IntelliJ IDE
+### Plugins to be installed by using IntelliJ IDE
 - Cucumber for Java
 - Gherkin
 - MavenPlugin
-     
-#### Dependencies installed in POM.xml
 
-    
+### Dependencies installed in pom.xml
+* Please check pom.xml for plugin builds and dependencies
+
+### Run the project using in terminal
+- Example change directory to your project
+```cmd
+        cd c:/xampp/htdocs/phoenix-drogon-maven
+```
+- Clean target folder that contains reports  
+```cmd
+        PS C:\xampp\htdocs\phoenix-drogon-maven> mvn clean
+```
+- Compile Java files
+```cmd
+        PS C:\xampp\htdocs\phoenix-drogon-maven> mvn compile
+```
+- Run test and throw cucumber report to target folder  
+```cmd
+        PS C:\xampp\htdocs\phoenix-drogon-maven> mvn install
+```
+
+#### Links & References
+* [IntelliJ IDE - Community](https://www.jetbrains.com/idea/download/#section=windows)
+* [Maven repository](https://mvnrepository.com/)
+* [Udemy resources](https://www.udemy.com/course/cucumber-with-selenium/learn/lecture/5966568#overview)
+* [Youtube sources](https://www.youtube.com/executeautomation)
