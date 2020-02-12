@@ -25,6 +25,17 @@
 - Cucumber for Java
 - Gherkin
 - MavenPlugin
+- Maven Test Support Plugin
+- Substeps IntelliJ Plugin
+- Test Automation Gears
+
+### Nice to have plugins
+- ANSI Highlighter
+- Batch Scripts Supports
+- CMD Support
+- Create testNG XML
+- DarkTheme
+- One Dark theme
 
 ### Dependencies installed in pom.xml
 * Please check pom.xml for plugin builds and dependencies
