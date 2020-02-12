@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+
 public class Hooks extends BaseUtil {
 
     @Before
@@ -24,9 +25,10 @@ public class Hooks extends BaseUtil {
         Properties prop = new Properties();
         prop.load(fis);
 
+
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-      options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-gpu");
         driver = new ChromeDriver(options);
@@ -35,10 +37,11 @@ public class Hooks extends BaseUtil {
         driver.getWindowHandle();
         driver.manage().window().maximize();
     }
+
     @Then("^Logout page$")
     public void logoutPage() {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img")).click(); //logout page
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50 TimeUnit.SECONDS);
         WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img"));
         Assert.assertTrue(logoutpage.isDisplayed());
 
@@ -48,7 +51,7 @@ public class Hooks extends BaseUtil {
 
     @After
     public void TearDownTest(Scenario scenario) {
-        if (scenario.isFailed()){
+        if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
         }
