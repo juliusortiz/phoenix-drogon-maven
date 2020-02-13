@@ -18,9 +18,13 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+<<<<<<< HEAD:src/test/java/Utility/Hook.java
 
 public class Hook {
     private static WebDriver driver;
+=======
+public class Hooks extends BaseUtil {
+>>>>>>> parent of 44e5585... Updateds:src/test/java/Hooks/Hooks.java
 
     @Before("@Web")
     public void InitializeTest() throws IOException {
@@ -28,10 +32,9 @@ public class Hook {
         Properties prop = new Properties();
         prop.load(fis);
 
-
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+      options.addArguments("--headless");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-gpu");
         driver = new ChromeDriver(options);
@@ -40,6 +43,7 @@ public class Hook {
         driver.getWindowHandle();
         driver.manage().window().maximize();
     }
+<<<<<<< HEAD:src/test/java/Utility/Hook.java
 
     @Before("@App")
     public void InitializeAndroid() throws IOException {
@@ -52,10 +56,12 @@ public class Hook {
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
+=======
+>>>>>>> parent of 44e5585... Updateds:src/test/java/Hooks/Hooks.java
     @Then("^Logout page$")
     public void logoutPage() {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img")).click(); //logout page
-        driver.manage().timeouts().implicitlyWait(50 TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img"));
         Assert.assertTrue(logoutpage.isDisplayed());
 
@@ -65,7 +71,7 @@ public class Hook {
 
     @After("@Web")
     public void TearDownTest(Scenario scenario) {
-        if (scenario.isFailed()) {
+        if (scenario.isFailed()){
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
         }
