@@ -114,7 +114,7 @@ public class LoginSales extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")).click();
         WebElement history = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")); // my accounts
         Assert.assertTrue(history.isDisplayed());
-        Thread.sleep(2000);
+        Thread.sleep(4000);
     }
 
     @And("^navigate to Sales Settings page$")

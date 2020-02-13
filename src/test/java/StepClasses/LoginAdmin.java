@@ -48,9 +48,9 @@ public class LoginAdmin extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/section/button[2]/a")).click(); //customer page
         WebElement Customerpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
         Assert.assertTrue(Customerpage.isDisplayed());
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]/img")).click(); //home
-        Thread.sleep(500);
+        Thread.sleep(2000);
     }
 
     @And("^navigate to Manage Users page$")
@@ -81,7 +81,7 @@ public class LoginAdmin extends BaseUtil {
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[3]/div[1]/div[1]")).click(); //status
         WebElement ManageStatusHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(ManageStatusHeader.isDisplayed());
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        Thread.sleep(2000);
     }
 
     @And("^navigate to Manage Customer page$")

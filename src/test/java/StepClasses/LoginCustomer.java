@@ -31,7 +31,7 @@ public class LoginCustomer extends BaseUtil {
         driver.findElement(By.xpath("//input[@name='pass']"))
                 .sendKeys(prop.getProperty("password"));
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        Thread.sleep(3000);
 
     }
 
@@ -62,11 +62,11 @@ public class LoginCustomer extends BaseUtil {
     @And("^navigate to History page$")
     public void navigateToHistoryPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        Thread.sleep(1000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[3]/div/div")).click(); //history
         WebElement historypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[3]/div/div")); //
         Assert.assertTrue(historypage.isDisplayed());
-        Thread.sleep(500);
+        Thread.sleep(1000);
     }
 
     @And("^navigate to CDSS Profile page$")
