@@ -55,7 +55,7 @@ public class Hook {
     @Then("^Logout page$")
     public void logoutPage() {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img")).click(); //logout page
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50 TimeUnit.SECONDS);
         WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img"));
         Assert.assertTrue(logoutpage.isDisplayed());
 
