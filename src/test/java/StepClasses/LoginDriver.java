@@ -1,18 +1,12 @@
 package StepClasses;
 
-import Utility.Hook;
+import Base.BaseUtil;
 import cucumber.api.java.en.Given;
-import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
 
-public class LoginDriver {
+public class LoginDriver extends BaseUtil {
 
-    private final WebDriver driver;
-
-    public LoginDriver() {
-        this.driver = Hook.getDriver();
-    }
 
     @Given("^logged in as driver user$")
     public void loggedInAsDriverUser() throws IOException, InterruptedException {

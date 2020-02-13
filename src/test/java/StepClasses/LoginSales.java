@@ -1,12 +1,10 @@
 package StepClasses;
 
 
-import Utility.Hook;
+import Base.BaseUtil;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -16,13 +14,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class LoginSales {
-
-    private final WebDriver driver;
-
-    public LoginSales() {
-        this.driver = Hook.getDriver();
-    }
+public class LoginSales extends BaseUtil {
 
     @Given("^logged in as Sales user$")
     public void loggedInAsSalesUser() throws IOException, InterruptedException {
