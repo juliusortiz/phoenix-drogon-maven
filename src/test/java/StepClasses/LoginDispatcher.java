@@ -52,7 +52,7 @@ public class LoginDispatcher extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")).click(); //problems reported page
         WebElement problemsreportedpage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")); //
         Assert.assertTrue(problemsreportedpage.isDisplayed());
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        Thread.sleep(2000);
     }
 
     @And("^navigate to Manage Reasons page$")

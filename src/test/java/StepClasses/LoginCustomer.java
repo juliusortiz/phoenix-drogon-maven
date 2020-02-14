@@ -42,7 +42,7 @@ public class LoginCustomer extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div")).click(); //delivery status page
         WebElement deliverystatuspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div/div")); //
         Assert.assertTrue(deliverystatuspage.isDisplayed());
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        Thread.sleep(2000);
     }
 
   /*  @And("^navigate to Delivery Receipt page$")
@@ -62,7 +62,7 @@ public class LoginCustomer extends BaseUtil {
     @And("^navigate to History page$")
     public void navigateToHistoryPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span")).click(); //dashboard
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[3]/div/div")).click(); //history
         WebElement historypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[3]/div/div")); //
         Assert.assertTrue(historypage.isDisplayed());

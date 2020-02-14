@@ -48,7 +48,7 @@ public class LoginAdmin extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/section/button[2]/a")).click(); //customer page
         WebElement Customerpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
         Assert.assertTrue(Customerpage.isDisplayed());
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]/img")).click(); //home
         Thread.sleep(2000);
     }
@@ -71,11 +71,10 @@ public class LoginAdmin extends BaseUtil {
         Assert.assertTrue(CreateUserpage.isDisplayed());
         driver.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button/span")).click(); //close
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-
     }
 
-    @And("^navigate to Manage Status page$")
-    public void navigateToManageStatusPage() throws InterruptedException {
+    @And("^navigate to Manage Statuses page$")
+    public void navigateToManageStatusesPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[3]/div[1]/div[1]")).click(); //status
@@ -84,13 +83,23 @@ public class LoginAdmin extends BaseUtil {
         Thread.sleep(2000);
     }
 
-    @And("^navigate to Manage Customer page$")
-    public void navigateToManageCustomerPage() throws InterruptedException {
+    @And("^navigate to Manage Accounts page$")
+    public void navigateToManageAccountsPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[4]/div[1]")).click(); //manage customer
-        WebElement ManageCustomerHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
-        Assert.assertTrue(ManageCustomerHeader.isDisplayed());
+        driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")).click(); //manage customer
+        WebElement ManageAccountspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div"));
+        Assert.assertTrue(ManageAccountspage.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+    }
+
+    @And("^navigate to Shippings from Manage Accounts page$")
+    public void navigateToShippingsFromManageAccountsPage() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[6]/a")).click(); //shippings page
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        WebElement shippingspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
+        Assert.assertTrue(shippingspage.isDisplayed());
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div/a")).click(); //back
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
@@ -101,7 +110,17 @@ public class LoginAdmin extends BaseUtil {
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[6]/div[1]")).click(); // delivery receipts //all
         WebElement DeliveryReceipts = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(DeliveryReceipts.isDisplayed());
-        Thread.sleep(500);
+        Thread.sleep(2000);
+    }
+
+    @And("^navigate to Products from the Delivery Receipts page$")
+    public void navigateToProductsFromTheDeliveryReceiptsPage() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[8]/button")).click(); //products page
+        Thread.sleep(2000);
+        WebElement productspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[8]/button"));
+        Assert.assertTrue(productspage.isDisplayed());
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div[3]/button")).click(); //close
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
     @And("^navigate to Problems Reported and Backloads Page$")
