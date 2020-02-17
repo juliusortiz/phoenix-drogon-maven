@@ -35,10 +35,10 @@ public class LoginAdmin extends BaseUtil {
 
     @And("^navigate to status page from the dashboard$")
     public void navigateToStatusPageFromTheDashboard() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/section/button[1]/a/div")).click(); //status page
+        driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/section/button[1]/a/div/div[2]/span[1]")).click(); //status page
         WebElement Statuspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
         Assert.assertTrue(Statuspage.isDisplayed());
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/header/a[1]/img")).click(); //home
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
@@ -110,32 +110,20 @@ public class LoginAdmin extends BaseUtil {
         driver.findElement(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[6]/div[1]")).click(); // delivery receipts //all
         WebElement DeliveryReceipts = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(DeliveryReceipts.isDisplayed());
-        Thread.sleep(5000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
-
- /*
-    And navigate to Products from the Delivery Receipts page
-    @And("^navigate to Products from the Delivery Receipts page$")
-    public void navigateToProductsFromTheDeliveryReceiptsPage() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[8]/button")).click(); //products page
-        Thread.sleep(2000);
-        WebElement productspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div[2]"));
-        Assert.assertTrue(productspage.isDisplayed());
-        driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div[3]/button")).click(); //close
-        Thread.sleep(1000);
-    }*/
 
     @And("^navigate to Problems Reported and Backloads Page$")
     public void navigateToProblemsReportedAndBackloadsPage() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]")).click(); //dashboard button
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[6]/div")).click(); //problems and back reloads
         WebElement ProblemsReportedAndBackloads = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[6]/div"));
         Assert.assertTrue(ProblemsReportedAndBackloads.isDisplayed());
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/button")).click(); //add new reason
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button")).click();
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button")).click(); //close
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div/div/div/div[2]/div")).click(); //backload
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
