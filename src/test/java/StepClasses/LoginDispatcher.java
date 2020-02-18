@@ -74,7 +74,7 @@ public class LoginDispatcher extends BaseUtil {
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]")).click(); //send feedback
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")).click(); //about this app
-        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]")); //
+        WebElement settingspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]"));
         Assert.assertTrue(settingspage.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }

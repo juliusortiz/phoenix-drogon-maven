@@ -107,14 +107,24 @@ public class LoginSales extends BaseUtil {
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
-    @And("^navigate to My Accounts page$")
+    @And("^navigate to Sales Manage Accounts page$")
     public void navigateToMyAccountsPage() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //my accounts
+        driver.findElement(By.xpath("/html/body/div[2]/main/header/button[1]/span")).click(); //manage accounts
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")).click();
         WebElement history = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")); // my accounts
         Assert.assertTrue(history.isDisplayed());
         Thread.sleep(5000);
+    }
+
+    @And("^navigate to Shippings from Sales Manage Accounts page$")
+    public void navigateToShippingsFromSalesManageAccountsPage() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[6]/a")).click(); //shippings
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        WebElement history = driver.findElement(By.xpath("/html/body/div[2]/main"));
+        Assert.assertTrue(history.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/table/tbody/tr[1]/td[5]/button")).click(); //location
     }
 
     @And("^navigate to Sales Settings page$")

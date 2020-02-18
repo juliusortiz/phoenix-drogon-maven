@@ -11,7 +11,8 @@ Feature: Login Sales
     And navigate to Sales History page
     And navigate to Filter Dropdown from the Sales history page
     And navigate to View Details from the Sales history page
-    And navigate to My Accounts page
+    And navigate to Sales Manage Accounts page
+    And navigate to Shippings from Sales Manage Accounts page
     And navigate to Sales Settings page
     And navigate to Sales Notification page
 

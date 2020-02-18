@@ -112,6 +112,16 @@ public class LoginAdmin extends BaseUtil {
         Assert.assertTrue(DeliveryReceipts.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
+/*  And navigate to Products from Delivery Receipts page
+    @And("^navigate to Products from Delivery Receipts page$")
+    public void navigateToProductsFromDeliveryReceiptsPage() throws InterruptedException {
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[11]/button")).click(); //shippings
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        WebElement history = driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div"));
+        Assert.assertTrue(history.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div[3]/button")).click(); //close
+    } */
 
     @And("^navigate to Problems Reported and Backloads Page$")
     public void navigateToProblemsReportedAndBackloadsPage() throws InterruptedException {
