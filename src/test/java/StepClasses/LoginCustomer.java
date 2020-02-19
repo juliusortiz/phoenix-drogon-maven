@@ -44,6 +44,7 @@ public class LoginCustomer extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div"))).click(); //delivery status page
         WebElement deliverystatuspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div/div")); //
         Assert.assertTrue(deliverystatuspage.isDisplayed());
+        Thread.sleep(1000);
     }
 
   /*  @And("^navigate to Delivery Receipt page$")

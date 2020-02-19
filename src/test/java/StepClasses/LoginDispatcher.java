@@ -44,12 +44,13 @@ public class LoginDispatcher extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div"))).click(); //problems reported page
         WebElement deliverieshistory = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div"));
         Assert.assertTrue(deliverieshistory.isDisplayed());
+        Thread.sleep(2000);
     }
 
     @And("^navigate to Problems Reported page$")
     public void navigateToProblemsReportedPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]/span"))).click(); //dashboard
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span"))).click(); //problems reported page
         WebElement problemsreportedpage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div/span")); //
         Assert.assertTrue(problemsreportedpage.isDisplayed());
