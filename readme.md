@@ -55,7 +55,7 @@
 ```
 - Run test and throw cucumber report to target folder  
 ```cmd
-        PS C:\xampp\htdocs\phoenix-drogon-maven> mvn install
+        PS C:\xampp\htdocs\phoenix-drogon-maven> mvn package
 ```
 
 #### Links & References
