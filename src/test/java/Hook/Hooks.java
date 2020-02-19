@@ -39,17 +39,6 @@ public class Hooks extends BaseUtil {
         driver.getWindowHandle();
         driver.manage().window().maximize();
 
-      /*  //Zoom out page
-        Robot robot = new Robot();
-        System.out.println("About to zoom out");
-        for (int i = 0; i < 4; i++) {
-            robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_SUBTRACT);
-            robot.keyRelease(KeyEvent.VK_SUBTRACT);
-            robot.keyRelease(KeyEvent.VK_CONTROL);
-        }
-        Thread.sleep(2000);*/
-
     }
 
     @Then("^Logout page$")
