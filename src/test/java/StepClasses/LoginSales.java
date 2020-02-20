@@ -73,12 +73,22 @@ public class LoginSales extends BaseUtil {
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
+    @And("^navigate to Sales Delivery Status page$")
+    public void navigateToSalesDeliveryStatusPage() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]/span"))).click(); //dashboard
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div"))).click(); //delivery status
+        WebElement history = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")); //
+        Assert.assertTrue(history.isDisplayed());
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+    }
+
     @And("^navigate to Sales History page$")
     public void navigateToSalesHistoryPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]/span"))).click(); //dashboard
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div"))).click();
-        WebElement history = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[2]/div/div")); //history
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div"))).click(); //sales history
+        WebElement history = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")); //history
         Assert.assertTrue(history.isDisplayed());
 
     }
@@ -104,7 +114,7 @@ public class LoginSales extends BaseUtil {
     public void navigateToMyAccountsPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]/span"))).click(); //dashboard button
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div"))).click();
         WebElement history = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")); // manage accounts
         Assert.assertTrue(history.isDisplayed());
     }

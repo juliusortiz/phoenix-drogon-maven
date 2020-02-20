@@ -37,14 +37,19 @@ public class LoginCustomer extends BaseUtil {
         Thread.sleep(10000);
     }
 
-    @And("^navigate to Delivery Status page$")
-    public void navigateToDeliveryStatusPage() throws InterruptedException {
+    @And("^navigate to Customer Delivery Status page$")
+    public void navigateToCustomerDeliveryStatusPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span"))).click(); //dashboard
         Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div"))).click(); //delivery status page
         WebElement deliverystatuspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[2]/div/div")); //
         Assert.assertTrue(deliverystatuspage.isDisplayed());
         Thread.sleep(1000);
+    }
+
+    @And("^navigate to View Delivery Receipt from the Delivery Status$")
+    public void navigateToViewDeliveryReceiptFromTheDeliveryStatus() throws InterruptedException {
+
     }
 
   /*  @And("^navigate to Delivery Receipt page$")
@@ -61,14 +66,30 @@ public class LoginCustomer extends BaseUtil {
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }*/
 
-    @And("^navigate to History page$")
-    public void navigateToHistoryPage() throws InterruptedException {
+    @And("^navigate to Customer History page$")
+    public void navigateToCustomerHistoryPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span"))).click(); //dashboard
         Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[3]/div/div"))).click(); //history
         WebElement historypage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/section/div/nav/a[3]/div/div")); //
         Assert.assertTrue(historypage.isDisplayed());
         Thread.sleep(3000);
+    }
+    @And("^navigate to Filter Dropdown from the Customer History page$")
+    public void navigateToFilterDropdownFromTheCustomerHistoryPage() throws InterruptedException{
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]"))).click(); //filter dropdown
+        WebElement filterdropdown = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]")); //filter dropdown
+        Assert.assertTrue(filterdropdown.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/ html/body/div[2]/main/section/header/section/div[1]/div/div[1]/div[2]"))).click(); //filter dropdown
+    }
+
+    @And("^navigate to Today Dropdown from the Customer History page$")
+    public void navigateToTodayDropdownFromTheCustomerHistoryPage() throws InterruptedException {
+
+    }
+
+    @And("^navigate to View Details from the Customer history page$")
+    public void navigateToViewDetailsFromTheCustomerHistoryPage() throws InterruptedException {
     }
 
     @And("^navigate to CDSS Profile page$")
@@ -84,6 +105,7 @@ public class LoginCustomer extends BaseUtil {
     @And("^navigate to Customer Settings page$")
     public void navigateToCustomerSettingsPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/button/img"))).click(); //dropdown
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/div/div[2]/div/div/article/footer/section[1]/a"))).click(); //settings page
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]"))).click(); //send feedback
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[3]"))).click(); //about this app

@@ -7,8 +7,8 @@ Feature: Login Scheduler
     And navigate to Bulk Shipment Type dropdown from the dashboard
     And navigate to TTP dropdown from the dashboard
     And navigate to Vehicle Code dropdown from the dashboard
-    And navigate to Current Delivery page
-    And navigate to Track Delivery page from the Current Delivery page
+    And navigate to Current Deliveries page
+    And navigate to Track Delivery page from the Current Deliveries page
     And navigate to Problems Reported Page
     And navigate to Manage Reasons Page
     And navigate to Scheduler Settings page

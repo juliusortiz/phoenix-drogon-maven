@@ -43,11 +43,21 @@ public class LoginAdmin extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
     }
 
-    @And("^navigate to customer page from the dashboard$")
-    public void navigateToCustomerPageFromTheDashboard() throws InterruptedException {
+    @And("^navigate to customers page from the dashboard$")
+    public void navigateToCustomersPageFromTheDashboard() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/section/button[2]/a"))).click(); //customer
-        WebElement Customerpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
-        Assert.assertTrue(Customerpage.isDisplayed());
+        WebElement Customerspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
+        Assert.assertTrue(Customerspage.isDisplayed());
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
+        Thread.sleep(2000);
+    }
+
+    @And("^navigate to users page from the dashboard$")
+    public void navigateToUsersPageFromTheDashboard() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/aside/header/a/span[1]"))).click(); //users
+        WebElement Customerspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
+        Assert.assertTrue(Customerspage.isDisplayed());
         Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
         Thread.sleep(2000);
@@ -71,13 +81,13 @@ public class LoginAdmin extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button/span"))).click(); //close
     }
 
-    @And("^navigate to Manage Statuses page$")
-    public void navigateToManageStatusesPage() throws InterruptedException {
+    @And("^navigate to Statuses page$")
+    public void navigateToStatusesPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]"))).click(); //dashboard button
         Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[3]/div[1]/div[1]"))).click(); //manage status
-        WebElement ManageStatusHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
-        Assert.assertTrue(ManageStatusHeader.isDisplayed());
+        WebElement Statuses = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
+        Assert.assertTrue(Statuses.isDisplayed());
         Thread.sleep(2000);
     }
 
@@ -102,27 +112,28 @@ public class LoginAdmin extends BaseUtil {
     public void navigateToDeliveryReceiptsPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]"))).click(); //dashboard button
         Thread.sleep(2000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[6]/div[1]"))).click(); //delivery receipts
-        WebElement DeliveryReceipts = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[5]/div/div"))).click(); //delivery receipts
+        WebElement DeliveryReceipts = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[5]/div/div"));
         Assert.assertTrue(DeliveryReceipts.isDisplayed());
         Thread.sleep(2000);
     }
-/*  And navigate to Products from Delivery Receipts page
+
     @And("^navigate to Products from Delivery Receipts page$")
     public void navigateToProductsFromDeliveryReceiptsPage() throws InterruptedException {
-        driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[11]/button")).click(); //shippings
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[8]/button"))).click(); //shippings
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        WebElement history = driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div"));
+        WebElement history = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[8]/button"));
         Assert.assertTrue(history.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("/html/body/div[2]/main/div[3]/div/div/div[3]/button")).click(); //close
-    } */
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[3]/div/div/div[3]/button"))).click(); //close
+        Thread.sleep(2000);
+    }
 
     @And("^navigate to Admin Manage Reasons Page$")
     public void navigateToAdminManageReasonsPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]"))).click();
         Thread.sleep(2000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[6]/div"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[6]/div/div"))).click();
         WebElement ProblemsReportedAndBackloads = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[6]/div"));
         Assert.assertTrue(ProblemsReportedAndBackloads.isDisplayed());
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[1]/button"))).click(); //add new reason

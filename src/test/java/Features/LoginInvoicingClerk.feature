@@ -1,4 +1,4 @@
-@SmokeTest
+@SmokeTest1
 Feature: Login Invoicing Clerk
   This feature deals with the Invoicing Clerk page accessibility and navigations
 
@@ -6,5 +6,6 @@ Feature: Login Invoicing Clerk
     Given logged in as Invoicing Clerk user
     And navigate to View Details page from the dashboard
     And navigate to Invoicing Clerk notification page
+    And navigate to Invoicing Clerk Settings page
 
     Then Logout page
