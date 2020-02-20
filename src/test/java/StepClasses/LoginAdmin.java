@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LoginAdmin extends BaseUtil {
 
-    WebDriverWait wait = new WebDriverWait(driver,30);
+    WebDriverWait wait = new WebDriverWait(driver,50);
 
     @Given("^logged in as admin user$")
     public void loggedInAsAdminUser() throws IOException, InterruptedException {
@@ -48,6 +48,7 @@ public class LoginAdmin extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/section/button[2]/a"))).click(); //customer
         WebElement Customerpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
         Assert.assertTrue(Customerpage.isDisplayed());
+        Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
         Thread.sleep(2000);
     }
@@ -122,14 +123,13 @@ public class LoginAdmin extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]"))).click();
         Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[6]/div"))).click();
-        Thread.sleep(2000);
         WebElement ProblemsReportedAndBackloads = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[6]/div"));
         Assert.assertTrue(ProblemsReportedAndBackloads.isDisplayed());
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/button"))).click(); //add new reason
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[1]/button"))).click(); //add new reason
         Thread.sleep(1000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button"))).click(); //close
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button/span"))).click(); //close
         Thread.sleep(1000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div/div/div/div[2]/div"))).click(); //backload
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[2]/div/div[1]/div[2]"))).click(); //backload
         Thread.sleep(2000);
     }
 

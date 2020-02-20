@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LoginDispatcher extends BaseUtil {
 
-    WebDriverWait wait = new WebDriverWait(driver,30);
+    WebDriverWait wait = new WebDriverWait(driver,50);
 
     @Given("^logged in as dispatcher user$")
     public void loggedInAsDispatcherUser() throws IOException, InterruptedException {

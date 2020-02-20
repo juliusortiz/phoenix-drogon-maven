@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LoginCustomer extends BaseUtil {
 
-    WebDriverWait wait = new WebDriverWait(driver,30);
+    WebDriverWait wait = new WebDriverWait(driver,50);
 
     @Given("^logged in as customer user$")
     public void loggedInAsCustomerUser() throws IOException, InterruptedException {

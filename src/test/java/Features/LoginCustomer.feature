@@ -1,4 +1,4 @@
-@SmokeTest1
+@SmokeTest
   Feature: Login Customer
     This feature deals with the admin page accessibility and navigations
 

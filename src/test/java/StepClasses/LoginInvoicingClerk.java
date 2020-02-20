@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LoginInvoicingClerk extends BaseUtil {
 
-    WebDriverWait wait = new WebDriverWait(driver,30);
+    WebDriverWait wait = new WebDriverWait(driver,50);
 
     @Given("^logged in as Invoicing Clerk user$")
     public void loggedInAsInvoicingClerkUser() throws IOException, InterruptedException {
@@ -42,7 +42,7 @@ public class LoginInvoicingClerk extends BaseUtil {
         WebElement Statuspage = driver.findElement(By.xpath("/html/body/div[2]/main/section"));
         Assert.assertTrue(Statuspage.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/header/a/span"))).click(); //back
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 

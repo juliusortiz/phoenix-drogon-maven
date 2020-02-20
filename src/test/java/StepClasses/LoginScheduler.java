@@ -6,6 +6,7 @@ import cucumber.api.java.en.Given;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.FileInputStream;
@@ -15,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LoginScheduler extends BaseUtil {
 
+    WebDriverWait wait = new WebDriverWait(driver,50);
 
     @Given("^logged in as Scheduler user$")
     public void loggedInAsSchedulerUser() throws IOException, InterruptedException {
