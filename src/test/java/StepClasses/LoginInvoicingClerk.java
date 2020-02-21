@@ -41,7 +41,7 @@ public class LoginInvoicingClerk extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div[1]/table/tbody/tr[1]/td[8]/a/button"))).click(); //view details page
         WebElement Statuspage = driver.findElement(By.xpath("/html/body/div[2]/main/section"));
         Assert.assertTrue(Statuspage.isDisplayed());
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/header/a"))).click(); //back
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //back
     }
 
     @And("^navigate to Invoicing Clerk notification page$")
@@ -54,7 +54,7 @@ public class LoginInvoicingClerk extends BaseUtil {
 
     @And("^navigate to Invoicing Clerk Settings page$")
     public void navigateToInvoicingClerkSettingsPage() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[2]/img"))).click(); //dropdown
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button/img"))).click(); //dropdown
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/article/footer/section[1]/a"))).click(); //settings page
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/article/header/a[2]"))).click(); //send feedback

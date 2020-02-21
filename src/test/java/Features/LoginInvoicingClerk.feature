@@ -1,4 +1,4 @@
-@SmokeTest1
+@SmokeTest
 Feature: Login Invoicing Clerk
   This feature deals with the Invoicing Clerk page accessibility and navigations
 
