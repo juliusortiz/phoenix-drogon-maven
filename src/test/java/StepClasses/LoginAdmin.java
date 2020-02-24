@@ -48,7 +48,7 @@ public class LoginAdmin extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/section/button[2]/a"))).click(); //customer
         WebElement Customerspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
         Assert.assertTrue(Customerspage.isDisplayed());
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
         Thread.sleep(2000);
     }
