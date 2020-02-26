@@ -56,3 +56,15 @@
 [0221/120041.737:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0221/120041.737:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0221/120041.737:ERROR:exception_snapshot_win.cc(98)] thread ID 17836 not found in process
+[0226/090105.766:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0226/090105.767:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0226/090105.767:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0226/090105.767:ERROR:exception_snapshot_win.cc(98)] thread ID 22016 not found in process
+[0226/090406.828:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0226/090406.829:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0226/090406.829:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0226/090406.829:ERROR:exception_snapshot_win.cc(98)] thread ID 15340 not found in process
+[0226/090655.883:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0226/090655.883:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0226/090655.883:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0226/090655.884:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
