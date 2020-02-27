@@ -46,10 +46,10 @@ public class LoginScheduler extends BaseUtil {
 
     @And("^navigate to TTP dropdown from the dashboard$")
     public void navigateToTTPDropdownFromTheDashboard() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div[2]/div[1]/div/div[2]"))).click(); //ttp
-        WebElement TTP = driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div[2]/div[1]/div/div[2]"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div/div[1]/div/div[2]"))).click(); //ttp
+        WebElement TTP = driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div/div[1]/div/div[2]"));
         Assert.assertTrue(TTP.isDisplayed());
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div[2]/div[1]/div/div[2]"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/section/div[1]/table/tbody/tr/td[2]/div/div/div[1]/div/div[2]"))).click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
