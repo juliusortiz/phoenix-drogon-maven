@@ -29,6 +29,7 @@ public class Hooks extends BaseUtil {
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
+        options.setPageLoadStrategy(PageLoadStrategy.NONE);
         options.addArguments("--headless");
         options.addArguments("--window-size=1920x866");
         options.addArguments("--disable-notifications");
