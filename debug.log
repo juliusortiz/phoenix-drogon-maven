@@ -68,3 +68,23 @@
 [0226/090655.883:ERROR:process_info.cc(556)] ReadMemoryInfo failed
 [0226/090655.883:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
 [0226/090655.884:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0228/093748.588:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093748.589:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093748.589:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093748.589:ERROR:exception_snapshot_win.cc(98)] thread ID 14212 not found in process
+[0228/093823.761:ERROR:process_reader_win.cc(182)] ResumeThread: The parameter is incorrect. (0x57)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0228/093823.762:ERROR:exception_snapshot_win.cc(98)] thread ID 12760 not found in process
