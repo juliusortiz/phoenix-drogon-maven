@@ -86,7 +86,7 @@ public class LoginSales extends BaseUtil {
     @And("^navigate to Sales History page$")
     public void navigateToSalesHistoryPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]/span"))).click(); //dashboard
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div"))).click(); //sales history
         WebElement history = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[3]/div/div")); //history
         Assert.assertTrue(history.isDisplayed());

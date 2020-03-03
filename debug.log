@@ -88,3 +88,25 @@
 [0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0228/093823.762:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
 [0228/093823.762:ERROR:exception_snapshot_win.cc(98)] thread ID 12760 not found in process
+[0302/102041.553:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/102041.555:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/102041.555:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/102041.555:ERROR:exception_snapshot_win.cc(98)] thread ID 6160 not found in process
+[0302/105748.012:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/105748.013:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/105748.013:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/105748.013:ERROR:exception_snapshot_win.cc(98)] thread ID 836 not found in process
+[0302/111721.952:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0302/111721.953:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0302/111721.953:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0302/111721.953:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0302/114546.266:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/114546.266:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/114546.266:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/114546.266:ERROR:exception_snapshot_win.cc(98)] thread ID 14976 not found in process
+[0302/135636.855:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0302/135636.856:ERROR:exception_snapshot_win.cc(98)] thread ID 18128 not found in process
+[0302/135636.856:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0303/094832.624:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0303/094832.624:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0303/094832.624:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)
