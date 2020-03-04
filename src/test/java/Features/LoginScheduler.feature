@@ -8,6 +8,7 @@ Feature: Login Scheduler
     And navigate to TTP dropdown from the dashboard
     And navigate to Vehicle Code dropdown from the dashboard
     And navigate to Current Deliveries page
+    And navigate to Delivery Instructions
     And navigate to Track Delivery page from the Current Deliveries page
     And navigate to Problems Reported Page
     And navigate to Manage Reasons Page
