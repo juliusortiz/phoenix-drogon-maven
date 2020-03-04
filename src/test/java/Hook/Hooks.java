@@ -40,18 +40,18 @@ public class Hooks extends BaseUtil {
         driver = new ChromeDriver(options);
 
 
-        /*WebDriverManager.firefoxdriver().setup();
+    /*    WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options1 = new FirefoxOptions();
-        options1.addArguments("--headless");
+       //options1.addArguments("--headless");
         options1.addArguments("--window-size=1920x866");
         options1.addPreference("dom.webnotifications.enabled", false);
         options1.addArguments("--disable-gpu");
         driver = new FirefoxDriver(options1);*/
 
 
-        /*WebDriverManager.edgedriver().setup();
+      /*  WebDriverManager.edgedriver().setup();
         EdgeOptions options2 = new EdgeOptions();
-        options2.addArguments("--headless");
+        //options2.addArguments("--headless");
         options2.addArguments("--window-size=1920x866");
         options2.addArguments("--disable-notifications");
         options2.addArguments("--disable-gpu");
