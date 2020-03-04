@@ -70,11 +70,21 @@ public class LoginScheduler extends BaseUtil {
         Assert.assertTrue(CurrentDelivery.isDisplayed());
     }
 
+    @And("^navigate to Delivery Instructions$")
+    public void navigateToDeliveryInstructions() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[6]/button[1]"))).click();
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        WebElement CurrentDelivery = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/div[1]/div[1]/div[2]/h5[1]"));
+        Assert.assertTrue(CurrentDelivery.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/div[1]/div[1]/div[1]/button[1]"))).click();
+    }
+
     @And("^navigate to Track Delivery page from the Current Deliveries page$")
     public void navigateToTrackDeliveryPageFromTheCurrentDeliveriesPage() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/section/div/table/tbody/tr[1]/td[6]/a"))).click(); //track delivery
-        WebElement TrackDelivery = driver.findElement(By.xpath("/html/body/div[2]/main/section"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/a[1]"))).click(); //track delivery
+        WebElement TrackDelivery = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/section[1]/article[1]/div[1]/header[1]/div[1]"));
         Assert.assertTrue(TrackDelivery.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/header[1]/a[1]"))).click();
         Thread.sleep(2000);
     }
 
