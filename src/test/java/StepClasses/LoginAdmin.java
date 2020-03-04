@@ -53,6 +53,16 @@ public class LoginAdmin extends BaseUtil {
         Thread.sleep(2000);
     }
 
+    @And("^navigate to delivery receipts page from the dashboard$")
+    public void navigateToDeliveryReceiptsPageFromTheDashboard() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/div/header/a/span[1]"))).click(); //delivery receipts
+        WebElement Customerspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]"));
+        Assert.assertTrue(Customerspage.isDisplayed());
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
+        Thread.sleep(2000);
+    }
+
     @And("^navigate to users page from the dashboard$")
     public void navigateToUsersPageFromTheDashboard() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/aside/header/a/span[1]"))).click(); //users

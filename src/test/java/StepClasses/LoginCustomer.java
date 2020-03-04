@@ -85,11 +85,19 @@ public class LoginCustomer extends BaseUtil {
 
     @And("^navigate to Today Dropdown from the Customer History page$")
     public void navigateToTodayDropdownFromTheCustomerHistoryPage() throws InterruptedException {
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div/div[2]"))).click(); //today dropdown
+        WebElement todaydropdown = driver.findElement(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div/div[2]")); //today dropdown
+        Assert.assertTrue(todaydropdown.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/header/section/div[3]/div/div[1]/div/div[2]"))).click(); //today dropdown
     }
 
     @And("^navigate to View Details from the Customer history page$")
     public void navigateToViewDetailsFromTheCustomerHistoryPage() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/main/div/table/tbody/tr[1]/td[7]/a"))).click(); //view details
+        WebElement viewdetails = driver.findElement(By.xpath("/html/body/div[2]/main/section/div")); //view details
+        Assert.assertTrue(viewdetails.isDisplayed());
+        Thread.sleep(1000);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/div/div[1]/button/span"))).click(); //back button
     }
 
     @And("^navigate to CDSS Profile page$")

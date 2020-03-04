@@ -1,4 +1,4 @@
-@SmokeTest
+@SmokeTest1
   Feature: Login Admin
     This feature deals with the admin page accessibility and navigations
 
@@ -6,6 +6,7 @@
     Given logged in as admin user
     And navigate to status page from the dashboard
     And navigate to customers page from the dashboard
+    And navigate to delivery receipts page from the dashboard
     And navigate to users page from the dashboard
     And navigate to Manage Users page
     And navigate to Create User page from Manage Users

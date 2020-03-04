@@ -82,7 +82,22 @@ public class LoginDispatcher extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div"))).click(); //manage reasons page
         WebElement managereasonspage = driver.findElement(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div")); //
         Assert.assertTrue(managereasonspage.isDisplayed());
+    }
 
+    @And("^navigate to Add New Reason from the Manage Reasons page$")
+    public void navigateToAddNewReasonFromTheManageReasonsPage() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[1]/button"))).click(); //add new reason
+        WebElement Statuspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[1]/button"));
+        Assert.assertTrue(Statuspage.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button"))).click(); //close
+    }
+
+    @And("^navigate to Backload dropdown from the Manage Reasons page$")
+    public void navigateToBackloadDropdownFromTheManageReasonsPage() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[2]/div/div[1]/div[2]"))).click(); //backload dropdown
+        WebElement backloaddropdown = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[2]/div/div[1]/div[2]")); //backload dropdown
+        Assert.assertTrue(backloaddropdown.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[2]/div/div[1]/div[2]"))).click(); //backload dropdown
     }
 
     @And("^navigate to Dispatcher Settings page$")

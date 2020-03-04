@@ -1,4 +1,4 @@
-@SmokeTest1
+@SmokeTest
 Feature: Login Dispatcher
   This feature deals with the admin page accessibility and navigations
 
@@ -9,6 +9,8 @@ Feature: Login Dispatcher
     And navigate to Deliveries History
     And navigate to Problems Reported page
     And navigate to Manage Reasons page
+    And navigate to Add New Reason from the Manage Reasons page
+    And navigate to Backload dropdown from the Manage Reasons page
     And navigate to Dispatcher Settings page
     And navigate to Dispatcher Notification page
 
