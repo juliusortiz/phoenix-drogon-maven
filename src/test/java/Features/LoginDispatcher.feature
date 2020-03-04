@@ -1,9 +1,11 @@
-@SmokeTest
+@SmokeTest1
 Feature: Login Dispatcher
   This feature deals with the admin page accessibility and navigations
 
   Scenario: Login dispatcher user and navigate to all pages
     Given logged in as dispatcher user
+    And navigate to Delivery Instructions from the dashboard page
+    And navigate to Track Delivery page from the dashboard page
     And navigate to Deliveries History
     And navigate to Problems Reported page
     And navigate to Manage Reasons page

@@ -37,6 +37,24 @@ public class LoginDispatcher extends BaseUtil {
         Thread.sleep(5000);
     }
 
+    @And("^navigate to Delivery Instructions from the dashboard page$")
+    public void navigateToDeliveryInstructionsFromTheDashboardPage() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/section/div/table/tbody/tr[1]/td[6]/button"))).click(); //delivery instructions
+        WebElement Statuspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/section/div/table/tbody/tr[1]/td[6]/button"));
+        Assert.assertTrue(Statuspage.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div/div/div/div[1]/button"))).click(); //close
+    }
+
+    @And("^navigate to Track Delivery page from the dashboard page$")
+    public void navigateToTrackDeliveryPageFromTheDashboardPage() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/section/div/table/tbody/tr[1]/td[7]/a/div"))).click(); //track delivery
+        WebElement Statuspage = driver.findElement(By.xpath("/html/body/div[2]/main/section/section"));
+        Assert.assertTrue(Statuspage.isDisplayed());
+        Thread.sleep(1000);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/header/a"))).click(); //back
+    }
+
+
     @And("^navigate to Deliveries History$")
     public void navigateToDeliveriesHistory() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]/span"))).click(); //dashboard
