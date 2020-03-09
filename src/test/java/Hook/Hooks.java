@@ -59,7 +59,7 @@ public class Hooks extends BaseUtil {
 
 
 
-        driver.get(prop.getProperty("qas.URL"));
+        driver.get(prop.getProperty("qas2.URL"));
         driver.getWindowHandle();
         driver.manage().window().maximize();
 
