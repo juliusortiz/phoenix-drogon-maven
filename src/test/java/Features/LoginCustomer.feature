@@ -9,7 +9,7 @@
       And navigate to Customer History page
       And navigate to Filter Dropdown from the Customer History page
       And navigate to Today Dropdown from the Customer History page
-      And navigate to View Details from the Customer history page
+      #And navigate to View Details from the Customer history page
       And navigate to CDSS Profile page
       And navigate to Customer Settings page
       And navigate to Customer Notification page
