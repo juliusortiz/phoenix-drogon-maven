@@ -35,34 +35,6 @@ public class LoginAdmin extends BaseUtil {
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
     }
 
-    @And("^navigate to status page from the dashboard$")
-    public void navigateToStatusPageFromTheDashboard() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/section/button[1]/a/div/div[2]/span[1]"))).click(); //status
-        WebElement Statuspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
-        Assert.assertTrue(Statuspage.isDisplayed());
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
-    }
-
-    @And("^navigate to customers page from the dashboard$")
-    public void navigateToCustomersPageFromTheDashboard() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/section/button[2]/a"))).click(); //customer
-        WebElement Customerspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
-        Assert.assertTrue(Customerspage.isDisplayed());
-        Thread.sleep(3000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
-        Thread.sleep(2000);
-    }
-
-    @And("^navigate to delivery receipts page from the dashboard$")
-    public void navigateToDeliveryReceiptsPageFromTheDashboard() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/section/div/header/a/span[1]"))).click(); //delivery receipts
-        WebElement Customerspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]"));
-        Assert.assertTrue(Customerspage.isDisplayed());
-        Thread.sleep(2000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
-        Thread.sleep(2000);
-    }
-
     @And("^navigate to users page from the dashboard$")
     public void navigateToUsersPageFromTheDashboard() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/aside/header/a/span[1]"))).click(); //users

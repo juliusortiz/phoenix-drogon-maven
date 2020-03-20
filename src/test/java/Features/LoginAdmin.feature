@@ -4,9 +4,6 @@
 
   Scenario: Login admin user and navigate to all pages
     Given logged in as admin user
-    And navigate to status page from the dashboard
-    And navigate to customers page from the dashboard
-    And navigate to delivery receipts page from the dashboard
     And navigate to users page from the dashboard
     And navigate to Manage Users page
     And navigate to Create User page from Manage Users
@@ -20,5 +17,4 @@
     And navigate to Notification Page
 
     Then Logout page
-
 
