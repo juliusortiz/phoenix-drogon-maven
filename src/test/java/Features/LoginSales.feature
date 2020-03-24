@@ -1,4 +1,4 @@
-@Sales
+@SmokeTest
 Feature: Login Sales
   This feature deals with the Sales page accessibility and navigations
 

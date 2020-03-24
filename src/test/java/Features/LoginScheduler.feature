@@ -1,4 +1,4 @@
-@Smoketest
+@SmokeTest
 Feature: Login Scheduler
   This feature deals with the Scheduler page accessibility and navigations
 
