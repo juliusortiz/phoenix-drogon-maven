@@ -65,7 +65,7 @@ public class LoginSales extends BaseUtil {
 
     @And("^navigate to View Delivery Receipt from the dashboard$")
     public void navigateToViewDeliveryReceiptFromTheDashboard() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/main/div[1]/table/tbody/tr[1]/td[6]/a/button"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/main[1]/div[1]/table[1]/tbody[1]/tr[1]/td[6]/a[1]"))).click();
         WebElement VDRbutton = driver.findElement(By.xpath("/html/body/div[2]/main/section")); //VDR button
         Assert.assertTrue(VDRbutton.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
