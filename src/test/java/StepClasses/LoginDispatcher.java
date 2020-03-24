@@ -84,20 +84,22 @@ public class LoginDispatcher extends BaseUtil {
         Assert.assertTrue(managereasonspage.isDisplayed());
     }
 
-    @And("^navigate to Add New Reason from the Manage Reasons page$")
-    public void navigateToAddNewReasonFromTheManageReasonsPage() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[1]/button"))).click(); //add new reason
-        WebElement Statuspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[1]/button"));
-        Assert.assertTrue(Statuspage.isDisplayed());
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button"))).click(); //close
+    @And("^landed to Backload filter from the dropdown$")
+    public void landedToBackloadFilterFromTheDropdown() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]")));
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        WebElement Backloadfilter = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]"));
+        Assert.assertTrue(Backloadfilter.isDisplayed());
     }
 
-    @And("^navigate to Backload dropdown from the Manage Reasons page$")
-    public void navigateToBackloadDropdownFromTheManageReasonsPage() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[2]/div/div[1]/div[2]"))).click(); //backload dropdown
-        WebElement backloaddropdown = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[2]/div/div[1]/div[2]")); //backload dropdown
-        Assert.assertTrue(backloaddropdown.isDisplayed());
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[2]/div/div[1]/div[2]"))).click(); //backload dropdown
+    @And("^navigate to Partially Accepted filter from the dropdown$")
+    public void navigateToPartiallyAcceptedFilterFromTheDropdown() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/div[2]/div[1]/div[1]/div[1]/div[1]"))).click();
+        Thread.sleep(2000);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]"))).click();
+        Thread.sleep(2000);
+        WebElement PartiallyAcceptedFilter = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/div[2]/div[1]/div[1]/div[1]/div[1]/span[1]"));
+        Assert.assertTrue(PartiallyAcceptedFilter.isDisplayed());
     }
 
     @And("^navigate to Dispatcher Settings page$")
@@ -117,4 +119,5 @@ public class LoginDispatcher extends BaseUtil {
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")); //
         Assert.assertTrue(notificationpage.isDisplayed());
     }
+
 }

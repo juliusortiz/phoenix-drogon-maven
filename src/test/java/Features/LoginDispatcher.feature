@@ -9,8 +9,8 @@ Feature: Login Dispatcher
     And navigate to Deliveries History
     And navigate to Problems Reported page
     And navigate to Manage Reasons page
-    And navigate to Add New Reason from the Manage Reasons page
-    And navigate to Backload dropdown from the Manage Reasons page
+    And landed to Backload filter from the dropdown
+    And navigate to Partially Accepted filter from the dropdown
     And navigate to Dispatcher Settings page
     And navigate to Dispatcher Notification page
 
