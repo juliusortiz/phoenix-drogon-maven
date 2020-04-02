@@ -19,8 +19,8 @@ public class LoginAdmin extends BaseUtil {
 
     WebDriverWait wait = new WebDriverWait(driver,50);
 
-    @Given("^logged in as admin user$")
-    public void loggedInAsAdminUser() throws IOException, InterruptedException {
+    @Given("^logged in as Admin user$")
+    public void loggedInAsAdminUser() throws IOException {
         FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());
         Properties prop = new Properties();
         prop.load(fis);
@@ -35,13 +35,23 @@ public class LoginAdmin extends BaseUtil {
         driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
     }
 
-    @And("^navigate to users page from the dashboard$")
+    @And("^navigate to Users page from the dashboard$")
     public void navigateToUsersPageFromTheDashboard() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/aside/header/a/span[1]"))).click(); //users
         WebElement Customerspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
         Assert.assertTrue(Customerspage.isDisplayed());
         Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
+        Thread.sleep(2000);
+    }
+
+    @And("^navigate to Delivery Status page from the dashboard$")
+    public void navigateToDeliveryStatusPageFromTheDashboard() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/header[1]/a[1]/img[1]"))).click();
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/section[1]/div[1]/header[1]/a[1]"))).click();
+        WebElement DeliveryStatusHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/header[1]/span[1]"));
+        Assert.assertTrue(DeliveryStatusHeader.isDisplayed());
         Thread.sleep(2000);
     }
 
@@ -73,8 +83,8 @@ public class LoginAdmin extends BaseUtil {
         Thread.sleep(2000);
     }
 
-    @And("^navigate to Manage Accounts page$")
-    public void navigateToManageAccountsPage() throws InterruptedException {
+    @And("^navigate to My Accounts page$")
+    public void navigateToMyAccountsPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]"))).click(); //dashboard button
         Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[4]/div/div"))).click(); //manage accounts
@@ -90,8 +100,8 @@ public class LoginAdmin extends BaseUtil {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div/a"))).click(); //close
     }
 
-    @And("^navigate to Delivery Receipts page$")
-    public void navigateToDeliveryReceiptsPage() throws InterruptedException {
+    @And("^navigate to Delivery Status page$")
+    public void navigateToDeliveryStatusPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]"))).click(); //dashboard button
         Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/aside/div/nav/a[5]/div/div"))).click(); //delivery receipts
@@ -100,8 +110,8 @@ public class LoginAdmin extends BaseUtil {
         Thread.sleep(2000);
     }
 
-    @And("^navigate to Products from Delivery Receipts page$")
-    public void navigateToProductsFromDeliveryReceiptsPage() throws InterruptedException {
+    @And("^navigate to Products from Delivery Status page$")
+    public void navigateToProductsFromDeliveryStatusPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[8]/button"))).click(); //shippings
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         WebElement history = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[8]/button"));
@@ -147,4 +157,5 @@ public class LoginAdmin extends BaseUtil {
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")); //
         Assert.assertTrue(notificationpage.isDisplayed());
     }
+
 }

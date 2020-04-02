@@ -33,7 +33,7 @@ public class Hooks extends BaseUtil {
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
         options.addArguments("--window-size=1920x866");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-gpu");
@@ -59,7 +59,7 @@ public class Hooks extends BaseUtil {
 
 
 
-        driver.get(prop.getProperty("qas2.URL"));
+        driver.get(prop.getProperty("base.URL"));
         driver.getWindowHandle();
         driver.manage().window().maximize();
 
@@ -82,7 +82,7 @@ public class Hooks extends BaseUtil {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
         }
-        driver.quit();
+        //driver.quit();
     }
 }
 
