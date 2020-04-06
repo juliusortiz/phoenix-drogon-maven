@@ -12,7 +12,11 @@
       And navigate to My Accounts page
       And navigate to Shippings from Manage Accounts page
       And navigate to Delivery Status page
-      And navigate to Products from Delivery Status page
+      And open Delivery Instructions modal
+      And open Products modal
+      And open Current Status modal
+      And view location
+      And open Delivery Receipt modal
       And navigate to Admin Manage Reasons Page
       And navigate to Settings Page
       And navigate to Notification Page

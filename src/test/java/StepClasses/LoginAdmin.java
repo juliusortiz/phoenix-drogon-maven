@@ -10,6 +10,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -110,15 +113,44 @@ public class LoginAdmin extends BaseUtil {
         Thread.sleep(2000);
     }
 
-    @And("^navigate to Products from Delivery Status page$")
-    public void navigateToProductsFromDeliveryStatusPage() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[8]/button"))).click(); //shippings
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        WebElement history = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/div[1]/table/tbody/tr[1]/td[8]/button"));
-        Assert.assertTrue(history.isDisplayed());
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[3]/div/div/div[3]/button"))).click(); //close
+    @And("^open Delivery Instructions modal$")
+    public void openDeliveryInstructionsModal() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/button[1]"))).click();
+        WebElement InstructionsModal = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[4]/div[1]/div[1]/div[2]/h5[1]"));
+        Assert.assertTrue(InstructionsModal.isDisplayed());
+        wait.until((ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[4]/div[1]/div[1]/div[1]/button[1]/span[1]")))).click();
+    }
+
+    @And("^open Products modal$")
+    public void openProductsModal() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[8]/button[1]"))).click();
+        WebElement ProductsModal = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[4]/div[1]/div[1]/div[1]/h5[1]"));
+        Assert.assertTrue(ProductsModal.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[4]/div[1]/div[1]/div[1]/button[1]/span[1]"))).click();
+    }
+
+    @And("^open Current Status modal$")
+    public void openCurrentStatusModal() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[9]/button[1]"))).click();
+        WebElement CurrentStatusModal = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[4]/div[1]/div[1]/div[1]/h5[1]"));
+        Assert.assertTrue(CurrentStatusModal.isDisplayed());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[4]/div[1]/div[1]/div[1]/button[1]"))).click();
+    }
+
+    @And("^view location$")
+    public void viewLocation() throws AWTException, InterruptedException {
         Thread.sleep(2000);
+        for (int i = 0; i < 4; i++) {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_SUBTRACT);
+            robot.keyRelease(KeyEvent.VK_SUBTRACT);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+        }
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[11]/button[1]")).click();
+        WebElement Mapdropdown = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]"));
+        Assert.assertTrue(Mapdropdown.isDisplayed());
     }
 
     @And("^navigate to Admin Manage Reasons Page$")
@@ -130,7 +162,7 @@ public class LoginAdmin extends BaseUtil {
         Assert.assertTrue(ProblemsReportedAndBackloads.isDisplayed());
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[1]/button"))).click(); //add new reason
         Thread.sleep(1000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button/span"))).click(); //close
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/m  ain/div[2]/div/div/div/button/span"))).click(); //close
         Thread.sleep(1000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[2]/div/div[1]/div[2]"))).click(); //backload
         Thread.sleep(2000);

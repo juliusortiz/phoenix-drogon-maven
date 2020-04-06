@@ -7,6 +7,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -31,13 +32,14 @@ public class Hooks extends BaseUtil {
         Properties prop = new Properties();
         prop.load(fis);
 
+
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("--headless");
-        options.addArguments("--window-size=1920x866");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-gpu");
         driver = new ChromeDriver(options);
+
 
 
     /*    WebDriverManager.firefoxdriver().setup();
