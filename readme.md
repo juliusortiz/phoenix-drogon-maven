@@ -36,6 +36,7 @@
 - Create testNG XML
 - DarkTheme
 - One Dark theme
+- Material theme UI
 
 ### Dependencies installed in pom.xml
 * Please check pom.xml for plugin builds and dependencies

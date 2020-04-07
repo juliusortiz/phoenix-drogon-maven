@@ -5,13 +5,11 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import java.awt.*;
-import java.awt.event.KeyEvent;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -138,19 +136,21 @@ public class LoginAdmin extends BaseUtil {
     }
 
     @And("^view location$")
-    public void viewLocation() throws AWTException, InterruptedException {
-        Thread.sleep(2000);
-        for (int i = 0; i < 4; i++) {
-            Robot robot = new Robot();
-            robot.keyPress(KeyEvent.VK_CONTROL);
-            robot.keyPress(KeyEvent.VK_SUBTRACT);
-            robot.keyRelease(KeyEvent.VK_SUBTRACT);
-            robot.keyRelease(KeyEvent.VK_CONTROL);
-        }
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[11]/button[1]")).click();
+    public void viewLocation() {
+        WebElement location = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[11]/button[1]"));
+        Actions build = new Actions(driver);
+        build.moveToElement(location).build().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[11]/button[1]"))).click();
         WebElement Mapdropdown = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[3]"));
         Assert.assertTrue(Mapdropdown.isDisplayed());
+    }
+
+    @And("^open Delivery Receipt modal$")
+    public void openDeliveryReceiptModal() {
+        WebElement DeliveryReceipt = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[12]/a[1]/button[1]"));
+        Actions build = new Actions(driver);
+        build.moveToElement(DeliveryReceipt).build().perform();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/table[1]/tbody[1]/tr[1]/td[12]/a[1]/button[1]")));
     }
 
     @And("^navigate to Admin Manage Reasons Page$")
@@ -162,7 +162,7 @@ public class LoginAdmin extends BaseUtil {
         Assert.assertTrue(ProblemsReportedAndBackloads.isDisplayed());
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[1]/button"))).click(); //add new reason
         Thread.sleep(1000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/m  ain/div[2]/div/div/div/button/span"))).click(); //close
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[2]/div[1]/div[1]/div[1]/button[1]"))).click(); //close
         Thread.sleep(1000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/div[2]/div[2]/div/div[1]/div[2]"))).click(); //backload
         Thread.sleep(2000);
@@ -182,12 +182,10 @@ public class LoginAdmin extends BaseUtil {
         Assert.assertTrue(settingspage.isDisplayed());
 
     }
-
     @And("^navigate to Notification Page$")
     public void navigateToNotificationPage() throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[2]"))).click();
         WebElement notificationpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/a[2]")); //
         Assert.assertTrue(notificationpage.isDisplayed());
     }
-
 }
