@@ -45,20 +45,21 @@ public class LoginAdmin extends BaseUtil {
     @And("^navigate to Users page from the dashboard$")
     public void navigateToUsersPageFromTheDashboard() throws InterruptedException, IOException {
         adminprop.load(admin);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("userspage")))).click(); //users
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("userspage")))).click();
         WebElement Customerspage = driver.findElement(By.xpath(adminprop.getProperty("userspageheader")));
         Assert.assertTrue(Customerspage.isDisplayed());
         Thread.sleep(2000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("phoenixicon")))).click();
         Thread.sleep(2000);
     }
 
     @And("^navigate to Delivery Status page from the dashboard$")
-    public void navigateToDeliveryStatusPageFromTheDashboard() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/header[1]/a[1]/img[1]"))).click();
+    public void navigateToDeliveryStatusPageFromTheDashboard() throws InterruptedException, IOException {
+        adminprop.load(admin);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("deliverystatuspage")))).click();
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/div[1]/section[1]/div[1]/header[1]/a[1]"))).click();
-        WebElement DeliveryStatusHeader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/section[1]/header[1]/span[1]"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("deliverypageheader")))).click();
+        WebElement DeliveryStatusHeader = driver.findElement(By.xpath(adminprop.getProperty("deliverypageheader")));
         Assert.assertTrue(DeliveryStatusHeader.isDisplayed());
         Thread.sleep(2000);
     }
