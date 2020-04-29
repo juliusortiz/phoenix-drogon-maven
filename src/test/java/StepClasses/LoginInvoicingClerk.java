@@ -22,7 +22,7 @@ public class LoginInvoicingClerk extends BaseUtil {
 
     @Given("^logged in as Invoicing Clerk user$")
     public void loggedInAsInvoicingClerkUser() throws IOException, InterruptedException {
-        FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());
+        FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("login.properties").getFile());
         Properties prop = new Properties();
         prop.load(fis);
 

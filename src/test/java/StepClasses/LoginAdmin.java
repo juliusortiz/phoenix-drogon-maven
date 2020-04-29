@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -19,27 +20,33 @@ import java.util.concurrent.TimeUnit;
 public class LoginAdmin extends BaseUtil {
 
     WebDriverWait wait = new WebDriverWait(driver,50);
+    FileInputStream login = new FileInputStream(getClass().getClassLoader().getResource("login.properties").getFile());
+    FileInputStream admin = new FileInputStream(getClass().getClassLoader().getResource("admin.properties").getFile());
+    Properties loginprop = new Properties();
+    Properties adminprop = new Properties();
+
+    public LoginAdmin() throws FileNotFoundException {
+        System.out.println("The property file did not load");
+    }
 
     @Given("^logged in as Admin user$")
     public void loggedInAsAdminUser() throws IOException {
-        FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());
-        Properties prop = new Properties();
-        prop.load(fis);
+        loginprop.load(login);
 
-        Select businesstype = new Select(driver.findElement(By.xpath("//select[@name='businesstype']")));
+        Select businesstype = new Select(driver.findElement(By.xpath(loginprop.getProperty("businesstypedropdown"))));
         businesstype.selectByVisibleText("Phoenix Petroleum");
-
-        driver.findElement(By.xpath("//input[@name='username']"))
-                .sendKeys(prop.getProperty("sa.username"));
-        driver.findElement(By.xpath("//input[@name='pass']"))
-                .sendKeys(prop.getProperty("password"));
-        driver.findElement(By.xpath("//button[@class='login100-form-btn']")).click();
+        driver.findElement(By.xpath(loginprop.getProperty("usernameField")))
+                .sendKeys(loginprop.getProperty("sa.username"));
+        driver.findElement(By.xpath(loginprop.getProperty("passwordField")))
+                .sendKeys(loginprop.getProperty("password"));
+        driver.findElement(By.xpath(loginprop.getProperty("loginButton"))).click();
     }
 
     @And("^navigate to Users page from the dashboard$")
-    public void navigateToUsersPageFromTheDashboard() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/section/div/aside/header/a/span[1]"))).click(); //users
-        WebElement Customerspage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]"));
+    public void navigateToUsersPageFromTheDashboard() throws InterruptedException, IOException {
+        adminprop.load(admin);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("userspage")))).click(); //users
+        WebElement Customerspage = driver.findElement(By.xpath(adminprop.getProperty("userspageheader")));
         Assert.assertTrue(Customerspage.isDisplayed());
         Thread.sleep(2000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/a[1]/img"))).click(); //home

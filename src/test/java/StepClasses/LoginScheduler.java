@@ -21,7 +21,7 @@ public class LoginScheduler extends BaseUtil {
 
     @Given("^logged in as Scheduler user$")
     public void loggedInAsSchedulerUser() throws IOException, InterruptedException {
-        FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());
+        FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("login.properties").getFile());
         Properties prop = new Properties();
         prop.load(fis);
 

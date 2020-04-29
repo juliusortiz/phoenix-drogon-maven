@@ -28,9 +28,9 @@ public class Hooks extends BaseUtil {
 
     @Before
     public void InitializeTest() throws IOException, AWTException, InterruptedException {
-        FileInputStream fis = new FileInputStream(getClass().getClassLoader().getResource("Config.properties").getFile());
+        FileInputStream env = new FileInputStream(getClass().getClassLoader().getResource("env.properties").getFile());
         Properties prop = new Properties();
-        prop.load(fis);
+        prop.load(env);
 
 
         WebDriverManager.chromedriver().setup();
@@ -61,7 +61,7 @@ public class Hooks extends BaseUtil {
 
 
 
-        driver.get(prop.getProperty("base.URL"));
+        driver.get(prop.getProperty("prod.URL"));
         driver.getWindowHandle();
         driver.manage().window().maximize();
 
@@ -84,7 +84,7 @@ public class Hooks extends BaseUtil {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
         }
-        //driver.quit();
+        driver.quit();
     }
 }
 
