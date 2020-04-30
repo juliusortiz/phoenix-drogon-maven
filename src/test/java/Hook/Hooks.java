@@ -20,6 +20,7 @@ import org.testng.Assert;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -30,6 +31,7 @@ public class Hooks extends BaseUtil {
     public void InitializeTest() throws IOException, AWTException, InterruptedException {
         FileInputStream env = new FileInputStream(getClass().getClassLoader().getResource("env.properties").getFile());
         Properties prop = new Properties();
+
         prop.load(env);
 
 
@@ -68,13 +70,15 @@ public class Hooks extends BaseUtil {
     }
 
     @Then("^Logout page$")
-    public void logoutPage() {
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img")).click(); //logout page
+    public void logoutPage() throws IOException {
+        FileInputStream header = new FileInputStream(getClass().getClassLoader().getResource("header.properties").getFile());
+        Properties headprop = new Properties();
+        headprop.load(header);
+        driver.findElement(By.xpath(headprop.getProperty("profiledropdown"))).click(); //logout page
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        WebElement logoutpage = driver.findElement(By.xpath("/html/body/div[2]/main/header/button/img"));
-        Assert.assertTrue(logoutpage.isDisplayed());
-
-        driver.findElement(By.xpath("/html/body/div[2]/main/header/article/footer/section[2]")).click();
+        driver.findElement(By.xpath(headprop.getProperty("logoutbutton"))).click();
+        WebElement loginlogo = driver.findElement(By.xpath(headprop.getProperty("loginlogo")));
+        Assert.assertTrue(loginlogo.isDisplayed());
         driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
     }
 
@@ -84,7 +88,7 @@ public class Hooks extends BaseUtil {
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             scenario.embed(screenshot, "image/png");
         }
-        driver.quit();
+        //driver.quit();
     }
 }
 

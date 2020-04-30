@@ -21,12 +21,14 @@ public class LoginAdmin extends BaseUtil {
 
     WebDriverWait wait = new WebDriverWait(driver,50);
     FileInputStream login = new FileInputStream(getClass().getClassLoader().getResource("login.properties").getFile());
+    FileInputStream header = new FileInputStream(getClass().getClassLoader().getResource("header.properties").getFile());
     FileInputStream admin = new FileInputStream(getClass().getClassLoader().getResource("admin.properties").getFile());
+    Properties headprop = new Properties();
     Properties loginprop = new Properties();
     Properties adminprop = new Properties();
 
     public LoginAdmin() throws FileNotFoundException {
-        System.out.println("The property file did not load");
+        System.out.println("Successfully loaded properties file");
     }
 
     @Given("^logged in as Admin user$")
@@ -44,12 +46,13 @@ public class LoginAdmin extends BaseUtil {
 
     @And("^navigate to Users page from the dashboard$")
     public void navigateToUsersPageFromTheDashboard() throws InterruptedException, IOException {
+        headprop.load(header);
         adminprop.load(admin);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("userspage")))).click();
-        WebElement Customerspage = driver.findElement(By.xpath(adminprop.getProperty("userspageheader")));
-        Assert.assertTrue(Customerspage.isDisplayed());
+        WebElement userspageheader = driver.findElement(By.xpath(adminprop.getProperty("userspageheader")));
+        Assert.assertTrue(userspageheader.isDisplayed());
         Thread.sleep(2000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("phoenixicon")))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(headprop.getProperty("phoenixicon")))).click();
         Thread.sleep(2000);
     }
 
@@ -57,36 +60,38 @@ public class LoginAdmin extends BaseUtil {
     public void navigateToDeliveryStatusPageFromTheDashboard() throws InterruptedException, IOException {
         adminprop.load(admin);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("deliverystatuspage")))).click();
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("deliverypageheader")))).click();
+        Thread.sleep(8000);
         WebElement DeliveryStatusHeader = driver.findElement(By.xpath(adminprop.getProperty("deliverypageheader")));
         Assert.assertTrue(DeliveryStatusHeader.isDisplayed());
         Thread.sleep(2000);
     }
 
     @And("^navigate to Manage Users page$")
-    public void navigateToManageUsersPage() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]"))).click(); //dashboard button
+    public void navigateToManageUsersPage() throws InterruptedException, IOException {
+        adminprop.load(admin);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("menubutton")))).click();
         Thread.sleep(2000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[2]/div[1]"))).click(); //manage users
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("manageuserspage")))).click();
         Thread.sleep(2000);
-        WebElement ManageUserheader = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]"));
+        WebElement ManageUserheader = driver.findElement(By.xpath(adminprop.getProperty("manageuserheader")));
         Assert.assertTrue(ManageUserheader.isDisplayed());
     }
 
     @And("^navigate to Create User page from Manage Users$")
-    public void navigateToCreateUserPageFromManageUsers() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[1]/header/button"))).click(); //create user
-        WebElement CreateUserpage = driver.findElement(By.xpath("/html/body/div[2]/main/div[1]/header/button"));
+    public void navigateToCreateUserPageFromManageUsers() throws IOException {
+        adminprop.load(admin);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("createuserbutton")))).click();
+        WebElement CreateUserpage = driver.findElement(By.xpath(adminprop.getProperty("createuserheader")));
         Assert.assertTrue(CreateUserpage.isDisplayed());
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/div[2]/div/div/div/button/span"))).click(); //close
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("closebutton")))).click();
     }
 
     @And("^navigate to Statuses page$")
-    public void navigateToStatusesPage() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/main/header/button[1]"))).click(); //dashboard button
+    public void navigateToStatusesPage() throws InterruptedException, IOException {
+        adminprop.load(admin);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("menubutton"))).click(); //dashboard button
         Thread.sleep(2000);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/div[2]/aside[1]/div[1]/nav[1]/a[3]/div[1]/div[1]"))).click(); //manage status
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(adminprop.getProperty("statusespage")))).click(); //manage status
         WebElement Statuses = driver.findElement(By.xpath("/html[1]/body[1]/div[2]/main[1]/div[1]/header[1]/span[1]"));
         Assert.assertTrue(Statuses.isDisplayed());
         Thread.sleep(2000);
