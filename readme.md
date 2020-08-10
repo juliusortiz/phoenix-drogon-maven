@@ -64,5 +64,3 @@
 * [Maven repository](https://mvnrepository.com/)
 * [Udemy resources](https://www.udemy.com/course/cucumber-with-selenium/learn/lecture/5966568#overview)
 * [Youtube sources](https://www.youtube.com/executeautomation)
-
-test
